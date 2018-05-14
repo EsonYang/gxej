@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="hidden" value="0000000001" id="coopPageId">
+    <input type="hidden" value="1" id="coopChannelTypeId">
+    <input type="hidden" value="1" id="coopParameterValuesId">
+    <input type="hidden" value="" id="coopMallTypeId">
+    <!-- 顶部广告 -->
+    <link href="//www.gxyj.com/coop/styles/css/gindex_hl.css?version=4821" rel="stylesheet" type="text/css">
+    <link href="//www.gxyj.com/coop/styles/css/gindex_header.css?version=4821" rel="stylesheet" type="text/css">
+    <link href="//www.gxyj.com/coop/styles/css/alert.css?version=4821" rel="stylesheet" type="text/css">
+    <link href="//www.gxyj.com/coop/styles/css/index-header.css?version=4821" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/utils.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/newcommonAddress.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/SuperSlide_hl.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/SuperSlide.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/masonry.min_hl.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/masonry.min.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/index_comon_hl.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/index_comon.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/shopping/ShopCarVO.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/shopcar.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/loadkey.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/customerServiceAll.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/jquery-browser.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/jquery.autocomplete.min.js?version=4821"></script>
+    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/search-common.js?version=4821"></script>
+    <!-- Start Alexa Certify Javascript 测试网速（大概）-->
+    <script type="text/javascript">
+        _atrk_opts = {
+            atrk_acct: "m82ep1IW1d10uW",
+            domain: "gxyj.com",
+            dynamic: true
+        };
+        (function() {
+            var as = document.createElement('script');
+            as.type = 'text/javascript';
+            as.async = true;
+            as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(as, s);
+        })();
+    </script>
+    <noscript>
+   <img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=m82ep1IW1d10uW" style="display:none" height="1" width="1" alt="" />
+  </noscript>
+    <link href=" " rel="stylesheet" type="text/css" id="top-b">
+    <input type="hidden" id="mallIdForPage" value="00000000">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //新添start
+            var mallId = $("#coopMallId").val();
+            var cookiePlat = Utils.getCookie("PLATFORM");
+            var cookiePlatForm = eval('(' + cookiePlat + ')');
+            var cookiePlatForm = eval('(' + cookiePlatForm + ')');
+            if (mallId != undefined && mallId != "") {
+                $("#mallIdForPage").val(mallId);
+                //$("#coopMallId").val(mallId);
+                $("#queryHiddenMallId").val(mallId);
+                $(".hotKeySerach").each(function() {
+                    $(this).attr("href", $(this).attr("href") + "&mallId=" + mallId);
+                });
+            } else if (cookiePlatForm != "" && cookiePlatForm != "undefined" && cookiePlatForm != null) {
+                mallId = cookiePlatForm.mallId;
+                $("#mallIdForPage").val(mallId);
+                //$("#coopMallId").val(mallId);
+                $("#queryHiddenMallId").val(mallId);
+                $(".hotKeySerach").each(function() {
+                    $(this).attr("href", $(this).attr("href") + "&mallId=" + mallId);
+                });
+            } else {
+                mallId = $("#mallIdForPage").val();
+            }
+            if (mallId == undefined) {
+                mallId = "00000000";
+            }
+            $("a").not("[href^='javascript'],[href^='#'],[href^='#p_detaillist']").each(function() {
+                var v = $(this).attr("href");
+                if (typeof(v) != "undefined") {
+                    if (v.length > 1) {
+                        if (v.indexOf("abc") >= 0) {} else {
+                            if (v.indexOf("mallId") < 0) {
+                                if (v.indexOf("?") >= 0) {
+                                    v = v + "&mallId=" + mallId;
+                                } else {
+                                    v = v + "?mallId=" + mallId;
+                                }
+                            }
+                            $(this).attr("href", v);
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <div class="head_top">
+        <div class="head_nav">
+            <input type="hidden" value="00000000" id="coopMallId">
+            <div class="cityPOST" id="cityPOST" onclick="">
+                <p class="send" id="choseCommonAddress"><i id="shows"></i>全国
+                    <a class=""></a>
+                </p>
+                <div class="position-city" style="display: none;" id="position-city">
+                    <span class="wrong11" id="close"></span>
+                    <div class="container-header clearfix">
+                        <div class="container-header-right" id="container-header-right">
+                            <div class="input-contaner">
+                                <span class="search">地区搜索：</span>
+                                <input id="searchKeyword" type="" name="" value="请选择输入地区中文及英文字母" onblur="if (this.value ==''){this.value ='请选择输入地区中文及英文字母'}" onfocus="if (value =='请选择输入地区中文及英文字母'){value=''}" oninput="searchKeyword()" onpropertychange="searchKeyword()">
+                            </div>
+                            <ul class="search-suggest" style="display:none;" id="searchKeywork">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container-midlle clearfix" style="border-bottom:1px solid #ccc;">
+                        <span class="recond">推荐地区：</span>
+                        <div class="allcitys" id="allcitys">
+                            <a id="allcity" class="activecolor">全国</a>
+                        </div>
+                    </div>
+                    <div class="container-midlle clearfix" style="border-bottom:1px solid #ccc;">
+                        <span class="recond">最近访问：</span>
+                        <div class="allcitys" id="allCitys"><a name="430700">常德市</a><a name="231102">爱辉区</a></div>
+                    </div>
+                    <div class="container-midlle container-bottom clearfix" id="showcityUl">
+                        <div class="list-item" id="liId0"><span class="recond word word-active">A</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="231102">爱辉区</a><a herf="javascript:;" name="654300">阿勒泰地区</a><a herf="javascript:;" name="360829">安福县</a><a herf="javascript:;" name="430923">安化县</a><a herf="javascript:;" name="340000">安徽</a>
+                                <a herf="javascript:;" name="360123">安义县</a><a herf="javascript:;" name="360726">安远县</a><a herf="javascript:;" name="141026">安泽县</a></div>
+                        </div>
+                        <div class="list-item" id="liId1"><span class="recond word word-active">B</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="220600">白山市</a><a herf="javascript:;" name="610527">白水县</a><a herf="javascript:;" name="620402">白银区</a><a herf="javascript:;" name="120115">宝坻区</a><a herf="javascript:;" name="610300">宝鸡市</a>
+                                <a herf="javascript:;" name="420626">保康县</a><a herf="javascript:;" name="511900">巴中市</a><a herf="javascript:;" name="610427">彬县</a><a herf="javascript:;" name="652700">博尔塔拉蒙古自治州</a></div>
+                        </div>
+                        <div class="list-item" id="liId2"><span class="recond word word-active">C</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="654022">察布查尔锡伯自治县</a><a herf="javascript:;" name="430700">常德市</a><a herf="javascript:;" name="350821">长汀县</a><a herf="javascript:;" name="410728">长垣县</a><a herf="javascript:;" name="211300">朝阳市</a>
+                                <a herf="javascript:;" name="150400">赤峰市</a><a herf="javascript:;" name="509999">重庆</a><a herf="javascript:;" name="360725">崇义县</a></div>
+                        </div>
+                        <div class="list-item" id="liId3"><span class="recond word word-active">D</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="611022">丹凤县</a><a herf="javascript:;" name="420922">大悟县</a><a herf="javascript:;" name="511700">达州市</a><a herf="javascript:;" name="350526">德化县</a><a herf="javascript:;" name="632802">德令哈市</a>
+                                <a herf="javascript:;" name="410185">登封市</a><a herf="javascript:;" name="411381">邓州市</a><a herf="javascript:;" name="361181">德兴市</a><a herf="javascript:;" name="621100">定西市</a><a herf="javascript:;" name="220502">东昌区</a>
+                                <a
+                                    herf="javascript:;" name="220421">东丰县</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId4"><span class="recond word word-active">E</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="422801">恩施市</a><a herf="javascript:;" name="150724">鄂温克族自治旗</a></div>
+                        </div>
+                        <div class="list-item" id="liId5"><span class="recond word word-active">F</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="410926">范县</a><a herf="javascript:;" name="371325">费县</a><a herf="javascript:;" name="433123">凤凰县</a><a herf="javascript:;" name="451223">凤山县</a><a herf="javascript:;" name="141182">汾阳市</a><a herf="javascript:;"
+                                    name="610730">佛坪县</a><a herf="javascript:;" name="350982">福鼎市</a><a herf="javascript:;" name="610822">府谷县</a><a herf="javascript:;" name="350000">福建</a><a herf="javascript:;" name="220621">抚松县</a></div>
+                        </div>
+                        <div class="list-item" id="liId6"><span class="recond word word-active">G</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="620000">甘肃</a><a herf="javascript:;" name="130182">藁城市</a><a herf="javascript:;" name="150785">根河市</a><a herf="javascript:;" name="511600">广安市</a><a herf="javascript:;" name="361030">广昌县</a><a herf="javascript:;"
+                                    name="440000">广东</a><a herf="javascript:;" name="431027">桂东县</a><a herf="javascript:;" name="450881">桂平市</a></div>
+                        </div>
+                        <div class="list-item" id="liId7"><span class="recond word word-active">H</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="652201">哈密市</a><a herf="javascript:;" name="610902">汉滨区</a><a herf="javascript:;" name="610581">韩城市</a><a herf="javascript:;" name="130000">河北</a><a herf="javascript:;" name="371312">河东区</a><a herf="javascript:;"
+                                    name="652827">和静县</a><a herf="javascript:;" name="140882">河津市</a><a herf="javascript:;" name="410000">河南</a><a herf="javascript:;" name="610524">合阳县</a><a herf="javascript:;" name="532529">红河县</a><a herf="javascript:;"
+                                    name="431200">怀化市</a><a herf="javascript:;" name="110116">怀柔区</a><a herf="javascript:;" name="370211">黄岛区</a><a herf="javascript:;" name="130983">黄骅市</a><a herf="javascript:;" name="430623">华容县</a><a herf="javascript:;"
+                                    name="420000">湖北</a><a herf="javascript:;" name="360733">会昌县</a><a herf="javascript:;" name="430000">湖南</a><a herf="javascript:;" name="654023">霍城县</a><a herf="javascript:;" name="341522">霍邱县</a></div>
+                        </div>
+                        <div class="list-item" id="liId8"><span class="recond word word-active">J</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="511304">嘉陵区</a><a herf="javascript:;" name="320000">江苏</a><a herf="javascript:;" name="360000">江西</a><a herf="javascript:;" name="220582">集安市</a><a herf="javascript:;" name="220000">吉林</a><a herf="javascript:;"
+                                    name="341502">金安区</a><a herf="javascript:;" name="620300">金昌市</a><a herf="javascript:;" name="360925">靖安县</a><a herf="javascript:;" name="610824">靖边县</a><a herf="javascript:;" name="360881">井冈山市</a><a herf="javascript:;"
+                                    name="420800">荆门市</a><a herf="javascript:;" name="610423">泾阳县</a><a herf="javascript:;" name="350582">晋江市</a><a herf="javascript:;" name="341524">金寨县</a><a herf="javascript:;" name="360400">九江市</a><a herf="javascript:;"
+                                    name="131181">冀州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId9"><span class="recond word word-active">L</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="410225">兰考县</a><a herf="javascript:;" name="130225">乐亭县</a><a herf="javascript:;" name="440881">廉江市</a><a herf="javascript:;" name="210000">辽宁</a><a herf="javascript:;" name="211000">辽阳市</a><a herf="javascript:;"
+                                    name="211021">辽阳县</a><a herf="javascript:;" name="361022">黎川县</a><a herf="javascript:;" name="450721">灵山县</a><a herf="javascript:;" name="220322">梨树县</a><a herf="javascript:;" name="4690216">龙河镇</a><a herf="javascript:;"
+                                    name="360727">龙南县</a><a herf="javascript:;" name="130824">滦平县</a><a herf="javascript:;" name="411100">漯河市</a><a herf="javascript:;" name="653224">洛浦县</a><a herf="javascript:;" name="350123">罗源县</a><a herf="javascript:;"
+                                    name="360323">芦溪县</a><a herf="javascript:;" name="411628">鹿邑县</a></div>
+                        </div>
+                        <div class="list-item" id="liId10"><span class="recond word word-active">M</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="420302">茅箭区</a><a herf="javascript:;" name="610725">勉县</a><a herf="javascript:;" name="150722">莫力达瓦达斡尔族自治旗</a></div>
+                        </div>
+                        <div class="list-item" id="liId11"><span class="recond word word-active">N</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="360100">南昌市</a><a herf="javascript:;" name="361021">南城县</a><a herf="javascript:;" name="361023">南丰县</a><a herf="javascript:;" name="360782">南康市</a><a herf="javascript:;" name="430921">南县</a><a herf="javascript:;"
+                                    name="150000">内蒙古</a><a herf="javascript:;" name="360730">宁都县</a><a herf="javascript:;" name="120221">宁河区</a><a herf="javascript:;" name="640000">宁夏</a></div>
+                        </div>
+                        <div class="list-item" id="liId12"><span class="recond word word-active">P</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="360430">彭泽县</a><a herf="javascript:;" name="140321">平定县</a><a herf="javascript:;" name="110117">平谷区</a><a herf="javascript:;" name="140829">平陆县</a><a herf="javascript:;" name="130532">平乡县</a>
+                                <a herf="javascript:;" name="140728">平遥县</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId13"><span class="recond word word-active">Q</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="500114">黔江区</a><a herf="javascript:;" name="340824">潜山县</a><a herf="javascript:;" name="130227">迁西县</a><a herf="javascript:;" name="430426">祁东县</a><a herf="javascript:;" name="410922">清丰县</a>
+                                <a herf="javascript:;" name="630000">青海</a><a herf="javascript:;" name="130534">清河县</a><a herf="javascript:;" name="410882">沁阳市</a><a herf="javascript:;" name="410221">杞县</a><a herf="javascript:;" name="360729">全南县</a></div>
+                        </div>
+                        <div class="list-item" id="liId14"><span class="recond word word-active">R</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="131124">饶阳县</a><a herf="javascript:;" name="360781">瑞金市</a></div>
+                        </div>
+                        <div class="list-item" id="liId15"><span class="recond word word-active">S</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="411200">三门峡市</a><a herf="javascript:;" name="653125">莎车县</a><a herf="javascript:;" name="370000">山东</a><a herf="javascript:;" name="360923">上高县</a><a herf="javascript:;" name="350823">上杭县</a>
+                                <a herf="javascript:;" name="360322">上栗县</a><a herf="javascript:;" name="611023">商南县</a><a herf="javascript:;" name="361100">上饶市</a><a herf="javascript:;" name="361121">上饶县</a><a herf="javascript:;" name="360724">上犹县</a>
+                                <a
+                                    herf="javascript:;" name="330682">上虞区</a>
+                                    <a herf="javascript:;" name="611002">商州区</a><a herf="javascript:;" name="140000">山西</a><a herf="javascript:;" name="610000">陕西</a><a herf="javascript:;" name="430523">邵阳县</a><a herf="javascript:;" name="210100">沈阳市</a>
+                                    <a
+                                        herf="javascript:;" name="130100">石家庄市</a>
+                                        <a herf="javascript:;" name="430726">石门县</a><a herf="javascript:;" name="220501">市辖区</a><a herf="javascript:;" name="510000">四川</a><a herf="javascript:;" name="220300">四平市</a><a herf="javascript:;" name="341324">泗县</a>
+                                        <a
+                                            herf="javascript:;" name="360827">遂川县</a>
+                                            <a herf="javascript:;" name="411403">睢阳区</a><a herf="javascript:;" name="211421">绥中县</a><a herf="javascript:;" name="321311">宿豫区</a><a herf="javascript:;" name="341300">宿州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId16"><span class="recond word word-active">T</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="140726">太谷县</a><a herf="javascript:;" name="410927">台前县</a><a herf="javascript:;" name="130200">唐山市</a><a herf="javascript:;" name="410523">汤阴县</a><a herf="javascript:;" name="430922">桃江县</a>
+                                <a herf="javascript:;" name="654027">特克斯县</a><a herf="javascript:;" name="341181">天长市</a><a herf="javascript:;" name="129999">天津</a><a herf="javascript:;" name="610522">潼关县</a><a herf="javascript:;" name="340700">铜陵市</a>
+                                <a
+                                    herf="javascript:;" name="652100">吐鲁番地区</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId17"><span class="recond word word-active">W</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="361129">万年县</a><a herf="javascript:;" name="410781">卫辉市</a><a herf="javascript:;" name="130533">威县</a><a herf="javascript:;" name="410481">舞钢市</a><a herf="javascript:;" name="430581">武冈市</a><a herf="javascript:;"
+                                    name="360423">武宁县</a><a herf="javascript:;" name="654202">乌苏市</a><a herf="javascript:;" name="150821">五原县</a><a herf="javascript:;" name="361130">婺源县</a></div>
+                        </div>
+                        <div class="list-item" id="liId18"><span class="recond word word-active">X</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="141023">襄汾县</a><a herf="javascript:;" name="420600">襄阳市</a><a herf="javascript:;" name="350322">仙游县</a><a herf="javascript:;" name="341322">萧县</a><a herf="javascript:;" name="410323">新安县</a><a herf="javascript:;"
+                                    name="150727">新巴尔虎右旗</a><a herf="javascript:;" name="360722">信丰县</a><a herf="javascript:;" name="360824">新干县</a><a herf="javascript:;" name="610481">兴平市</a><a herf="javascript:;" name="130125">行唐县</a><a herf="javascript:;"
+                                    name="360427">星子县</a><a herf="javascript:;" name="650000">新疆兵团</a><a herf="javascript:;" name="950000">新疆自治区</a><a herf="javascript:;" name="210181">新民市</a><a herf="javascript:;" name="430528">新宁县</a><a herf="javascript:;"
+                                    name="411500">信阳市</a><a herf="javascript:;" name="360424">修水县</a><a herf="javascript:;" name="540000">西藏</a><a herf="javascript:;" name="360734">寻乌县</a><a herf="javascript:;" name="610429">旬邑县</a><a herf="javascript:;"
+                                    name="320300">徐州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId19"><span class="recond word word-active">Y</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="511800">雅安市</a><a herf="javascript:;" name="610622">延川县</a><a herf="javascript:;" name="410329">伊川县</a><a herf="javascript:;" name="360900">宜春市</a><a herf="javascript:;" name="420506">夷陵区</a>
+                                <a herf="javascript:;" name="420981">应城市</a><a herf="javascript:;" name="421124">英山县</a><a herf="javascript:;" name="371323">沂水县</a><a herf="javascript:;" name="433127">永顺县</a><a herf="javascript:;" name="341503">裕安区</a>
+                                <a
+                                    herf="javascript:;" name="411425">虞城县</a>
+                                    <a herf="javascript:;" name="360622">余江县</a><a herf="javascript:;" name="371725">郓城县</a><a herf="javascript:;" name="361123">玉山县</a><a herf="javascript:;" name="130229">玉田县</a><a herf="javascript:;" name="530400">玉溪市</a></div>
+                        </div>
+                        <div class="list-item" id="liId20"><span class="recond word word-active">Z</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="420683">枣阳市</a><a herf="javascript:;" name="360702">章贡区</a><a herf="javascript:;" name="350881">漳平市</a><a herf="javascript:;" name="350600">漳州市</a><a herf="javascript:;" name="371624">沾化县</a>
+                                <a herf="javascript:;" name="370685">招远市</a><a herf="javascript:;" name="321100">镇江市</a><a herf="javascript:;" name="420527">秭归县</a><a herf="javascript:;" name="520300">遵义市</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="login clearfix">
+                <li id="userInfo"><a class="acolor" onclick="casLogin()">马上登录</a></li>
+                <li class="li-linespace">|</li>
+                <li><a href="javascript:;" class="acolor" onclick="casRegister()">注册</a></li>
+                <li>
+                    <!-- <span id="userInfo" class="fl" style="margin: 0 10px 0 0;"></span> --><a id="carCont" onclick="onShopCarCheckOutButtonClick()" href="//www.gxyj.com/newshoppingcart/query.jhtml?mallId=00000000" class="shopcar">购物车 <span class="shopcar_count" id="shopcarcount">0</span> 
+       <div id="shopcarcontent" widthtag="1" class="cart_f" style="z-index:1555555"><!--
+		<div class="cart_c">
+		<strong>购物车空空的，快装满它吧。</strong>
+	</div>
+		-->
+
+
+
+</div> <i class="navicon i-shoppcart"></i> </a>件 </li>
+                <li class="li-linespace" style="padding-left:10px;">|</li>
+                <li><a href="//www.gxyj.com/member/member.jhtml?menuType=1_1&amp;mallId=00000000" target="_blank">我的商城</a></li>
+                <li class="li-linespace">|</li>
+                <li><a href="//www.gxyj.com/member/memberOrders.jhtml?menuType=2_1&amp;mallId=00000000" target="_blank">我的订单</a></li>
+                <li class="li-linespace">|</li>
+                <li id="kfcenter" class="kfcenter"> <a href="http://www.gxyj.com/help/getHelpInfo.jhtml?mallId=00000000" class="a-kffw anav-v a-bgborder a_pul">客户服务 <i class="navicon i-arrowtop"></i> </a>
+                    <div class="kffwcon clearfix downgx" id="kffwcon">
+                        <a onclick="openCustomerService()" class="heav">在线客服</a>
+                        <a href="javascript:openUrl2('http://www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010052&amp;parentId=0000010029')" target="_blank" class="heav">售后保障</a>
+                        <a href="javascript:openUrl2('http://www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010158&amp;parentId=0000010022')" target="_blank" class="heav">热点问题</a>
+                    </div>
+                    <!-- <div class="hecon clearfix" id="hecon" style="display: none;">
+                        <a onclick="openCustomerService()" class="hea">在线客服</a>
+                        <a  href="javascript:openUrl2('http://www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010052&parentId=0000010029')" target="_blank" class="hea">售后保障</a>
+                        <a  href="javascript:openUrl2('http://www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010158&parentId=0000010022')" target="_blank" class="hea">热点问题</a>
+                    </div> -->
+                </li>
+                <li class="li-linespace">|</li>
+                <li id="navcon" class="shopcenter"> <a href="#" id="a-navall" class="a-navall anav-v a-bgborder a_pul">网站导航 <i class="navicon i-arrowtop"></i> </a>
+                    <div class="shoper downgx" id="shoper">
+                        <ul class="shoplist clearfix">
+                            <li class="farmproduct">
+                                <h3>农产品商城</h3>
+                                <nav class="shopcontentlast clearfix">
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=77&amp;mallId=00000000"> 肉禽蛋奶 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9C&amp;mallId=00000000"> 米面杂粮 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=80&amp;mallId=00000000"> 熟食面点 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=81&amp;mallId=00000000"> 方便速食 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=83&amp;mallId=00000000"> 厨房调味 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=82&amp;mallId=00000000"> 腊味干货 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=86&amp;mallId=00000000"> 饮料冲调 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=85&amp;mallId=00000000"> 休闲零食 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=50&amp;mallId=00000000"> 营养保健 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=88&amp;mallId=00000000"> 中外名酒 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=78&amp;mallId=00000000"> 海鲜水产 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=79&amp;mallId=00000000"> 时令鲜蔬 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=84&amp;mallId=00000000"> 新鲜水果 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=87&amp;mallId=00000000"> 四季茗茶 </a>
+                                </nav>
+                            </li>
+                            <li class="online">
+                                <h3>货郎在线</h3>
+                                <nav class="shopcontentlast clearfix">
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=90&amp;mallId=00000000"> 生活日用 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=89&amp;mallId=00000000"> 精品家纺 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=92&amp;mallId=00000000"> 纸品湿巾 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=91&amp;mallId=00000000"> 厨具日用 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=93&amp;mallId=00000000"> 面部护理 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=94&amp;mallId=00000000"> 洗发护发 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=96&amp;mallId=00000000"> 香水彩妆 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=95&amp;mallId=00000000"> 身体护肤 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=98&amp;mallId=00000000"> 家庭清洁 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=97&amp;mallId=00000000"> 口腔护理 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=99&amp;mallId=00000000"> 时尚女装 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9J&amp;mallId=00000000"> 精品男装 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9L&amp;mallId=00000000"> 鲜花礼品 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9K&amp;mallId=00000000"> 家用电器 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9D&amp;mallId=00000000"> 潮流鞋靴 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9M&amp;mallId=00000000"> 电脑外设 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9E&amp;mallId=00000000"> 精品箱包 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9O&amp;mallId=00000000"> 办公用品 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9G&amp;mallId=00000000"> 袜子配饰 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9H&amp;mallId=00000000"> 母婴护理 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9R&amp;mallId=00000000"> 汽车用品 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9N&amp;mallId=00000000"> 供销e购卡 </a>
+                                </nav>
+                            </li>
+                            <li class="farmshop">
+                                <h3>农资商城</h3>
+                                <nav class="shopcontent clearfix">
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=56&amp;mallId=00000000"> 肥料 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=70&amp;mallId=00000000"> 农药 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=57&amp;mallId=00000000"> 农机具 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=72&amp;mallId=00000000"> 土地 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=71&amp;mallId=00000000"> 苗木 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=58&amp;mallId=00000000" style="margin-right: 0;"> 种子 </a>
+                                    <a href="//www.gxyj.com/searchproducts/pv.jhtml?searchType=CATEGORY&amp;catId=9I&amp;mallId=00000000"> 农业服务 </a>
+                                </nav>
+                            </li>
+                            <li class="farmlife">
+                                <h3>生活服务</h3>
+                                <nav class="shopcontent clearfix">
+                                    <a href="//www.gxyj.com/order/tolivehood.jhtml?activeNum=05&amp;mallId=00000000" target="_blank">缴水费</a>
+                                    <a href="//www.gxyj.com/order/tolivehood.jhtml?activeNum=06&amp;mallId=00000000" target="_blank">缴电费</a>
+                                    <a href="//www.gxyj.com/order/tolivehood.jhtml?activeNum=07&amp;mallId=00000000" target="_blank">煤气费</a>
+                                    <a href="//www.gxyj.com/order/tolivehood.jhtml?activeNum=01&amp;mallId=00000000" target="_blank">手机充值</a>
+                                </nav>
+                            </li>
+                            <li class="service">
+                                <h3>服务指南</h3>
+                                <nav class="shopcontent clearfix">
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010158&amp;parentId=0000010022&amp;mallId=00000000"> 初次到访 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010056&amp;parentId=0000010028&amp;mallId=00000000"> 购物流程 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010074&amp;parentId=0000010071&amp;mallId=00000000"> 关于我们 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010049&amp;parentId=0000010027&amp;mallId=00000000"> 配送标准 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010054&amp;parentId=0000010029&amp;mallId=00000000"> 发票制度 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010048&amp;parentId=0000010027&amp;mallId=00000000"> 签收验货 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010053&amp;parentId=0000010029&amp;mallId=00000000"> 退货流程 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010052&amp;parentId=0000010029&amp;mallId=00000000"> 退换货规则 </a>
+                                    <a href="//www.gxyj.com/basemallInfo/goApplyPage.jhtml?mallId=00000000"> 地方平台搭建 </a>
+                                    <a href="//www.gxyj.com/regionalPlatform/merchantEnter.jhtml?mallId=00000000"> 商户入驻 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010051&amp;parentId=0000010032&amp;mallId=00000000"> 入驻流程 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010050&amp;parentId=0000010032&amp;mallId=00000000"> 入驻须知 </a>
+                                    <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010057&amp;parentId=0000010032&amp;mallId=00000000"> 禁售商品规则 </a>
+                                    <a href="//www.gxyj.com/help/networkApplication.jhtml?mallId=00000000" id="wangdian"> 网点申请 </a>
+                                </nav>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-linespace">|</li>
+                <li><a href="https://b2b.gxyj.com/?mallId=00000000" target="view_frame">供销e通</a></li>
+                <li class="li-linespace">|</li>
+                <li><a href="http://lingpi.gxyj.com/#home?mallId=00000000" target="view_frame">供销e批</a></li>
+                <li class="li-linespace">|</li>
+                <li><a href="http://www.gxyj.com/nznf/index.html?mallId=00000000" target="_blank">农资农服</a></li>
+                <li class="li-linespace">|</li>
+                <li id="hand" class="hand"> <a href="#" class="a-iphone anav-v a-bgborder a_pul"> 手机版 <i class="navicon i-arrowtop"></i> </a>
+                    <div class="iponecode downgx" id="erwei">
+                        <div class="dlcode clearfix">
+                            <div class="dd fl">
+                                <img src="//www.gxyj.com/coop/images/weixin.jpg" width="90" heigh="107">
+                            </div>
+                            <div class="dd fl">
+                                <img src="//www.gxyj.com/coop/images/client.jpg" width="90" heigh="107">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".btn-left").find("span").hover(function() {
+                $(this).addClass("hover");
+            }, function() {
+                $(".btn-left").find("span").removeClass("hover");
+            });
+
+            $(".btn-right").find("span").hover(function() {
+                $(this).addClass("hover");
+            }, function() {
+                $(".btn-right").find("span").removeClass("hover");
+            });
+            $(".btn-left,.btn-right").click(function() {
+                var liWidth = $(".slider-area li").width(),
+                    ul = $(".slider-area ul");
+                if ($(this).hasClass("btn-left")) {
+                    if (ul.not(":animated").length == 1) {
+                        ul.children("li").last().prependTo(ul);
+                        ul.css("left", -liWidth);
+                        ul.animate({
+                            "left": "+=" + liWidth
+                        }, 500);
+                    }
+                } else {
+                    $(".slider-area ul:not(:animated)").animate({
+                        "left": "-=" + liWidth
+                    }, 500, function() {
+                        ul.children("li").first().appendTo(ul);
+                        ul.css("left", 0);
+                    });
+                }
+            });
+            //帮助中心下拉框显示隐藏
+            $("#helpcenter").mouseover(function() {
+                $("#hecon").show();
+            });
+            $("#helpcenter").mouseout(function() {
+                $("#hecon").hide();
+            });
+
+
+
+
+        });
+
+        $("#cityPOST").hover(function() {
+            $(".position-city ").css("display", "block");
+            $("#choseCommonAddress a").addClass("i-arrowbottom");
+        }, function() {
+            $(".position-city ").css("display", "none");
+            $("#choseCommonAddress a").removeClass("i-arrowbottom");
+        });
+        $(".input-contaner input").focus(function() {
+            $(this).addClass('ipme')
+        });
+
+
+
+        $('#container-header-right').mouseover(function() {
+            var searchKeyword = jQuery.trim($("#searchKeyword").val());
+            if (searchKeyword != null && searchKeyword != "请选择输入地区中文及英文字母" && searchKeyword != "") {
+                $("#searchKeywork").show();
+            } else {
+                $("#searchKeywork").hide();
+            }
+
+        }).mouseout(function() {
+            $("#searchKeywork").hide();
+
+        });
+        $("#searchKeywork").on("click", "a", openWindowSelect);
+        $("#allcity").click(openWindow);
+        $("#showcityUl").on("click", "a", openWindowClick);
+        $("#allCitys").on("click", "a", openWindowCache);
+    </script>
+    <link href="//www.gxyj.com/coop/styles/css/new-index.css?version=4821" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://www.gxyj.com/coop/scripts/js/loadNavigationBarInfo.js"></script>
+    <script type="text/javascript" src="http://www.gxyj.com/coop/scripts/js/loadNewLogo.js"></script>
+    <div id="newLogo" class="head_bottom">
+        <!-- <div class="head_bottomL">
+					<a href="">
+				<img src="//www.gxyj.com/coop/images/2018newLogo.png" />
+			</a>
+			</div> -->
+        <div id="previewCodeBox" class="previewCodeBox">
+        </div>
+        <div class="head_bottomL">
+            <a href="http://www.gxyj.com/index.html" target="_self"><img src="http://image.gxyj.com/v4/images/2/operationDefault/1523351768441.png"></a>
+        </div>
+    </div>
+    <div class="menubox" id="menubox">
+        <s class="s_shadow"></s>
+        <div class="menu w clearfix">
+            <div class="fl navgationWrap" id="newNavigationStairAndSec">
+                <ul class="nav_tab clearfix">
+                    <li class="nvliindex"><a href="http://www.gxyj.com/index.html" class="nva_gx current"><i class="i_ico"></i> 首页</a></li>
+                    <li class="nvli"><a href="http://www.gxyj.com/searchproducts/pv.jhtml?mallId=00000000&amp;searchType=CATEGORY&amp;catId=87001" target="_blank" class="nva_gx"><i class="i_ico"></i>春茶</a></li>
+                    <li class="nvli"><a href="http://www.gxyj.com/searchproducts/pv.jhtml?mallId=00000000&amp;searchType=CATEGORY&amp;catId=85002" target="_blank" class="nva_gx"><i class="i_ico"></i>坚果</a></li>
+                    <li class="nvli"><a href="http://www.gxyj.com/searchproducts/pv.jhtml?mallId=00000000&amp;searchType=CATEGORY&amp;catId=9C003" target="_blank" class="nva_gx"><i class="i_ico"></i>杂粮</a></li>
+                    <li class="nvli"><a href="http://www.gxyj.com/searchproducts/pv.jhtml?mallId=00000000&amp;searchType=CATEGORY&amp;catId=85003" target="_blank" class="nva_gx"><i class="i_ico"></i>蜜饯</a></li>
+                    <li class="nvli"><a href="http://www.gxyj.com/searchproducts/pv.jhtml?mallId=00000000&amp;searchType=CATEGORY&amp;catId=84" target="_blank" class="nva_gx"><i class="i_ico"></i>鲜果</a></li>
+                </ul>
+                <div class="pclassall"><a href="http://www.gxyj.com/getAllProductCategoryList.jhtml?mallId=00000000" target="_blank">全部&gt;</a></div>
+                <a class="yx-cp-tabNav-split nvliarea"></a><a class="nvliarea nva_gx" href="http://www.gxyj.com/active/xzqcpc/index.html" target="_blank">寻真</a><a class="nvliarea nva_gx" href="http://www.gxyj.com/shop/index.jhtml?shopId=010101&amp;mallId=00000000" target="_blank">特产推荐</a>
+                <a class="nvliarea nva_gx" href="http://www.gxyj.com/fpzq/index.html" target="_blank">扶贫专区</a><a class="nvliarea nva_gx" href="http://www.gxyj.com/dfptlby/index.html" target="_blank">地方平台</a></div>
+            <!--搜索栏-->
+            <div class="head_botomR search_box">
+                <form name="searchForm" target="_blank">
+                    <input type="hidden" name="searchType" id="searchType" value="">
+                    <input type="hidden" name="selectCatId" value="">
+                    <input type="hidden" name="mallId" id="queryHiddenMallId" value="00000000">
+                    <input name="query" placeholder="" class="text ac_input" type="text" id="query" size="45" maxlength="45" value="" onblur="query_blur()" onfocus="query_focus()" onkeydown="query_keydown()" autocomplete="off">
+                    <input type="hidden" name="prodPropPage" id="prodPropPage" value="">
+                </form>
+                <a href="javascript:void(0);" id="queryButton" class="button"> <span class="icon"></span> </a>
+                <input type="hidden" id="defaultKeyValue" value="伦晚">
+                <input type="hidden" id="defaultKeyCatId" value="">
+                <input type="hidden" id="defaultKeyUrl" value="http://www.gxyj.com/active/xzqcpc/index.html">
+            </div>
+        </div>
+    </div>
+    <script>
+        var mallId;
+        var localUrl = location.href;
+        if (localUrl.indexOf("product.gxyj.com") >= 0) {
+            mallId = Utils.getCookie("mallId");;
+            $("#coopMallId").val(mallId);
+        } else {
+            mallId = $("#coopMallId").val();
+        }
+        if (mallId == undefined) {
+            mallId = "00000000";
+        }
+        var channelType = $("#coopChannelTypeId").val();
+        var parameterValues = $("#coopParameterValuesId").val();
+        if ((mallId == "00000000" && channelType == "1" && parameterValues == "3") || (location.search.substring(1).indexOf("prodPropPage=2")) > 0) {
+            $("#queryButton1").show(); //显示,参数说明同上
+        }
+        if ($("#cityPOST").length > 0) {
+            initFristPageCommonAddress(mallId, channelType, parameterValues);
+            queryChildCommonAddressNew();
+            loadCitycache();
+        } else {
+            initFristPageCommonAddressOld(mallId, channelType, parameterValues);
+        }
+    </script>
+    <script>
+        $(function() {
+            var keyword = $("#keyword").val();
+            if (keyword) {
+                $("#query").val(keyword);
+            }
+        })
+    </script>
+    <!--body-->
+    <script type="text/javascript">
+        $(function() {
+            var container = $('#masonry');
+            container.imagesLoaded(function() {
+                container.masonry({
+                    itemSelector: '.b_col',
+                    gutterWidth: 5,
+                    isAnimated: true
+                });
+            });
+        });
+
+        function hiddenButton() {
+            $('#shopCarId').hide();
+        }
+
+        function jumpingButton() {
+            window.location.href = "/member/memberedit.jhtml?menuType=1_3";
+        }
+    </script>
+    <!--脚步-->
+    <script type="text/javascript">
+        $(function() {
+            $(".btn-left").find("span").hover(function() {
+                $(this).addClass("hover");
+            }, function() {
+                $(".btn-left").find("span").removeClass("hover");
+            });
+
+            $(".btn-right").find("span").hover(function() {
+                $(this).addClass("hover");
+            }, function() {
+                $(".btn-right").find("span").removeClass("hover");
+            });
+            $(".btn-left,.btn-right").click(function() {
+                var liWidth = $(".slider-area li").width(),
+                    ul = $(".slider-area ul");
+                if ($(this).hasClass("btn-left")) {
+                    if (ul.not(":animated").length == 1) {
+                        ul.children("li").last().prependTo(ul);
+                        ul.css("left", -liWidth);
+                        ul.animate({
+                            "left": "+=" + liWidth
+                        }, 500);
+                    }
+                } else {
+                    $(".slider-area ul:not(:animated)").animate({
+                        "left": "-=" + liWidth
+                    }, 500, function() {
+                        ul.children("li").first().appendTo(ul);
+                        ul.css("left", 0);
+                    });
+                }
+            });
+        });
+
+        $("#cityPOST").hover(function() {
+            $(".position-city ").css("display", "block");
+        }, function() {
+            $(".position-city ").css("display", "none");
+        });
+        $(".input-contaner input").focus(function() {
+            $(this).addClass('ipme');
+        })
+
+        $('#container-header-right').mouseover(function() {
+            var searchKeyword = jQuery.trim($("#searchKeyword").val());
+            if (searchKeyword != null && searchKeyword != "请选择输入地区中文及英文字母" && searchKeyword != "") {
+                $("#searchKeywork").show();
+            } else {
+                $("#searchKeywork").hide();
+            }
+        }).mouseout(function() {
+            $("#searchKeywork").hide();
+        });
+        $("#searchKeywork").on("click", "a", openWindowSelect);
+        $("#allcity").click(openWindow);
+        $("#showcityUl").on("click", "a", openWindowClick);
+        $("#allCitys").on("click", "a", openWindowCache);
+    </script>
+    <!-- Start Alexa Certify Javascript -->
+    <script type="text/javascript">
+        _atrk_opts = {
+            atrk_acct: "m82ep1IW1d10uW",
+            domain: "gxyj.com",
+            dynamic: true
+        };
+        (function() {
+            var as = document.createElement('script');
+            as.type = 'text/javascript';
+            as.async = true;
+            as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(as, s);
+        })();
+    </script>
+    <noscript>
+   <img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=m82ep1IW1d10uW" style="display:none" height="1" width="1" alt="" />
+  </noscript>
+    <!-- End Alexa Certify Javascript -->
+    <link href="//www.gxyj.com/coop/styles/css/nindex-page.css?version=4821" rel="stylesheet" type="text/css">
+    <div class="floor-wrap">
+        <div class="main1">
+            <div class="clearfix">
+                <div class="new_banner">
+                    <div class="slideBox1">
+                        <div class="bd" id="adListAjax">
+                            <ul>
+                                <li style="display: none;">
+                                    <a target="_blank" href="http://www.gxyj.com/active/xzqcpc/index.html?mallId=00000000"><img src="http://image.gxyj.com/v4/images/2/operationDefault/1524539576721.jpg"></a>
+                                </li>
+                                <li style="display: list-item;">
+                                    <a target="_blank" href="http://www.gxyj.com/active/lcmfpc/index.html?mallId=00000000"><img src="http://image.gxyj.com/v4/images/3/operationDefault/1525771546950.jpg"></a>
+                                </li>
+                                <li style="display: none;">
+                                    <a target="_blank" href="http://www.gxyj.com/active/gxmqpc/index.html?mallId=00000000"><img src="http://image.gxyj.com/v4/images/2/operationDefault/1525684210669.jpg"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hd">
+                            <ul>
+                                <li class="">1</li>
+                                <li class="on">2</li>
+                                <li class="">3</li>
+                            </ul>
+                        </div>
+                        <!-- <div class="hd">
+        							<ul></ul>
+        						</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 供销精品-好店推荐开始 -->
+        <div id="w_floor_2" class="gx-rerev w">
+            <div class="clearfix gx-rev">
+                <!-- 供销精品开始 -->
+                <div class="gx_jp gx_wh">
+                    <div class="gx_topv clearfix">
+                        <div class="topv_left fl">
+                            <div class="topv_leftc clearfix">
+                                <h2>供销有好店</h2>
+                                <span class="sp-txt">精品好货 一站购齐</span>
+                            </div>
+                        </div>
+                        <div class="topv-right fr">
+                            <a href="http://www.gxyj.com/shop/index.jhtml?shopId=030466&amp;mallId=00000000" target="_blank">更多 <i class="morev"></i></a>
+                        </div>
+                    </div>
+                    <div class="pic_v">
+                        <a target="_blank" href="http://www.gxyj.com/shop/index.jhtml?shopId=030466&amp;mallId=00000000"> <img class="lazy" src="http://image.gxyj.com/v4/images/2/operationDefault/1523865743801.jpg" alt=""></a>
+                    </div>
+                    <div class="pro_vlist">
+                        <ul class="clearfix">
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000126448.html?mallId=00000000">
+                                    <div class="prov_img">
+                                        <img class="lazy" src="http://image.gxyj.com/v4/images/1/operationDefault/1523865908080.jpg" alt="">
+                                    </div>
+                                    <p class="titlev tac">云南石林人参果5斤装</p>
+                                    <p class="kgp tac">清甜味 还能炒菜吃</p>
+                                    <p class="pricev tac"> <i>￥</i> <em>33.90</em> </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000109385.html?mallId=00000000">
+                                    <div class="prov_img">
+                                        <img class="lazy" src="http://image.gxyj.com/v4/images/3/operationDefault/1523865974046.jpg" alt="">
+                                    </div>
+                                    <p class="titlev tac">海南红心木瓜8斤包邮</p>
+                                    <p class="kgp tac">来自热带 热情似火的甜</p>
+                                    <p class="pricev tac"> <i>￥</i> <em>24.80</em> </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000108180.html?mallId=00000000">
+                                    <div class="prov_img">
+                                        <img class="lazy" src="http://image.gxyj.com/v4/images/4/operationDefault/1523865943895.jpg" alt="">
+                                    </div>
+                                    <p class="titlev tac">广西田东农家香蕉</p>
+                                    <p class="kgp tac">不催熟 自然味</p>
+                                    <p class="pricev tac"> <i>￥</i> <em>23.00</em> </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 供销精品结束 -->
+                <!-- 好店推荐开始 -->
+                <!-- 供销精品开始 -->
+                <div class="gx_shop gx_wh">
+                    <div class="gx_topv clearfix">
+                        <div class="topv_left fl">
+                            <div class="topv_leftc clearfix">
+                                <h2>e家心选</h2>
+                                <span class="sp-txt">用心选 放心吃</span>
+                            </div>
+                        </div>
+                        <input type="hidden" value="0000000001" id="goodShopPageId">
+                        <div class="topv-right fr">
+                            <a id="goodShop" href="http://www.gxyj.com/ehomeSelection.jhtml?pageId=0000000001&amp;mallId=00000000" target="_blank">更多 <i class="morev"></i></a>
+                        </div>
+                    </div>
+                    <div class="pic_vshop clearfix">
+                        <a href="http://www.gxyj.com/eHomeDetil.jhtml?articleId=000000000001&amp;pageId=0000000001&amp;mallId=00000000" target="_blank" class="imgbaner">
+                            <div class="imgv">
+                                <img class="lazy" src="http://image.gxyj.com/v4/images/2/operationDefault/1523241789269.jpg" alt="">
+                            </div>
+                        </a>
+                        <a href="http://www.gxyj.com/eHomeDetil.jhtml?articleId=000000000001&amp;pageId=0000000001&amp;mallId=00000000" target="_blank" class="asm">
+                            <div class="textv">
+                                <h3>无瓜子 不成活</h3>
+                                <p class="ptext"> 从前听人说：中国人人人具有三种博士的资格：拿筷子博士、吹煤头纸博士、吃瓜子博士。 </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pro_vlist">
+                        <ul class="clearfix">
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000094670.html?mallId=00000000">
+                                    <div class="prov_img">
+                                        <img class="lazy" src="http://image.gxyj.com/v4/images/4/operationDefault/1524537160803.jpg" alt="">
+                                    </div>
+                                    <p class="titlev tac">谷小欠手选大瓜子</p>
+                                    <p class="kgp tac">核桃味焦糖味 颗颗饱满</p>
+                                    <p class="pricev tac"> <i>￥</i> <em>21.90</em> </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000049509.html?mallId=00000000">
+                                    <div class="prov_img">
+                                        <img class="lazy" src="http://image.gxyj.com/v4/images/1/operationDefault/1524537375720.jpg" alt="">
+                                    </div>
+                                    <p class="titlev tac">山之彩 夏威夷果200g</p>
+                                    <p class="kgp tac">浓浓奶油味儿 送开壳器</p>
+                                    <p class="pricev tac"> <i>￥</i> <em>17.90</em> </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000048934.html?mallId=00000000">
+                                    <div class="prov_img">
+                                        <img class="lazy" src="http://image.gxyj.com/v4/images/2/operationDefault/1524537915161.jpg" alt="">
+                                    </div>
+                                    <p class="titlev tac">新疆原味薄皮核桃400g</p>
+                                    <p class="kgp tac">兵团直营 严格筛选</p>
+                                    <p class="pricev tac"> <i>￥</i> <em>39.80</em> </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 好店推荐结束 -->
+            </div>
+        </div>
+        <!-- 供销精品-好店推荐结束 -->
+        <div id="w_floor_3" class="floor_wrapper w floor">
+            <div class="goods_txt Title">
+                刁/钻/口/味
+                <span> 零食诱惑 <i class="i_ico i_ico_sg"></i> </span> 一/次/满/足
+            </div>
+            <div class="mc sgmc bgshodow">
+                <div class="re-cirbg">
+                    <img src="http://image.gxyj.com/v4/images/3/operationDefault/1523867297246.jpg">
+                </div>
+                <div class="side">
+                    <div class="banner">
+                        <a target="_blank" href="http://product.gxyj.com/0000134948.html?mallId=00000000"> <img class="lazy" data-echo="http://image.gxyj.com/v4/images/2/operationDefault/1524704170293.jpg" alt=""> </a>
+                        <a target="_blank" href="http://product.gxyj.com/0000137160.html?mallId=00000000"> <img class="lazy" data-echo="http://image.gxyj.com/v4/images/2/operationDefault/1523867350025.jpg" alt=""> </a>
+                    </div>
+                </div>
+                <div class="mc_col">
+                    <div class="mc_inner">
+                        <ul class="p_list clearfix">
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000133727.html?mallId=00000000">
+                                    <div class="p_pic">
+                                        <img class="lazy" data-echo="http://image.gxyj.com/v4/images/4/operationDefault/1523867648503.jpg" alt="">
+                                    </div>
+                                    <div class="p_name">
+                                        四川早枇杷
+                                    </div>
+                                    <p class="kgp tac">大果1.5kg顺丰包邮</p>
+                                    <div class="p_price tac">
+                                        <i>￥</i>
+                                        <em>128.00</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000132877.html?mallId=00000000">
+                                    <div class="p_pic">
+                                        <img class="lazy" data-echo="http://image.gxyj.com/v4/images/4/operationDefault/1524015767067.jpg" alt="">
+                                    </div>
+                                    <div class="p_name">
+                                        白牦牛肉干150克/袋
+                                    </div>
+                                    <p class="kgp tac">甘肃武威天祝特产</p>
+                                    <div class="p_price tac">
+                                        <i>￥</i>
+                                        <em>50.00</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000107367.html?mallId=00000000">
+                                    <div class="p_pic">
+                                        <img class="lazy" data-echo="http://image.gxyj.com/v4/images/4/operationDefault/1523867578163.jpg" alt="">
+                                    </div>
+                                    <div class="p_name">
+                                        陕西白水苹果
+                                    </div>
+                                    <p class="kgp tac">70-75果 5斤包邮</p>
+                                    <div class="p_price tac">
+                                        <i>￥</i>
+                                        <em>23.90</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000107363.html?mallId=00000000">
+                                    <div class="p_pic">
+                                        <img class="lazy" data-echo="http://image.gxyj.com/v4/images/2/operationDefault/1523867608913.jpg" alt="">
+                                    </div>
+                                    <div class="p_name">
+                                        兵团老农新疆葡萄干
+                                    </div>
+                                    <p class="kgp tac">七色组合350g</p>
+                                    <div class="p_price tac">
+                                        <i>￥</i>
+                                        <em>29.80</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000106423.html?mallId=00000000">
+                                    <div class="p_pic">
+                                        <img class="lazy" data-echo="http://image.gxyj.com/v4/images/4/operationDefault/1523867618663.jpg" alt="">
+                                    </div>
+                                    <div class="p_name">
+                                        陕西丫丫秋葵脆片
+                                    </div>
+                                    <p class="kgp tac">2袋装&nbsp;一咬满口脆</p>
+                                    <div class="p_price tac">
+                                        <i>￥</i>
+                                        <em>12.80</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000101619.html?mallId=00000000">
+                                    <div class="p_pic">
+                                        <img class="lazy" data-echo="http://image.gxyj.com/v4/images/3/operationDefault/1523867588442.jpg" alt="">
+                                    </div>
+                                    <div class="p_name">
+                                        马铃薯脆条 40g
+                                    </div>
+                                    <p class="kgp tac">土豆控超满足 十包包邮</p>
+                                    <div class="p_price tac">
+                                        <i>￥</i>
+                                        <em>3.00</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000049511.html?mallId=00000000">
+                                    <div class="p_pic">
+                                        <img class="lazy" data-echo="http://image.gxyj.com/v4/images/3/operationDefault/1523867566266.jpg" alt="">
+                                    </div>
+                                    <div class="p_name">
+                                        碧根果仁100g×2袋
+                                    </div>
+                                    <p class="kgp tac">不用剥壳大口吃</p>
+                                    <div class="p_price tac">
+                                        <i>￥</i>
+                                        <em>29.90</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000094932.html?mallId=00000000">
+                                    <div class="p_pic">
+                                        <img class="lazy" data-echo="http://image.gxyj.com/v4/images/1/operationDefault/1523867639176.jpg" alt="">
+                                    </div>
+                                    <div class="p_name">
+                                        麻辣兔头即食装
+                                    </div>
+                                    <p class="kgp tac">四川宜宾特产</p>
+                                    <div class="p_price tac">
+                                        <i>￥</i>
+                                        <em>8.90</em>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="w_floor_4" class="floor_wrapper w floor">
+            <div class="ls-cir">
+                <img src="http://image.gxyj.com/v4/images/3/operationDefault/1523867868434.jpg">
+            </div>
+            <div class="goods_txt Title">
+                2018/新/茶
+                <span> 匠心好茶 <i class="i_ico i_ico_sg"></i> </span> 产/地/直/供
+            </div>
+            <div class="mc sgmc bgshodow">
+                <div class="side">
+                    <div class="banner-lsgh">
+                        <a target="_blank" href="http://product.gxyj.com/0000057116.html?mallId=00000000"> <img class="lazy" data-echo="http://image.gxyj.com/v4/images/2/operationDefault/1523867912341.jpg" alt=""> </a>
+                    </div>
+                </div>
+                <div class="mc_col">
+                    <div class="mc_inner">
+                        <ul class="p_list_lsgh clearfix">
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000137401.html?mallId=00000000"> <img class="lazy" data-echo="http://image.gxyj.com/v4/images/4/operationDefault/1523868411603.jpg" alt=""> </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000136578.html?mallId=00000000"> <img class="lazy" data-echo="http://image.gxyj.com/v4/images/3/operationDefault/1523868440998.jpg" alt=""> </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000063234.html?mallId=00000000"> <img class="lazy" data-echo="http://image.gxyj.com/v4/images/2/operationDefault/1524798441961.jpg" alt=""> </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://product.gxyj.com/0000134768.html?mallId=00000000"> <img class="lazy" data-echo="http://image.gxyj.com/v4/images/1/operationDefault/1523868421840.jpg" alt=""> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floor"></div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".new_banner .slideBox1").slide({
+                titCell: ".hd ul",
+                mainCell: ".bd ul",
+                effect: "fade",
+                easing: "swing",
+                autoPlay: true,
+                autoPage: true,
+                interTime: 3000,
+                delayTime: 500
+            });
+        });
+    </script>
+    <div id="elevatorNew" class="elevator">
+        <div class="tab_cart">
+            <a href="newshoppingcart/query.jhtml?mallId=00000000" target="_blank" class="buycart i_ico2"></a>
+            <a id="carttext" href="newshoppingcart/query.jhtml?mallId=00000000" target="_blank" class="carttext">购物车</a>
+        </div>
+        <ul>
+            <li>
+                <a href="#w_floor_3"> <span class="txt">零食诱惑</span> </a>
+            </li>
+            <li>
+                <a href="#w_floor_4"> <span class="txt">匠心好茶</span> </a>
+            </li>
+        </ul>
+        <div class="contact_service">
+            <a class="i_ico2" onclick="openCustomerService()"></a>
+            <a id="ser_kf" class="text" onclick="openCustomerService()">联系客服</a>
+        </div>
+        <div class="scroll_top">
+            <a id="gotop" class="i_ico2" href="javascript:void(0)"></a>
+            <a id="gotoptext" class="gttext">回到顶部</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://www.gxyj.com/coop/scripts/js/echo.min.js?version=4821"></script>
+    <script>
+        Echo.init({
+            offset: 0,
+            throttle: 0
+        });
+    </script>
+    <!--统一alert弹窗提示-->
+    <div id="alertJqm" native="native" class="alert jqmWindow">
+        <div class="modal_header">
+            <span class="close"></span>
+            <h3>友情提示</h3>
+        </div>
+        <div id="alertInfo" style="text-align: left;margin-left: 33px;">
+        </div>
+        <div class="tac cfx padb20">
+            <input type="button" class="btn btn_org bt_save" value="确定">
+        </div>
+    </div>
+    <script language="javascript">
+        if ($("#alertJqmFlag").val() != "false") {
+            window.alertJqmInfo = function(msg, func, params) {
+                jQuery("#alertJqm").jqm({
+                    modal: true,
+                    onShow: function(m) {
+                        m.o.css('z-index', 3100).show();
+                        m.w.css('z-index', 3200).show();
+                    }
+                });
+                jQuery("#alertJqm .close").one('click', function() {
+                    jQuery("#alertJqm").jqmHide();
+                    if (func) {
+                        if (params) {
+                            func(params);
+                            params = "";
+                        } else {
+                            func();
+                        }
+                        func = "";
+                    }
+                });
+                jQuery("#alertJqm .bt_save").one('click', function() {
+                    jQuery("#alertJqm").jqmHide();
+                    if (func) {
+                        if (params) {
+                            func(params);
+                            params = "";
+                        } else {
+                            func();
+                        }
+                        func = "";
+                    }
+                });
+                jQuery("#alertInfo").text(msg);
+                jQuery("#alertJqm").jqmShow();
+            }
+        } else {
+            $("#alertJqm[native='native']").remove();
+        }
+    </script>
+    <!--统一confirm弹窗提示-->
+    <div id="confirmJqm" native="native" class="alert jqmWindow">
+        <div class="modal_header">
+            <span class="close"></span>
+            <h3>友情提示</h3>
+        </div>
+        <div id="confirmInfo" class="cont" style="width:95%;">
+        </div>
+        <div class="tac cfx padb20">
+            <input type="button" class="btn btn_org bt_save" id="" value="确定">
+            <input type="button" class="btn btn_red ml10 bt_cancel" value="取消">
+        </div>
+    </div>
+    <script language="javascript">
+        if ($("#confirmJqmFlag").val() != "false") {
+            window.closeConfirmInfo = function(cancelFunc, cancelFuncParams) {
+                if (cancelFunc) {
+                    if (cancelFuncParams) {
+                        cancelFunc(cancelFuncParams);
+                    } else {
+                        cancelFunc();
+                    }
+                }
+            }
+
+            window.confirmJqmInfo = function(msg, confirmFunc, confrimFuncParams, cancelFunc, cancelFuncParams) {
+                jQuery('#confirmJqm').jqm({
+                    modal: true
+                });
+                jQuery("#confirmJqm .close").one('click', function() {
+                    if (confirmFunc) {
+                        confirmFunc = "";
+                    }
+                    if (confrimFuncParams) {
+                        confrimFuncParams = "";
+                    }
+                    jQuery("#confirmJqm").jqmHide();
+                    closeConfirmInfo(cancelFunc, cancelFuncParams);
+                });
+                jQuery("#confirmJqm .bt_cancel").one('click', function() {
+                    if (confirmFunc) {
+                        confirmFunc = "";
+                    }
+                    if (confrimFuncParams) {
+                        confrimFuncParams = "";
+                    }
+                    jQuery("#confirmJqm").jqmHide();
+                    closeConfirmInfo(cancelFunc, cancelFuncParams);
+                });
+                jQuery("#confirmInfo").html(msg);
+                jQuery("#confirmJqm").jqmShow();
+                jQuery("#confirmJqm .bt_save").one('click', function() {
+                    jQuery("#confirmJqm").jqmHide();
+                    if (confirmFunc) {
+                        if (confrimFuncParams) {
+                            confirmFunc(confrimFuncParams);
+                        } else {
+                            confirmFunc();
+                        }
+                    }
+                });
+            }
+        } else {
+            $("#confirmJqm[native='native']").remove();
+        }
+    </script>
+    <link rel="stylesheet" href="//www.gxyj.com/coop/styles/newBlackFooter.css?version=4821">
+    <div class="ifooter">
+        <div class="helper clearfix">
+            <ul>
+                <li>
+                    <dl>
+                        <dt>
+        供销业务
+       </dt>
+                        <dd>
+                            <a href="https://b2b.gxyj.com/?mallId=00000000" target="view_frame">供销e通</a>
+                        </dd>
+                        <dd>
+                            <a href="http://lingpi.gxyj.com/#home?mallId=00000000" target="view_frame">供销e批</a>
+                        </dd>
+                        <dd>
+                            <a href="http://www.gxyj.com/nznf/index.html?mallId=00000000" target="view_frame">农资农服</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+        新手上路
+       </dt>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010158&amp;parentId=0000010022&amp;mallId=00000000" target="view_frame">初次到访</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010074&amp;parentId=0000010071&amp;mallId=00000000" target="view_frame">关于我们</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/basemallInfo/goFriendLinksPage.jhtml?mallId=00000000" target="view_frame">友情链接</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+        购物指南
+       </dt>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010056&amp;parentId=0000010028&amp;mallId=00000000" target="view_frame">购物流程</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+        配送服务
+       </dt>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010049&amp;parentId=0000010027&amp;mallId=00000000" target="view_frame">配送标准</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010048&amp;parentId=0000010027&amp;mallId=00000000" target="view_frame">签收验货</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+        售后保障
+       </dt>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010054&amp;parentId=0000010029&amp;mallId=00000000" target="view_frame">发票制度</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010053&amp;parentId=0000010029&amp;mallId=00000000" target="view_frame">退换货流程</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010052&amp;parentId=0000010029&amp;mallId=00000000" target="view_frame">退换货规则</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+        商家入驻
+       </dt>
+                        <dd>
+                            <a href="//www.gxyj.com/basemallInfo/goApplyPage.jhtml?mallId=00000000" target="view_frame">地方平台搭建</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/regionalPlatform/merchantEnter.jhtml?mallId=00000000" target="view_frame">商户入驻</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010057&amp;parentId=0000010032&amp;mallId=00000000" target="view_frame">禁售商品规则</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010051&amp;parentId=0000010032&amp;mallId=00000000" target="view_frame">入驻流程</a>
+                        </dd>
+                        <dd>
+                            <a href="//www.gxyj.com/help/getHelpInfo.jhtml?fid=0000010050&amp;parentId=0000010032&amp;mallId=00000000" target="view_frame">入驻须知</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="gxcoop">
+                <a href="//www.gxyj.com/index.html?mallId=00000000"> <img src="//www.gxyj.com/coop/images/gxcoop.png" alt=""></a>
+            </div>
+            <ul class="wx_col">
+                <li class="clearfix">
+                    <h4>微信公众平台</h4>
+                    <p>
+                        <a href="javascript:void(0)"> <img src="//www.gxyj.com/coop/images/wx-bg1-index.png" width="108" height="108"></a>
+                    </p>
+                </li>
+                <li class="clearfix">
+                    <h4 class="text-middle">下载客户端</h4>
+                    <p>
+                        <a href="javascript:void(0)"> <img src="//www.gxyj.com/coop/images/wx-bg2-index.png" width="108" height="108"></a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright" style="margin:0 auto;">
+            <span>版权所有 供销e家&nbsp;|&nbsp;京ICP备15050565号&nbsp;|&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202000858&amp;mallId=00000000" target="_blank"><img src="http://www.gxyj.com/coop/images/footerFlag.png" style="vertical-align: middle;">京公网安备11011202000858号</a>&nbsp;|&nbsp;<a href="http://www.gxyj.com/active/ynzzpc/blic.html?mallId=00000000" target="_blank">经营执照</a>&nbsp;|&nbsp;京ICP证151138号</span>
+            <div style="display:none;">
+                <div style="display:none;">
+                    <script src="https://s11.cnzz.com/z_stat.php?id=1256538031&amp;web_id=1256538031" language="JavaScript"></script>
+                    <script src="https://c.cnzz.com/core.php?web_id=1256538031&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1256538031&amp;mallId=00000000" target="_blank" title="站长统计">站长统计</a>
+                    <script src="https://jspassport.ssl.qhimg.com/11.0.1.js?0956a2279aab029a2edb0246fc54708a" language="JavaScript"></script>
+                    <script charset="utf-8" src="https://s.ssl.qhres.com/ssl/ab77b6ea7f3fbf79.js"></script>
+                    <script type="text/javascript" src="//www.gxyj.com/coop/scripts/js/T-PC.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+        <div class="copybox">
+            <div class="copyimg">
+                <a id="_pingansec_bottomimagesmall_brand" href="http://si.trustutn.org/info?sn=608161107025316395330&amp;certType=1&amp;mallId=00000000" target="_blank"> <img src="//www.gxyj.com/coop/img/110×40.jpg"> </a>
+                <a href="//www.bj.cyberpolice.cn/index.do?mallId=00000000" target="_blank"> <img src="//www.gxyj.com/coop/img/110×40-1.jpg"> </a>
+                <a href="//www.12377.cn/?mallId=00000000" target="_blank"> <img src="//www.gxyj.com/coop/img/110×40-2.jpg"> </a>
+                <a id="___szfw_logo___" href="https://credit.szfw.org/CX20170620038856130131.html?mallId=00000000" target="_blank"><img src="http://icon.szfw.org/cert.png" border="0"></a>
+                <!--可信网站图片LOGO安装开始-->
+                <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e17062011010268091hfyq000000&amp;size=0"></script><span style="display:inline-block;position:relative;width:auto;"><a href="https://ss.knet.cn/verifyseal.dll?sn=e17062011010268091hfyq000000&amp;ct=df&amp;a=1&amp;pa=0.05000519420851646&amp;mallId=00000000" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a></span>
+                <span id="KXYZ"></span>
+                <!--可信网站图片LOGO安装结束-->
+            </div>
+        </div>
+        <script type="text/javascript">
+            (function() {
+                document.getElementById('___szfw_logo___').oncontextmenu = function() {
+                    return false;
+                }
+            })();
+        </script>
+        <script>
+            //判断是否是活动页
+            $(function() {
+
+                var active_url = window.location.href;
+                if (active_url.indexOf("/newCoopIndex") >= 0) {
+                    $("#footer").css("margin-top", "-51px");
+                    $(".head_bottomL").append('<a href="//www.gxyj.com/index.html" target="_self"><img src="//www.gxyj.com/coop/images/logo11_01.png" style="cursor: pointer;"/></a>');
+                }
+
+            })
+        </script>
+    </div>
+    <script>
+        /* $("#ifooter").ready(function () {
+                        $("#ifooter").css("width", "100%");
+                    }) */
+    </script>
+    <script type="text/javascript">
+        function openWindow(url) {
+            var coop_mall_id = $("#coopMallId").val();
+            if (coop_mall_id == undefined) {
+                coop_mall_id = "00000000";
+            }
+            if (url != '') {
+                //给url拼接mallId
+                var index1 = url.indexOf("?");
+                if (index1 != -1) { //url有参数
+                    index = url.indexOf("mallId=");
+                    if (index != -1) { //url有mallId
+                        index1 = index;
+                        var index2 = url.indexOf("&", index1);
+                        if (index2 == -1) {
+                            index2 = url.length;
+                        }
+                        var keyword = url.substring(index1, index2);
+                        url = url.replace(keyword, "mallId=" + coop_mall_id);
+                    } else {
+                        url = url + "&mallId=" + coop_mall_id;
+                    }
+                } else {
+                    url = url + "?mallId=" + coop_mall_id;
+                }
+                window.open(url);
+            }
+        }
+
+        function queryInfoContent(annouId, mallId) {
+            //根据公告编码查询公告内容 contextPath+"/notice/queryAnnouncementInfo.jhtml?annouId="+annouId
+            openWindow("http://www.gxyj.com/notice/queryAnnouncementInfo.jhtml?annouId=" + annouId + "&mallId=" + mallId);
+
+        }
+    </script>
+
+    <style>
+        #jiaxin-mcs-fixed-dialog {
+            z-index: 999999;
+            position: fixed;
+            display: none;
+            overflow: hidden;
+            background-color: transparent;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+            background-color: transparent
+        }
+        
+        .jiaxin-mcs-fixed-dialog {
+            bottom: 0;
+            right: 60px;
+            width: 360px;
+            height: 480px
+        }
+        
+        #jiaxin-mcs-fixed-dialog iframe {
+            clear: both;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            float: none;
+            background: 0
+        }
+        
+        #jiaxin-mcs-fixed-btn {
+            clear: both;
+            display: none;
+            position: fixed;
+            width: auto;
+            color: #fff;
+            cursor: pointer;
+            height: auto;
+            z-index: 999999
+        }
+        
+        .jiaxin-mcs-fixed-btn {
+            bottom: 150px;
+            right: 0;
+            background-color: #00a4f5;
+            font-size: 16px;
+        }
+        
+        #jiaxin-mcs-fixed-btn img {
+            clear: both;
+            width: 20px;
+            height: 20px;
+            vertical-align: inherit !important;
+        }
+        
+        #jiaxin-mcs-fixed-btn div {
+            clear: both;
+            display: block;
+            width: 18px;
+            padding: 0 10px 10px 10px;
+            margin-top: 10px;
+            text-align: center;
+            overflow-x: hidden;
+            line-height: 1.428571429;
+            word-break: break-all;
+            word-wrap: break-word;
+            letter-spacing: 24px;
+        }
+        
+        #jiaxin-mcs-fixed-btn span {
+            font-family: Arial, "Microsoft YaHei", "微软雅黑", sans-serif;
+            clear: both;
+            display: block;
+            float: left;
+            height: 40px;
+            margin: 0 10px;
+            line-height: 40px;
+            overflow-y: hidden;
+        }
+        
+        #jiaxin-mcs-fixed-btn span img {
+            margin-bottom: -3px;
+            margin-right: 2px
+        }
+        
+        #jiaxin-mcs-fixed-btn a {
+            clear: both;
+            display: block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgba(0, 0, 0, .1);
+            border-radius: 25px;
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);
+            cursor: pointer;
+            text-decoration: none
+        }
+        
+        #jiaxin-mcs-fixed-btn a img {
+            clear: both;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 20px;
+            height: 20px
+        }
+        
+        #jiaxin-mcs-badge {
+            background-color: #FF2254;
+            border-radius: 4px;
+            position: absolute;
+            top: -35px;
+            font-size: 10px;
+            font-style: normal;
+            text-align: center;
+            min-width: 20px;
+            padding: 5px;
+        }
+        
+        .jiaxin-mcs-move-bar {
+            position: fixed;
+            z-index: 9999999;
+            height: 60px;
+            right: 160px;
+            width: 260px;
+            cursor: move;
+        }
+    </style>
+    <div id="jiaxin-mcs-fixed-dialog" class="" style="width: 360px; height: 480px; right: 60px; bottom: 0px; display: none;"><iframe id="jiaxin-mcs-iframe" frameborder="0"></iframe>
+        <div id="jiaxin-mcs-move-bar" class="jiaxin-mcs-move-bar"></div>
+    </div>
+    <div id="jiaxin-mcs-fixed-btn" class="" style="right: 60px; bottom: 0px; display: block;"></div>
+</body>
+
+</html>

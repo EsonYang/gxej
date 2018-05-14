@@ -1,0 +1,81 @@
+body {
+    overflow-x: hidden;
+}
+
+body,
+h1,
+h3,
+h4,
+h2,
+h5,
+h6,
+ul,
+ol,
+p,
+fieldset,
+dd,
+dl,
+input,
+textarea,
+option,
+hr,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h3,
+h4,
+h2,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+a,
+input {
+    outline: none;
+}
+
+body {
+    font: 12px/1em "微软雅黑";
+    color: #666;
+}
+
+.clear:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.clear {
+    zoom: 1;
+}
+
+.border0 {
+    border: none;
+}

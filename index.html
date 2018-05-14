@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>供销e家GXYJ.COM|中华全国供销合作总社指导创办的供销社电子商务全国平台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="css/text.css"> -->
+
+
+</head>
+
+<body>
+    <div id="advertisement">
+        <a href="javascript:;">
+            <img src="picture/1524540226500.jpg" alt="">
+        </a>
+    </div>
+
+    <div id="head_top">
+        <div id="head_nav">
+            <div id="city_list" class="_oBox">
+                <i id="shows"></i>
+                <a>全国</a>
+                <span class="navicon"></span>
+                <div class="position-city" style="display: none;" id="position-city">
+                    <span class="wrong11" id="close"></span>
+                    <div class="container-header clearfix">
+                        <div class="container-header-right" id="container-header-right">
+                            <div class="input-contaner">
+                                <span class="search">地区搜索：</span>
+                                <input id="searchKeyword" type="" name="" value="请选择输入地区中文及英文字母" onblur="if (this.value ==''){this.value ='请选择输入地区中文及英文字母'}" onfocus="if (value =='请选择输入地区中文及英文字母'){value=''}" oninput="searchKeyword()" onpropertychange="searchKeyword()">
+                            </div>
+                            <ul class="search-suggest" style="display:none;" id="searchKeywork">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container-midlle clearfix" style="border-bottom:1px solid #ccc;">
+                        <span class="recond">推荐地区：</span>
+                        <div class="allcitys" id="allcitys">
+                            <a id="allcity" class="activecolor">全国</a>
+                        </div>
+                    </div>
+                    <div class="container-midlle clearfix" style="border-bottom:1px solid #ccc;">
+                        <span class="recond">最近访问：</span>
+
+                    </div>
+                    <div class="container-midlle container-bottom clearfix" id="showcityUl">
+                        <div class="list-item" id="liId0"><span class="recond word word-active">A</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="231102">爱辉区</a><a herf="javascript:;" name="654300">阿勒泰地区</a><a herf="javascript:;" name="360829">安福县</a><a herf="javascript:;" name="430923">安化县</a><a herf="javascript:;" name="340000">安徽</a>
+                                <a herf="javascript:;" name="360123">安义县</a><a herf="javascript:;" name="360726">安远县</a><a herf="javascript:;" name="141026">安泽县</a></div>
+                        </div>
+                        <div class="list-item" id="liId1"><span class="recond word word-active">B</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="220600">白山市</a><a herf="javascript:;" name="610527">白水县</a><a herf="javascript:;" name="620402">白银区</a><a herf="javascript:;" name="120115">宝坻区</a><a herf="javascript:;" name="610300">宝鸡市</a>
+                                <a herf="javascript:;" name="420626">保康县</a><a herf="javascript:;" name="511900">巴中市</a><a herf="javascript:;" name="610427">彬县</a><a herf="javascript:;" name="652700">博尔塔拉蒙古自治州</a></div>
+                        </div>
+                        <div class="list-item" id="liId2"><span class="recond word word-active">C</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="654022">察布查尔锡伯自治县</a><a herf="javascript:;" name="430700">常德市</a><a herf="javascript:;" name="350821">长汀县</a><a herf="javascript:;" name="410728">长垣县</a><a herf="javascript:;" name="211300">朝阳市</a>
+                                <a herf="javascript:;" name="150400">赤峰市</a><a herf="javascript:;" name="509999">重庆</a><a herf="javascript:;" name="360725">崇义县</a></div>
+                        </div>
+                        <div class="list-item" id="liId3"><span class="recond word word-active">D</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="611022">丹凤县</a><a herf="javascript:;" name="420922">大悟县</a><a herf="javascript:;" name="511700">达州市</a><a herf="javascript:;" name="350526">德化县</a><a herf="javascript:;" name="632802">德令哈市</a>
+                                <a herf="javascript:;" name="410185">登封市</a><a herf="javascript:;" name="411381">邓州市</a><a herf="javascript:;" name="361181">德兴市</a><a herf="javascript:;" name="621100">定西市</a><a herf="javascript:;" name="220502">东昌区</a>
+                                <a herf="javascript:;" name="220421">东丰县</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId4"><span class="recond word word-active">E</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="422801">恩施市</a><a herf="javascript:;" name="150724">鄂温克族自治旗</a></div>
+                        </div>
+                        <div class="list-item" id="liId5"><span class="recond word word-active">F</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="410926">范县</a><a herf="javascript:;" name="371325">费县</a><a herf="javascript:;" name="433123">凤凰县</a><a herf="javascript:;" name="451223">凤山县</a><a herf="javascript:;" name="141182">汾阳市</a><a herf="javascript:;"
+                                    name="610730">佛坪县</a><a herf="javascript:;" name="350982">福鼎市</a><a herf="javascript:;" name="610822">府谷县</a><a herf="javascript:;" name="350000">福建</a><a herf="javascript:;" name="220621">抚松县</a></div>
+                        </div>
+                        <div class="list-item" id="liId6"><span class="recond word word-active">G</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="620000">甘肃</a><a herf="javascript:;" name="130182">藁城市</a><a herf="javascript:;" name="150785">根河市</a><a herf="javascript:;" name="511600">广安市</a><a herf="javascript:;" name="361030">广昌县</a><a herf="javascript:;"
+                                    name="440000">广东</a><a herf="javascript:;" name="431027">桂东县</a><a herf="javascript:;" name="450881">桂平市</a></div>
+                        </div>
+                        <div class="list-item" id="liId7"><span class="recond word word-active">H</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="652201">哈密市</a><a herf="javascript:;" name="610902">汉滨区</a><a herf="javascript:;" name="610581">韩城市</a><a herf="javascript:;" name="130000">河北</a><a herf="javascript:;" name="371312">河东区</a><a herf="javascript:;"
+                                    name="652827">和静县</a><a herf="javascript:;" name="140882">河津市</a><a herf="javascript:;" name="410000">河南</a><a herf="javascript:;" name="610524">合阳县</a><a herf="javascript:;" name="532529">红河县</a><a herf="javascript:;"
+                                    name="431200">怀化市</a><a herf="javascript:;" name="110116">怀柔区</a><a herf="javascript:;" name="370211">黄岛区</a><a herf="javascript:;" name="130983">黄骅市</a><a herf="javascript:;" name="430623">华容县</a><a herf="javascript:;"
+                                    name="420000">湖北</a><a herf="javascript:;" name="360733">会昌县</a><a herf="javascript:;" name="430000">湖南</a><a herf="javascript:;" name="654023">霍城县</a><a herf="javascript:;" name="341522">霍邱县</a></div>
+                        </div>
+                        <div class="list-item" id="liId8"><span class="recond word word-active">J</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="511304">嘉陵区</a><a herf="javascript:;" name="320000">江苏</a><a herf="javascript:;" name="360000">江西</a><a herf="javascript:;" name="220582">集安市</a><a herf="javascript:;" name="220000">吉林</a><a herf="javascript:;"
+                                    name="341502">金安区</a><a herf="javascript:;" name="620300">金昌市</a><a herf="javascript:;" name="360925">靖安县</a><a herf="javascript:;" name="610824">靖边县</a><a herf="javascript:;" name="360881">井冈山市</a><a herf="javascript:;"
+                                    name="420800">荆门市</a><a herf="javascript:;" name="610423">泾阳县</a><a herf="javascript:;" name="350582">晋江市</a><a herf="javascript:;" name="341524">金寨县</a><a herf="javascript:;" name="360400">九江市</a><a herf="javascript:;"
+                                    name="131181">冀州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId9"><span class="recond word word-active">L</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="410225">兰考县</a><a herf="javascript:;" name="130225">乐亭县</a><a herf="javascript:;" name="440881">廉江市</a><a herf="javascript:;" name="210000">辽宁</a><a herf="javascript:;" name="211000">辽阳市</a><a herf="javascript:;"
+                                    name="211021">辽阳县</a><a herf="javascript:;" name="361022">黎川县</a><a herf="javascript:;" name="450721">灵山县</a><a herf="javascript:;" name="220322">梨树县</a><a herf="javascript:;" name="4690216">龙河镇</a><a herf="javascript:;"
+                                    name="360727">龙南县</a><a herf="javascript:;" name="130824">滦平县</a><a herf="javascript:;" name="411100">漯河市</a><a herf="javascript:;" name="653224">洛浦县</a><a herf="javascript:;" name="350123">罗源县</a><a herf="javascript:;"
+                                    name="360323">芦溪县</a><a herf="javascript:;" name="411628">鹿邑县</a></div>
+                        </div>
+                        <div class="list-item" id="liId10"><span class="recond word word-active">M</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="420302">茅箭区</a><a herf="javascript:;" name="610725">勉县</a><a herf="javascript:;" name="150722">莫力达瓦达斡尔族自治旗</a></div>
+                        </div>
+                        <div class="list-item" id="liId11"><span class="recond word word-active">N</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="360100">南昌市</a><a herf="javascript:;" name="361021">南城县</a><a herf="javascript:;" name="361023">南丰县</a><a herf="javascript:;" name="360782">南康市</a><a herf="javascript:;" name="430921">南县</a><a herf="javascript:;"
+                                    name="150000">内蒙古</a><a herf="javascript:;" name="360730">宁都县</a><a herf="javascript:;" name="120221">宁河区</a><a herf="javascript:;" name="640000">宁夏</a></div>
+                        </div>
+                        <div class="list-item" id="liId12"><span class="recond word word-active">P</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="360430">彭泽县</a><a herf="javascript:;" name="140321">平定县</a><a herf="javascript:;" name="110117">平谷区</a><a herf="javascript:;" name="140829">平陆县</a><a herf="javascript:;" name="130532">平乡县</a>
+                                <a herf="javascript:;" name="140728">平遥县</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId13"><span class="recond word word-active">Q</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="500114">黔江区</a><a herf="javascript:;" name="340824">潜山县</a><a herf="javascript:;" name="130227">迁西县</a><a herf="javascript:;" name="430426">祁东县</a><a herf="javascript:;" name="410922">清丰县</a>
+                                <a herf="javascript:;" name="630000">青海</a><a herf="javascript:;" name="130534">清河县</a><a herf="javascript:;" name="410882">沁阳市</a><a herf="javascript:;" name="410221">杞县</a><a herf="javascript:;" name="360729">全南县</a></div>
+                        </div>
+                        <div class="list-item" id="liId14"><span class="recond word word-active">R</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="131124">饶阳县</a><a herf="javascript:;" name="360781">瑞金市</a></div>
+                        </div>
+                        <div class="list-item" id="liId15"><span class="recond word word-active">S</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="411200">三门峡市</a><a herf="javascript:;" name="653125">莎车县</a><a herf="javascript:;" name="370000">山东</a><a herf="javascript:;" name="360923">上高县</a><a herf="javascript:;" name="350823">上杭县</a>
+                                <a herf="javascript:;" name="360322">上栗县</a><a herf="javascript:;" name="611023">商南县</a><a herf="javascript:;" name="361100">上饶市</a><a herf="javascript:;" name="361121">上饶县</a><a herf="javascript:;" name="360724">上犹县</a>
+                                <a herf="javascript:;" name="330682">上虞区</a>
+                                <a herf="javascript:;" name="611002">商州区</a><a herf="javascript:;" name="140000">山西</a><a herf="javascript:;" name="610000">陕西</a><a herf="javascript:;" name="430523">邵阳县</a><a herf="javascript:;" name="210100">沈阳市</a>
+                                <a herf="javascript:;" name="130100">石家庄市</a>
+                                <a herf="javascript:;" name="430726">石门县</a><a herf="javascript:;" name="220501">市辖区</a><a herf="javascript:;" name="510000">四川</a><a herf="javascript:;" name="220300">四平市</a><a herf="javascript:;" name="341324">泗县</a>
+                                <a herf="javascript:;" name="360827">遂川县</a>
+                                <a herf="javascript:;" name="411403">睢阳区</a><a herf="javascript:;" name="211421">绥中县</a><a herf="javascript:;" name="321311">宿豫区</a><a herf="javascript:;" name="341300">宿州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId16"><span class="recond word word-active">T</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="140726">太谷县</a><a herf="javascript:;" name="410927">台前县</a><a herf="javascript:;" name="130200">唐山市</a><a herf="javascript:;" name="410523">汤阴县</a><a herf="javascript:;" name="430922">桃江县</a>
+                                <a herf="javascript:;" name="654027">特克斯县</a><a herf="javascript:;" name="341181">天长市</a><a herf="javascript:;" name="129999">天津</a><a herf="javascript:;" name="610522">潼关县</a><a herf="javascript:;" name="340700">铜陵市</a>
+                                <a herf="javascript:;" name="652100">吐鲁番地区</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId17"><span class="recond word word-active">W</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="361129">万年县</a><a herf="javascript:;" name="410781">卫辉市</a><a herf="javascript:;" name="130533">威县</a><a herf="javascript:;" name="410481">舞钢市</a><a herf="javascript:;" name="430581">武冈市</a><a herf="javascript:;"
+                                    name="360423">武宁县</a><a herf="javascript:;" name="654202">乌苏市</a><a herf="javascript:;" name="150821">五原县</a><a herf="javascript:;" name="361130">婺源县</a></div>
+                        </div>
+                        <div class="list-item" id="liId18"><span class="recond word word-active">X</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="141023">襄汾县</a><a herf="javascript:;" name="420600">襄阳市</a><a herf="javascript:;" name="350322">仙游县</a><a herf="javascript:;" name="341322">萧县</a><a herf="javascript:;" name="410323">新安县</a><a herf="javascript:;"
+                                    name="150727">新巴尔虎右旗</a><a herf="javascript:;" name="360722">信丰县</a><a herf="javascript:;" name="360824">新干县</a><a herf="javascript:;" name="610481">兴平市</a><a herf="javascript:;" name="130125">行唐县</a><a herf="javascript:;"
+                                    name="360427">星子县</a><a herf="javascript:;" name="650000">新疆兵团</a><a herf="javascript:;" name="950000">新疆自治区</a><a herf="javascript:;" name="210181">新民市</a><a herf="javascript:;" name="430528">新宁县</a><a herf="javascript:;"
+                                    name="411500">信阳市</a><a herf="javascript:;" name="360424">修水县</a><a herf="javascript:;" name="540000">西藏</a><a herf="javascript:;" name="360734">寻乌县</a><a herf="javascript:;" name="610429">旬邑县</a><a herf="javascript:;"
+                                    name="320300">徐州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId19"><span class="recond word word-active">Y</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="511800">雅安市</a><a herf="javascript:;" name="610622">延川县</a><a herf="javascript:;" name="410329">伊川县</a><a herf="javascript:;" name="360900">宜春市</a><a herf="javascript:;" name="420506">夷陵区</a>
+                                <a herf="javascript:;" name="420981">应城市</a><a herf="javascript:;" name="421124">英山县</a><a herf="javascript:;" name="371323">沂水县</a><a herf="javascript:;" name="433127">永顺县</a><a herf="javascript:;" name="341503">裕安区</a>
+                                <a herf="javascript:;" name="411425">虞城县</a>
+                                <a herf="javascript:;" name="360622">余江县</a><a herf="javascript:;" name="371725">郓城县</a><a herf="javascript:;" name="361123">玉山县</a><a herf="javascript:;" name="130229">玉田县</a><a herf="javascript:;" name="530400">玉溪市</a></div>
+                        </div>
+                        <div class="list-item" id="liId20"><span class="recond word word-active">Z</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="420683">枣阳市</a><a herf="javascript:;" name="360702">章贡区</a><a herf="javascript:;" name="350881">漳平市</a><a herf="javascript:;" name="350600">漳州市</a><a herf="javascript:;" name="371624">沾化县</a>
+                                <a herf="javascript:;" name="370685">招远市</a><a herf="javascript:;" name="321100">镇江市</a><a herf="javascript:;" name="420527">秭归县</a><a herf="javascript:;" name="520300">遵义市</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul id="login">
+                <li id="uesr_info"><a href="" class="a_color">马上登录</a></li>
+                <li class="li_linespace">|</li>
+                <li><a href="" class="a_color">注册</a></li>
+                <li><a href="" id="car_cont" class="shop_car">
+                购物车
+                    <i class="i_shopcar"></i>
+                    <span class="a_color">0</span>
+                    </a>件
+                </li>
+                <li class="li_linespace">|</li>
+                <li><a href="">我的商城</a></li>
+                <li class="li_linespace">|</li>
+                <li><a href="">我的订单</a></li>
+                <li class="li_linespace">|</li>
+                <li id="customer_service" class="_oBox">
+                    <a href="">客户服务
+                    <i class="navicon"></i></a>
+                    <div class="kffwon" id="kffwon">
+                        <a href="">在线客服</a>
+                        <a href="">售后保障</a>
+                        <a href="">热点问题</a>
+                    </div>
+
+                </li>
+                <li class="li_linespace">|</li>
+                <li id="shopNav" class="_oBox">
+                    <a href="" id="shop_center">网站导航<i class="navicon"></i> </a>
+                    <div class="shoper downgx" id="shoper">
+                        <ul class="shoplist clearfix">
+                            <li class="farmproduct">
+                                <h3>农产品商城</h3>
+                                <nav class="shopcontentlast clearfix">
+                                    <a href=""> 肉禽蛋奶 </a>
+                                    <a href=""> 米面杂粮 </a>
+                                    <a href=""> 熟食面点 </a>
+                                    <a href=""> 方便速食 </a>
+                                    <a href=""> 厨房调味 </a>
+                                    <a href=""> 腊味干货 </a>
+                                    <a href=""> 饮料冲调 </a>
+                                    <a href=""> 休闲零食 </a>
+                                    <a href=""> 营养保健 </a>
+                                    <a href=""> 中外名酒 </a>
+                                    <a href=""> 海鲜水产 </a>
+                                    <a href=""> 时令鲜蔬 </a>
+                                    <a href=""> 新鲜水果 </a>
+                                    <a href=""> 四季茗茶 </a>
+                                </nav>
+                            </li>
+                            <li class="online">
+                                <h3>货郎在线</h3>
+                                <nav class="shopcontentlast clearfix">
+                                    <a href=""> 生活日用 </a>
+                                    <a href=""> 精品家纺 </a>
+                                    <a href=""> 纸品湿巾 </a>
+                                    <a href=""> 厨具日用 </a>
+                                    <a href=""> 面部护理 </a>
+                                    <a href=""> 洗发护发 </a>
+                                    <a href=""> 香水彩妆 </a>
+                                    <a href=""> 身体护肤 </a>
+                                    <a href=""> 家庭清洁 </a>
+                                    <a href=""> 口腔护理 </a>
+                                    <a href=""> 时尚女装 </a>
+                                    <a href=""> 精品男装 </a>
+                                    <a href=""> 鲜花礼品 </a>
+                                    <a href=""> 家用电器 </a>
+                                    <a href=""> 潮流鞋靴 </a>
+                                    <a href=""> 电脑外设 </a>
+                                    <a href=""> 精品箱包 </a>
+                                    <a href=""> 办公用品 </a>
+                                    <a href=""> 袜子配饰 </a>
+                                    <a href=""> 母婴护理 </a>
+                                    <a href=""> 汽车用品 </a>
+                                    <a href=""> 供销e购卡 </a>
+                                </nav>
+                            </li>
+                            <li class="farmshop">
+                                <h3>农资商城</h3>
+                                <nav class="shopcontent clearfix">
+                                    <a href=""> 肥料 </a>
+                                    <a href=""> 农药 </a>
+                                    <a href=""> 农机具 </a>
+                                    <a href=""> 土地 </a>
+                                    <a href=""> 苗木 </a>
+                                    <a href="" style="margin-right: 0;"> 种子 </a>
+                                    <a href=""> 农业服务 </a>
+                                </nav>
+                            </li>
+                            <li class="farmlife">
+                                <h3>生活服务</h3>
+                                <nav class="shopcontent clearfix">
+                                    <a href="" target="_blank">缴水费</a>
+                                    <a href="" target="_blank">缴电费</a>
+                                    <a href="" target="_blank">煤气费</a>
+                                    <a href="" target="_blank">手机充值</a>
+                                </nav>
+                            </li>
+                            <li class="service">
+                                <h3>服务指南</h3>
+                                <nav class="shopcontent clearfix">
+                                    <a href=""> 初次到访 </a>
+                                    <a href=""> 购物流程 </a>
+                                    <a href=""> 关于我们 </a>
+                                    <a href=""> 配送标准 </a>
+                                    <a href=""> 发票制度 </a>
+                                    <a href=""> 签收验货 </a>
+                                    <a href=""> 退货流程 </a>
+                                    <a href=""> 退换货规则 </a>
+                                    <a href=""> 地方平台搭建 </a>
+                                    <a href=""> 商户入驻 </a>
+                                    <a href=""> 入驻流程 </a>
+                                    <a href=""> 入驻须知 </a>
+                                    <a href=""> 禁售商品规则 </a>
+                                    <a href="" id="wangdian"> 网点申请 </a>
+                                </nav>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="li_linespace">|</li>
+                <li><a href="">供销e通</a></li>
+                <li class="li_linespace">|</li>
+                <li><a href="">供销e批</a></li>
+                <li class="li_linespace">|</li>
+                <li><a href="">农资衣服</a></li>
+                <li class="li_linespace">|</li>
+                <li id="phone"><a href="" class="_oBox">手机版 <i class="navicon"></i>
+            <div id="qr_code">
+                <img src="picture/weixin.jpg" alt="">
+                <img src="picture/client.jpg" alt="">
+            </div>
+        
+        </a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="newLogo" class="head_bottom">
+        <div class="head_bottomL">
+            <a href="" target="_self"><img src="picture/2018newlogo.png"></a>
+        </div>
+    </div>
+
+
+
+    <div class="menubox" id="menubox">
+        <s class="s_shadow"></s>
+        <div class="menu w clearfix">
+            <div class="fl navgationWrap" id="newNavigationStairAndSec">
+                <ul class="nav_tab clearfix">
+                    <li class="nvliindex"><a href="" class="nva_gx current"><i class="i_ico"></i> 首页</a></li>
+                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>春茶</a></li>
+                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>坚果</a></li>
+                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>杂粮</a></li>
+                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>蜜饯</a></li>
+                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>鲜果</a></li>
+                </ul>
+                <div class="pclassall"><a href="" target="_blank">全部&gt;</a></div>
+                <a class="yx-cp-tabNav-split nvliarea"></a><a class="nvliarea nva_gx" href="" target="_blank">寻真</a><a class="nvliarea nva_gx" href="" target="_blank">特产推荐</a>
+                <a class="nvliarea nva_gx" href="" target="_blank">扶贫专区</a><a class="nvliarea nva_gx" href="" target="_blank">地方平台</a></div>
+            <!--搜索栏-->
+            <div class="head_botomR search_box">
+                <a href="javascript:void(0);" id="queryButton" class="button"> <span class="icon"></span> </a>
+                <input type="text" class="text" id="defaultKeyValue" value="伦晚">
+            </div>
+        </div>
+    </div>
+
+    <div id="banner">
+        <div class="banner-wrapper">
+            <div class="banner_item active">
+                <a href=""><img src="picture/1524539576721.jpg" alt=""></a>
+            </div>
+            <div class="banner_item">
+                <a href=""><img src="picture/1525684210669.jpg" alt=""></a>
+            </div>
+            <div class="banner_item">
+                <a href=""><img src="picture/1525771546950.jpg" alt=""></a>
+            </div>
+        </div>
+        <!--轮播图 分页按钮-->
+        <div class="banner_pagination">
+            <span class="bg-change"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- 分界线 -->
+    <div id="w_floor_2" class="gx-rerev w">
+        <div class="clearfix gx-rev">
+            <!-- 供销精品开始 -->
+            <div class="gx_jp gx_wh">
+                <div class="gx_topv clearfix">
+                    <div class="topv_left fl">
+                        <div class="topv_leftc clearfix">
+                            <h2>供销有好店</h2>
+                            <span class="sp-txt">精品好货 一站购齐</span>
+                        </div>
+                    </div>
+                    <div class="topv-right fr">
+                        <a href="" target="_blank">更多 <i class="morev"></i></a>
+                    </div>
+                </div>
+                <div class="pic_v">
+                    <a target="_blank" href=""> <img class="lazy" src="picture/1523865743801.jpg" alt=""></a>
+                </div>
+                <div class="pro_vlist">
+                    <ul class="clearfix">
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="prov_img">
+                                    <img class="lazy" src="picture/1523865908080.jpg" alt="">
+                                </div>
+                                <p class="titlev tac">云南石林人参果5斤装</p>
+                                <p class="kgp tac">清甜味 还能炒菜吃</p>
+                                <p class="pricev tac"> <i>￥</i> <em>33.90</em> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="prov_img">
+                                    <img class="lazy" src="picture/1523865974046.jpg" alt="">
+                                </div>
+                                <p class="titlev tac">海南红心木瓜8斤包邮</p>
+                                <p class="kgp tac">来自热带 热情似火的甜</p>
+                                <p class="pricev tac"> <i>￥</i> <em>24.80</em> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="prov_img">
+                                    <img class="lazy" src="picture/1523865943895.jpg" alt="">
+                                </div>
+                                <p class="titlev tac">广西田东农家香蕉</p>
+                                <p class="kgp tac">不催熟 自然味</p>
+                                <p class="pricev tac"> <i>￥</i> <em>23.00</em> </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gx_shop gx_wh">
+                <div class="gx_topv clearfix">
+                    <div class="topv_left fl">
+                        <div class="topv_leftc clearfix">
+                            <h2>e家心选</h2>
+                            <span class="sp-txt">用心选 放心吃</span>
+                        </div>
+                    </div>
+                    <input type="hidden" value="0000000001" id="goodShopPageId">
+                    <div class="topv-right fr">
+                        <a id="goodShop" href="" target="_blank">更多 <i class="morev"></i></a>
+                    </div>
+                </div>
+                <div class="pic_vshop clearfix">
+                    <a href="" target="_blank" class="imgbaner">
+                        <div class="imgv">
+                            <img class="lazy" src="picture/1525847221972.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="" target="_blank" class="asm">
+                        <div class="textv">
+                            <h3>新一代健康零食就是它—果蔬脆片</h3>
+                            <p class="ptext"> 长久以来，零食俨然成了垃圾食品的代名词。然而这一次，我要给你介绍一种可以放心吃的健康零食—果蔬脆片。 </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pro_vlist">
+                    <ul class="clearfix">
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="prov_img">
+                                    <img class="lazy" src="picture/1526268546561.jpg" alt="">
+                                </div>
+                                <p class="titlev tac">陕西丫丫秋葵脆片4包装</p>
+                                <p class="kgp tac">高营养 低热量</p>
+                                <p class="pricev tac"> <i>￥</i> <em>39.00</em> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="prov_img">
+                                    <img class="lazy" src="picture/1526268379127.jpg" alt="">
+                                </div>
+                                <p class="titlev tac">冻干榴莲脆片28g</p>
+                                <p class="kgp tac">新鲜营养</p>
+                                <p class="pricev tac"> <i>￥</i> <em>13.90</em> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="prov_img">
+                                    <img class="lazy" src="picture/1526268269249.jpg" alt="">
+                                </div>
+                                <p class="titlev tac">山之彩 敏豆脆60g</p>
+                                <p class="kgp tac">瞬间冻干 保证新鲜</p>
+                                <p class="pricev tac"> <i>￥</i> <em>16.90</em> </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 好店推荐结束 -->
+        </div>
+    </div>
+    <!-- 零食诱惑 -->
+    <div id="w_floor_3" class="floor_wrapper w floor">
+        <div class="goods_txt Title">
+            刁/钻/口/味
+            <span> 零食诱惑 <i class="i_ico i_ico_sg"></i> </span> 一/次/满/足
+        </div>
+        <div class="mc sgmc bgshodow">
+            <div class="re-cirbg">
+                <img src="picture/1523867297246.jpg">
+            </div>
+            <div class="side">
+                <div class="banner">
+                    <a target="_blank" href="javascript:;"> <img class="lazy" data-echo="picture/1524704170293.jpg" alt="" src="picture/1524704170293.jpg"> </a>
+
+                </div>
+            </div>
+            <div class="mc_col">
+                <div class="mc_inner">
+                    <ul class="p_list clearfix">
+                        <li>
+                            <a target="_blank" href="javascript:;">
+                                <div class="p_pic">
+                                    <img class="lazy" data-echo="picture/1523867648503.jpg" alt="" src="picture/1523867648503.jpg">
+                                </div>
+                                <div class="p_name">
+                                    四川早枇杷
+                                </div>
+                                <p class="kgp tac">大果1.5kg顺丰包邮</p>
+                                <div class="p_price tac">
+                                    <i>￥</i>
+                                    <em>128.00</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="p_pic">
+                                    <img class="lazy" data-echo="picture/1524015767067.jpg" alt="" src="picture/1524015767067.jpg">
+                                </div>
+                                <div class="p_name">
+                                    白牦牛肉干150克/袋
+                                </div>
+                                <p class="kgp tac">甘肃武威天祝特产</p>
+                                <div class="p_price tac">
+                                    <i>￥</i>
+                                    <em>50.00</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="p_pic">
+                                    <img class="lazy" data-echo="picture/1523867578163.jpg" alt="" src="picture/1523867578163.jpg">
+                                </div>
+                                <div class="p_name">
+                                    陕西白水苹果
+                                </div>
+                                <p class="kgp tac">70-75果 5斤包邮</p>
+                                <div class="p_price tac">
+                                    <i>￥</i>
+                                    <em>23.90</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="p_pic">
+                                    <img class="lazy" data-echo="picture/1523867608913.jpg" alt="" src="picture/1523867608913.jpg">
+                                </div>
+                                <div class="p_name">
+                                    兵团老农新疆葡萄干
+                                </div>
+                                <p class="kgp tac">七色组合350g</p>
+                                <div class="p_price tac">
+                                    <i>￥</i>
+                                    <em>29.80</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="p_pic">
+                                    <img class="lazy" data-echo="picture/1523867618663.jpg" alt="" src="picture/1523867618663.jpg">
+                                </div>
+                                <div class="p_name">
+                                    陕西丫丫秋葵脆片
+                                </div>
+                                <p class="kgp tac">2袋装&nbsp;一咬满口脆</p>
+                                <div class="p_price tac">
+                                    <i>￥</i>
+                                    <em>12.80</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="p_pic">
+                                    <img class="lazy" data-echo="picture/1523867588442.jpg" alt="" src="picture/1523867588442.jpg">
+                                </div>
+                                <div class="p_name">
+                                    马铃薯脆条 40g
+                                </div>
+                                <p class="kgp tac">土豆控超满足 十包包邮</p>
+                                <div class="p_price tac">
+                                    <i>￥</i>
+                                    <em>3.00</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="p_pic">
+                                    <img class="lazy" data-echo="picture/1523867566266.jpg" alt="" src="picture/1523867566266.jpg">
+                                </div>
+                                <div class="p_name">
+                                    碧根果仁100g×2袋
+                                </div>
+                                <p class="kgp tac">不用剥壳大口吃</p>
+                                <div class="p_price tac">
+                                    <i>￥</i>
+                                    <em>29.90</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">
+                                <div class="p_pic">
+                                    <img class="lazy" data-echo="picture/1523867639176.jpg" alt="" src="picture/1523867639176.jpg">
+                                </div>
+                                <div class="p_name">
+                                    麻辣兔头即食装
+                                </div>
+                                <p class="kgp tac">四川宜宾特产</p>
+                                <div class="p_price tac">
+                                    <i>￥</i>
+                                    <em>8.90</em>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ……………………………………………………………………………………………………匠心好茶...................... -->
+    <div id="w_floor_4" class="floor_wrapper w floor">
+        <div class="ls-cir">
+            <img src="picture/1523867868434.jpg">
+        </div>
+        <div class="goods_txt Title">
+            2018/新/茶
+            <span> 匠心好茶 <i class="i_ico i_ico_sg"></i> </span> 产/地/直/供
+        </div>
+        <div class="mc sgmc bgshodow">
+            <div class="side">
+                <div class="banner-lsgh">
+                    <a target="_blank" href=""> <img class="lazy" data-echo="picture/1523867912341.jpg" alt="" src="picture/1523867912341.jpg"> </a>
+                </div>
+            </div>
+            <div class="mc_col">
+                <div class="mc_inner">
+                    <ul class="p_list_lsgh clearfix">
+                        <li>
+                            <a target="_blank" href="javascript:;"> <img class="lazy" data-echo="picture/1523868411603.jpg" alt="" src="picture/1523868411603.jpg"> </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="javascript:;"> <img class="lazy" data-echo="picture/1523868440998.jpg" alt="" src="picture/1523868440998.jpg"> </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="javascript:;"> <img class="lazy" data-echo="picture/1524798441961.jpg" alt="" src="picture/1524798441961.jpg"> </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="javascript:;"> <img class="lazy" data-echo="picture/1523868421840.jpg" alt="" src="picture/1523868421840.jpg"> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/index.js"></script>
+
+</html>
