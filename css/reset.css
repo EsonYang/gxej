@@ -51,7 +51,6 @@ li {
 
 img {
     border: none;
-    display: block;
 }
 
 a,
@@ -60,7 +59,7 @@ input {
 }
 
 body {
-    font: 12px/1em "微软雅黑";
+    font: 12px/1em "microsoft yahei";
     color: #666;
 }
 
@@ -78,4 +77,12 @@ body {
 
 .border0 {
     border: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right
 }

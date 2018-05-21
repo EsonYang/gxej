@@ -1,0 +1,68 @@
+﻿.TconG {
+    padding: 50px 0;
+}
+
+.othIcon {
+    padding: 12px 16px;
+}
+
+.othIcon a span {
+    width: 57px;
+    height: 20px;
+    overflow: hidden;
+    line-height: 20px;
+    float: left;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.othIcon>a>span>i {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    background-image: url(../picture/sec-sprite.png);
+    background-repeat: no-repeat;
+}
+
+.othIcon>a>span>i.icon1 {
+    background-position: 0 0;
+}
+
+.othIcon>a>span>i.icon2 {
+    background-position: 0 -22px;
+}
+
+.othIcon>a>span>i.icon3 {
+    background-position: 0 -44px;
+}
+
+#ifooter .helper dt {
+    color: #333333;
+}
+
+#ifooter a {
+    color: #333333;
+}
+
+#ifooter a:hover {
+    color: #a7bf37;
+}
+
+#ifooter h4 {
+    color: #333;
+}
+
+#ifooter .copyright {
+    background: #fff;
+    color: #333;
+}
+
+#ifooter .copybox {
+    background: #fff;
+}
+
+#ifooter {
+    margin: 0;
+}

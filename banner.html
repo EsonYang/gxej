@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            loadNewColumnAd();
+        });
+
+        function loadNewColumnAd() {
+            jQuery.ajax({
+                type: "POST",
+                url: "http://www.gxyj.com/loadNewColumnAd.jhtml",
+                data: {},
+                dataType: "jsonp",
+                jsonp: "callback",
+                async: false,
+                success: function(data) {
+                    console.log(data)
+                    if (null != data && data.length > 0) {
+                        var html = "";
+                        html += "<ul>";
+                        for (var i = 0; i < data.length; i++) {
+                            var newColumnAd = data[i];
+                            html += '<li><a target="_blank" href="' + newColumnAd.adUrl + '"><img src="' + newColumnAd.imgUrl + '" /></a></li>';
+                        }
+                        html += "</ul>";
+                    }
+                    $('#adListAjax').html(html).after('<div class="hd"><ul></ul></div>');
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1082 @@
+.header {
+    position: relative;
+}
+
+a {
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.fr {
+    float: right;
+}
+
+.crumb {
+    line-height: 22px;
+    width: 1210px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.crumb>.title {
+    font-size: 18px;
+    color: #666666;
+    float: left;
+}
+
+.crumb>b {
+    color: #cdcdcd;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+    font-family: '\5b8b\4f53';
+}
+
+.g-select-sp {
+    height: 25px;
+    position: relative;
+    float: left
+}
+
+.select-sp {
+    border: 1px solid rgb(220, 220, 220);
+    z-index: auto;
+    padding: 0 23px 0 7px;
+    line-height: 23px;
+    height: 23px;
+    cursor: pointer;
+    display: block;
+    color: #666;
+    position: relative;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.g-select-sp .select-sp:hover {
+    border: 1px solid rgb(255, 136, 0);
+    border-bottom: 1px solid #fff;
+    z-index: 888;
+}
+
+.select-con {
+    width: 338px;
+    min-height: 101px;
+    background-color: #fff;
+    border: 1px solid #ff8800;
+    position: absolute;
+    left: -35px;
+    top: 24px;
+    z-index: 555;
+    margin-top: 0;
+    display: none;
+}
+
+.select-con>ul {
+    padding: 10px 16px;
+}
+
+.select-con>ul>li {
+    width: 101px;
+    height: 27px;
+    line-height: 27px;
+    text-align: left;
+    float: left;
+}
+
+.select-con>ul>li.active a {
+    color: #f80;
+}
+
+.fl {
+    float: left;
+}
+
+.ser-pr {
+    position: relative;
+    width: 154px;
+    height: 24px;
+}
+
+.ser-pr>input {
+    height: 23px;
+    border: 1px solid #cdcdcd;
+    line-height: 23px;
+    background: #ffffff;
+    padding-left: 6px;
+    padding-right: 26px;
+    width: 120px;
+    color: #666;
+}
+
+.ser-pr>.item-icon {
+    display: block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    background-image: url(../picture/item-icon.png);
+    background-repeat: no-repeat;
+    top: 50%;
+    margin-top: -6.5px;
+    right: 6px;
+    background-position: -42px 0;
+    cursor: pointer;
+}
+
+.bodyNew {
+    width: 1210px;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.contTop {
+    width: 1210px;
+    float: left;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search_select {
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+    background: #F9F9F9;
+}
+
+.search_select dt,
+.search_select dd {
+    float: left;
+    padding: 10px 0;
+    line-height: 26px;
+}
+
+.search_select dt {
+    width: 90px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666;
+    font-size: 12px;
+}
+
+.search_select dd .c label input {
+    margin-left: 15px;
+}
+
+.search_select dd {
+    width: 1110px;
+    overflow: hidden;
+    position: relative;
+    zoom: 1;
+    background-color: #fff;
+    padding: 10px 0 10px 10px;
+}
+
+.search_select dd .c {
+    width: 94%;
+}
+
+.search_select dd .c label {
+    position: relative;
+    top: 1px;
+}
+
+.search_select dd .clip {
+    height: 26px;
+}
+
+.search_select dd a,
+.search_select dd span {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 5px 0 0;
+    color: #666;
+    cursor: pointer;
+    border: 1px solid #fff;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.search_price .prices span {
+    padding: 0 0 0 5px;
+    margin-right: 0;
+    float: left;
+}
+
+.choose:hover {
+    border: 1px solid #f80;
+}
+
+.search_select dd div>a:hover,
+.search_select dd div>span.hover {
+    color: #f80;
+}
+
+.search_select dd span.selcur {
+    color: #ff8800;
+}
+
+.search_select dd .more {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0 10px 0 5px;
+    cursor: pointer;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.search_select dd .more>i {
+    width: 12px;
+    height: 9px;
+    position: absolute;
+    top: 8px;
+    left: 34px;
+    background: url(../images/item-icon.png) no-repeat 0px -6px;
+}
+
+.search_select dd .more>span {
+    border: none;
+}
+
+.seleBorder {
+    border: 2px solid #edd28b;
+    background: #fffdee;
+}
+
+.seleBorder dd {
+    width: 1103px;
+}
+
+.item-iconmore {
+    background: url(../images/item-icon.png) no-repeat 0 -15px;
+    display: block;
+    width: 8px;
+    float: left;
+    height: 8px;
+    margin-top: 8px;
+}
+
+.search_select dd>span.more .more_on {
+    background: url(../images/item-icon.png) no-repeat 0px 1px;
+}
+
+.search_select .del_key,
+.search_select .cur {
+    background: url(../images/ico15.png) no-repeat right 0;
+    border: 1px solid #AEA59E;
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    height: 21px;
+    line-height: 21px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    min-width: 60px;
+    padding: 0 20px 0 10px;
+}
+
+.search_select .cur {
+    background-position: right -20px;
+    border: solid 1px #A00002;
+}
+
+.search_select dd .reset {
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    color: #005EA7;
+    text-decoration: none;
+    height: 20px;
+    line-height: 20px;
+}
+
+.search_select dd .selectBox {
+    display: none;
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.search_select dd .selectBox .selectMoreSure:hover {
+    border: 1px solid #f80;
+}
+
+.search_select dd .selectBox p {
+    width: 140px;
+    margin: 0 auto;
+}
+
+.search_select dd .selectMoreSure {
+    display: inline-block;
+    line-height: 14px;
+    height: 14px;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 4px 14px 5px;
+    color: #FFF;
+    background: #f80;
+    border: 1px solid #f80;
+    margin-right: 10px;
+}
+
+.search_select dd .c {
+    width: 94%;
+}
+
+.search_select dd .selectMoreCancel {
+    display: inline-block;
+    line-height: 14px;
+    height: 14px;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid #DDD;
+    padding: 4px 13px 5px;
+    color: #666;
+    background-color: #f7f7f7;
+}
+
+.search_select2 strong {
+    background: none;
+}
+
+.search_price .prices {
+    display: inline-block;
+    text-align: center;
+}
+
+.search_price .p_num {
+    height: 24px;
+    border: solid 1px #ccc;
+    background: #fff;
+    width: 50px;
+    float: left;
+    padding: 0 0 0 5px;
+    margin-left: 5px;
+    color: #666;
+}
+
+.search_price .prices p.b2 {
+    background: #f2f2f2;
+    color: #656565;
+    border: 1px solid #dcdcdc;
+    padding: 0 10px;
+    margin: 2px 0 0 5px;
+    line-height: 21px;
+    height: 21px;
+    vertical-align: top;
+    font-size: 12px;
+    cursor: pointer;
+    float: left;
+}
+
+.search_order {
+    padding: 0;
+    background-color: #F2F2F2;
+    height: 40px;
+    width: 996px;
+    float: right;
+}
+
+.search_order_bottom {
+    padding: 0;
+    background-color: #F9F9F9;
+    height: 40px;
+    width: 996px;
+    float: right;
+}
+
+.search_order_bottom .filter {
+    width: 60%;
+    float: left;
+    height: 20px;
+    margin: 10px;
+}
+
+.search_order_bottom .filter input {}
+
+.search_order_bottom .filter label {
+    color: #000;
+    margin-right: 10px;
+}
+
+.search_order .orderByDiv {
+    width: 230px;
+    height: 30px;
+    margin: 5px 0 0 10px;
+    float: left;
+}
+
+.search_order .btn_px {
+    color: #000;
+    float: left;
+    line-height: 28px;
+    padding: 0 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.search_order .btn_px1 {
+    color: #000;
+    float: left;
+    background-color: #fff;
+    position: relative;
+    margin-left: -1px;
+}
+
+.search_order .btn_px span {}
+
+i.item-icon11 {
+    width: 10px;
+    height: 11px;
+    position: absolute;
+    top: 10px;
+    right: 6px;
+}
+
+.search_order .btn_px .btn_ico_up {
+    background-position: right -5px;
+    padding-right: 10px;
+}
+
+.search_order .btn_px .btn_ico_down {
+    padding-right: 10px;
+}
+
+.search_order .btn_cur {
+    background: #f80;
+    border: 1px solid #f80;
+    color: #fff;
+    z-index: 11;
+}
+
+.search_page {
+    display: inline-block;
+    height: 40px;
+}
+
+.locality {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.locality .top {
+    float: left;
+    cursor: pointer;
+    height: 28px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.locality .top span {
+    float: left;
+    padding: 0 10px;
+    background: #f6f6f6;
+    height: 28px;
+    line-height: 28px;
+}
+
+.locality .top span#localName {
+    background: none;
+}
+
+.shop_select {
+    display: inline-block;
+    margin-top: 11px;
+}
+
+.shop_select #one {
+    background: #fff;
+}
+
+.item-icon {
+    display: block;
+    float: left;
+    position: absolute;
+    background-image: url(../picture/item-icon.png);
+    background-repeat: no-repeat;
+}
+
+.shop_select a {
+    height: 28px;
+    border: solid 1px #ddd;
+    line-height: 28px;
+    width: 50px;
+    cursor: pointer;
+    padding-right: 7px;
+    float: left;
+    display: inline-block;
+    text-align: right;
+    margin-left: -1px;
+}
+
+.Big-view-i {
+    width: 12px;
+    height: 12px;
+    left: 6px;
+    top: 50%;
+    position: relative;
+    margin-top: -6px;
+    background-position: -10px -15px;
+}
+
+.cur-1 {
+    background-position: -10px -29px;
+    color: #f80;
+}
+
+.Store-i {
+    width: 14px;
+    height: 12px;
+    left: 6px;
+    top: 50%;
+    margin-top: -6px;
+    position: relative;
+    background-position: -24px -15px;
+}
+
+.search_page a .disable {
+    background: #F1F1F1;
+    color: #CCC;
+    cursor: default;
+}
+
+.search_page a span {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #AAA;
+    text-align: center;
+    font-family: "\5b8b\4f53";
+    font-weight: bold;
+    float: left;
+}
+
+.locality .top i {
+    float: left;
+    height: 8px;
+    line-height: 30px;
+    width: 12px;
+    margin: 10px 5px;
+    background: url(../picture/item-icon.png) no-repeat 1px -7px;
+    margin-left: -5px;
+}
+
+.search_list {
+    width: 100%;
+    float: right;
+}
+
+.search_list ul {
+    width: 1006px;
+    padding-top: 20px;
+    height: 450px;
+}
+
+.search_list .productBox {
+    float: left;
+    width: 240px;
+    height: 410px;
+    margin: 0 9px 20px 0;
+}
+
+.search_list li {
+    float: left;
+    height: 375px;
+    width: 240px;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+.search_list li:hover {
+    height: 406px;
+    border: 1px solid rgb(255, 136, 0);
+}
+
+.search_list li:hover .btns {
+    display: block;
+}
+
+.search_list li .pro {
+    width: 100%;
+    height: 100%;
+}
+
+.search_list li .p-img {
+    text-align: center;
+}
+
+.search_list li .p-img img {
+    width: 220px;
+    height: 220px;
+    margin: 10px 8px;
+}
+
+.search_list li .p-name {
+    overflow: hidden;
+    height: 40px;
+    color: #333;
+    line-height: 20px;
+    font-size: 12px;
+    width: 220px;
+    padding: 0 10px;
+}
+
+.search_list li .extra {
+    color: #ccc;
+    overflow: hidden;
+    height: 25px;
+    width: 220px;
+    padding: 0 10px;
+}
+
+.search_list li .pro .renzheng {
+    height: 25px;
+    width: 220px;
+    position: relative;
+    padding: 0 10px;
+}
+
+.search_list li .btns {
+    height: 35px;
+    width: 100%;
+    display: none;
+    overflow: hidden;
+}
+
+.btn3 {
+    border: 1px solid #ddd;
+}
+
+.search_list li .btn3 {
+    line-height: 35px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    float: left;
+    border-left: 1px solid #ddd;
+    border-radius: 0;
+    margin-left: -1px;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.collect {
+    width: 44px;
+    height: 100%;
+    padding-left: 15px;
+    background: url(../picture/u1603.png) no-repeat 7px 12px;
+}
+
+.contrast {
+    width: 58px;
+    height: 100%;
+}
+
+.search_list li .btn3 label {
+    position: relative;
+    top: 1px;
+}
+
+.addCar {
+    width: 96px;
+    height: 100%;
+    padding-left: 25px;
+    position: relative;
+    color: #f80;
+    border-right: none;
+}
+
+.addCar i {
+    width: 22px;
+    height: 17px;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: -9px;
+    background: url(../picture/item-icon.png) no-repeat 0 0;
+    background-position: -50px -44px;
+}
+
+.search_list li .p-price {
+    color: #FF8A13;
+    font-size: 20px;
+    width: 220px;
+    padding: 0 10px;
+    line-height: 40px;
+    height: 40px;
+}
+
+.search_list li .p-address {
+    color: #999999;
+    font-size: 12px;
+    text-align: right;
+    line-height: 25px;
+    width: 50%;
+    float: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bodyNew .wrap {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.wrap div.special {
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    color: #333333;
+    font-size: 15px;
+    position: relative;
+    background: #F2F2F2;
+    border-bottom: 1px solid #99CC22;
+    text-align: center;
+}
+
+.wrap .box .scroll_vertical {
+    overflow: hidden;
+}
+
+.box {
+    overflow: hidden;
+    max-height: 844px;
+}
+
+.wrap .box ul {
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.wrap .box ul li {
+    width: 178px;
+    padding: 10px;
+    height: 260px;
+    border-bottom: 1px solid #eee;
+}
+
+.wrap .box ul a {}
+
+.wrap .box ul li a img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.wrap .plus {
+    background: url("../img/btn1.png") no-repeat center center;
+    height: 40px;
+    width: 50%;
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.wrap .minus {
+    background: url("../img/btn2.png") no-repeat center center;
+    height: 40px;
+    width: 50%;
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.specialPrice {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    color: #FF8800;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.specialPrice span {
+    float: left;
+    font-size: 18px;
+}
+
+.specialPrice del {
+    float: right;
+    color: #ccc;
+    font-weight: 100;
+}
+
+.list a:hover {
+    color: rgb(255, 136, 0)
+}
+
+.add_window_w4 {
+    background-color: #FFFFFF;
+    border: 1px solid #858585;
+    color: #333333;
+    display: none;
+    left: 50%;
+    margin-left: -200px;
+    position: fixed;
+    top: 17%;
+    width: 400px;
+    z-index: 99;
+}
+
+.modal_header {
+    background: #f6f6f6;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    color: #c7000b;
+}
+
+.modal_header.bg_ff3 {
+    background: #fff3e3;
+}
+
+.tac {
+    text-align: center !important;
+}
+
+.modal_header .close {
+    float: right;
+    margin: 9px 0 0 0;
+    width: 15px;
+    height: 15px;
+    background-position: 0 0;
+    font-size: 14px;
+    background: url(../images/ico6.png) no-repeat;
+    cursor: pointer;
+}
+
+
+/* 
+.pro_detail {
+    float: left;
+    width: 100%;
+}
+
+.pro_detail_c {
+    margin-left: 390px;
+    float: left;
+    padding-left: 20px;
+}
+
+.pro_detail_c .sku_nm {
+    width: 50px;
+    overflow: hidden;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.pro_detail_c .in_block {
+    float: left;
+}
+
+.pro_detail_c .sku_nm2 {
+    width: 120px;
+}
+
+.pro_detail h3 {
+    border-bottom: solid 2px #E5464A;
+    line-height: 33px;
+    font-weight: bold;
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.pro_detail h3 font {
+    height: 33px;
+    line-height: 33px;
+    width: 40px;
+    font-size: 12px;
+    color: #FFF;
+    text-indent: 12px;
+    background: url(../images/index_bg.png) no-repeat 0 0;
+    margin-right: 10px;
+}
+
+.pro_detail h3 font.spacing {
+    margin-left: -10px;
+}
+
+.pro_detail h3 p.p_red {
+    padding: 0 0 0 90px;
+    margin: -10px 0 0;
+    color: #c00;
+}
+
+.pro_detail .b_link {
+    text-decoration: line-through;
+}
+
+.pro_detail .price {
+    font-family: 'microsoft yahei', Arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: #E03A3C;
+}
+
+.pro_detail .d_gre_b {
+    border: solid 1px #459b7b;
+    background: #f8fcf3;
+    font-style: normal;
+    font-size: 10px;
+    margin-left: 6px;
+}
+
+.pro_detail .d_gre_b i {
+    font-style: normal;
+    padding: 0 2px;
+}
+
+.pro_detail .d_gre_b .db {
+    background: #41aa84;
+    color: #f8fcf3;
+}
+
+.pro_detail .d_gre_b .zf {
+    padding: 0 2px;
+    color: #41aa84;
+}
+
+.pro_detail .buy_btn {
+    margin: 10px 17px;
+}
+
+.pro_detail .buy_btn .btn {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 18px;
+    height: 32px;
+    line-height: 32px;
+    width: 130px;
+    border-radius: .2em;
+    padding: 0;
+}
+
+.pro_detail .buy_btn .btn span {
+    background: url(../images/btn_icon2.png) no-repeat -100px 0;
+}
+
+.pro_detail .buy_btn .b1 span {
+    background-position: -7px -140px;
+    padding: 0 10px 0 20px;
+}
+
+.pro_detail .buy_btn .b2 span {
+    background-position: -2px -168px;
+    padding: 0 6px 0 25px;
+}
+
+.pro_detail .buy_btn .b3 span {
+    background-position: -2px -197px;
+    padding: 0 2px 0 22px;
+}
+
+.pro_detail .buy_btn .n_btn {
+    margin-right: 6px;
+}
+
+.pro_detail .prop {
+    margin: 3px 17px 10px 10px;
+}
+
+.pro_detail .prop li {
+    margin-bottom: 10px;
+}
+
+.pro_detail .prop li.re_index {
+    position: relative;
+    z-index: 15;
+    vertical-align: middle;
+    line-height: 27px;
+    height: 30px;
+}
+
+.pro_detail .prop li.re_index .sku_table {
+    display: inline-block;
+    *display: inline;
+} */
+
+.pro_detail .num_add {
+    display: inline-block;
+    border: solid 1px #cdcdcd;
+    line-height: 14px;
+    padding: 0 4px;
+    color: #313131;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.pro_detail .buy_num {
+    border: solid 1px #cdcdcd;
+    width: 34px;
+    padding: 3px 0;
+    margin: 0 5px;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+
+.pro_detail .num_add {
+    display: inline-block;
+    border: solid 1px #cdcdcd;
+    line-height: 14px;
+    padding: 0 4px;
+    color: #313131;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.padb20 {
+    padding: 17px;
+}
+
+.btn,
+.btn2 {
+    display: inline-block;
+    padding: 4px 10px 4px;
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 18px;
+    background: #ff8800 !important;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: .1em;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.pro_detail p.select_a {
+    padding: 10px 17px;
+    border-bottom: dotted 1px #d5d5d5;
+    border-top: dotted 1px #d5d5d5;
+    line-height: 30px;
+    background-color: #F6F6F6;
+}

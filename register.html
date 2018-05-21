@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/du-l.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/regist.css">
+
+
+</head>
+
+<body>
+    <input type="hidden" name="alertJqmFlag" id="alertJqmFlag" value="" />
+    <input type="hidden" name="confirmJqmFlag" id="confirmJqmFlag" value="" />
+    <div class="header">
+        <div class="header-con clearfix">
+            <a class="logo2 fl" href="http://www.gxyj.com/index.html">
+                <img src="picture/logo11_03.png" alt="">
+            </a>
+            <span class="sp2 fl">欢迎注册</span>
+            <span class="sp3 fr" id="yyzh">
+					已有账号?<a href="http://www.gxyj.com/member/memberBegin.jhtml" id='qdl'>请登录</a>
+				</span>
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div id="content" class="content pwdrecv_r">
+        <div id="step_r_1">
+            <div class="form">
+
+                <ul style="padding-top: 25px;">
+                    <li>
+                        <label>手机号码</label>
+                        <input id="mobile" name="mobile" type="text" tabindex="1" class="txt2" maxLength="11" placeholder="手机号将作为您的用户名" />
+                        <b id="mobileErrorMsg"></b>
+                        <span class="pmt"><span class="pmt_c"><i id="mobileErrorIcon"></i><span id="mobilemsg"></span></span>
+                        </span>
+                    </li>
+                    <li class="rel zIndex2">
+                        <label><em class="col_red"></em>设置密码</label>
+                        <input type="password" tabindex="2" class="txt2" name="password1" id="safeEdit1" tabindex="2" minLength="8" maxLength="30" autocomplete="off" placeholder="请输入密码" />
+                        <b id="custpwdErrorIconMsg"></b>
+                        <b id="custpwdErrorMsg"></b>
+                        <span class="pmt"><span class="pmt_c"><i id="custpwdErrorIcon"></i><span id="custpwdmsg"></span></span>
+                        </span>
+
+                        <div class="capital_tips" id="tips1" style=" display:none;">
+                            <h2>大写锁定打开</h2>
+                            保持大写锁定打开可能会使您错误输入密码。<br> 在输入密码之前，您应该按“Caps Lock”键来将其关闭。
+                        </div>
+                    </li>
+                    <li class="rel zIndex1">
+                        <label><em class="col_red"></em>确认密码</label>
+                        <input type="password" tabindex="3" class="txt2" name="password2" id="safeEdit2" tabindex="3" minLength="8" maxLength="30" autocomplete="off" placeholder="请再次输入密码" onpaste="return false" />
+                        <b id="custpwd1ErrorMsg"></b>
+                        <span class="pmt"><span class="pmt_c"><i id="custpwd1ErrorIcon"></i><span id="custpwd1msg"></span></span>
+                        </span>
+                        <div class="capital_tips" id="tips2" style=" display:none;">
+                            <h2>大写锁定打开</h2>
+                            保持大写锁定打开可能会使您错误输入密码。<br> 在输入密码之前，您应该按“Caps Lock”键来将其关闭。
+                        </div>
+                    </li>
+                    <li>
+                        <div id="sendAlert" style="width: 554px;">
+                            <label> <span class="close"></span>
+		     验证码
+		  </label>
+                            <input id="validateCode" tabindex="4" class="txt2" style="width:100px;" type="text" value="" name="" class="" maxlength="4" placeholder="请输入验证码">
+                            <b id="checkCodeErrorMsg" style="float:right;margin-top: 10px;"></b>
+                            <img src="picture/aaa116e0576545fea8ceaf7fbef3c5b6.gif" class="ml4" id="refreshVCode1" style="width: 110px;height: 38px;background: 100% 100%;border: 1px solid #000;margin: 0px 6px 0 6px;" /><a href="javaScript:;" class="ml10"
+                                id="ccimage1" style="width: 50px;line-height: 15px;margin: 8px 5px  0 0;float: right;display: inline-block;">看不清<br>换一张</a>
+                            <span class="pmt" style="position: relative;left: 224px;top: 0;"><span class="pmt_c"><i id="checkCodeErrorIcon"></i><span id="checkCodeMsg" style="color:#f00;width: 290px;"></span></span>
+                            </span>
+
+                        </div>
+                    </li>
+                    <li style="position:relative;">
+                        <label>手机校验码</label>
+                        <input type="text" class="txt2" tabindex="5" id="mobileVerifyCode" name="mobileVerifyCode" maxLength="6" disabled="true" placeholder="请点击获取校验码" />
+                        <span style="display: inline-block;width: 10px;height: 10px;position:relative;top:-25px;" id="getSendLayarMsg"></span>
+                        <b id="mobileVCodeErrorMsg"></b>
+                        <button id="getPhoneCode" class="btn-phonecode" type="button" onclick="javascript:reSendMobileCode()">获取校验码</button>
+                        <span class="pmt"><span class="pmt_c"><i id="mobileVCodeErrorIcon"></i><span id="mobileVCodemsg"></span></span>
+                        </span>
+
+
+                        <p class="p" style="margin-left:227px;margin-top:13px;">若手机无法接收到短信请联系客服400-628-6121咨询</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="item-g fore06" style="width:583px;margin: 0 auto;">
+                <div class="item-p1 clearfix">
+                    <label class="label-g fl"></label>
+                    <input name="agreement" id="agreement" type="checkbox" value="供销e家商城平台会员服务协议" checked="checked" type="checkbox" checked="checked">
+                    <a id="xy" href="javascript:void(0)">《供销e家商城平台会员服务协议》 </a>
+                </div>
+                <span class="pmt_c"><span id="agreementmsg" style="position: relative;left: 261px;top: -19px;color: #f00;"></span></span>
+            </div>
+
+            <div class="item-g fore07">
+                <div class="item-p1 clearfix">
+                    <label class="label-g fl"></label>
+                    <span type="button" id="button_step1" class="agree-btn fl"><i class=""></i>同意以上服务条款并提交注册</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="w" id="step_r_4">
+            <div class="Succ-box">
+                <div class="s-title1">
+                    <b class="Succ-box-icon sprite-img"></b> 注册成功！
+                </div>
+                <p>尊敬的用户，您已成功注册为供销e家会员！</p>
+                <a class="succsesss-btn" id="goToMall">现在就去登录</a>
+            </div>
+        </div>
+        <form id="myform" type="post">
+            <input id="tranData" type="hidden" name="tranData">
+            <input id="merSignMsg" type="hidden" name="merSignMsg">
+            <input id="eMallField" type="hidden" name="eMallField">
+        </form>
+    </div>
+
+    <!--统一alert弹窗提示-->
+    <div id="alertJqm" native="native" class="alert jqmWindow">
+        <div class="modal_header"> <span class="close"></span>
+            <h3>友情提示</h3>
+        </div>
+        <div id="alertInfo" style="text-align: left;margin-left: 33px;">
+        </div>
+        <div class="tac cfx padb20">
+            <input type="button" class="btn btn_org bt_save" value="确定" />
+        </div>
+    </div>
+
+    <!--统一confirm弹窗提示-->
+    <div id="confirmJqm" native="native" class="alert jqmWindow">
+        <div class="modal_header"> <span class="close"></span>
+            <h3>友情提示</h3>
+        </div>
+        <div id="confirmInfo" class="cont" style="width:95%;">
+        </div>
+        <div class="tac cfx padb20">
+            <input type="button" class="btn btn_org bt_save" id="" value="确定" />
+            <input type="button" class="btn btn_red ml10 bt_cancel" value="取消" />
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
