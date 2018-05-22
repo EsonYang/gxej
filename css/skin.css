@@ -1,0 +1,493 @@
+.brands_logo {
+    background: url(../../images/theme/skin/head_bg.png) repeat-x 0 -3px;
+}
+
+.brands_logo strong {
+    font-size: 16px;
+    display: inline-block;
+}
+
+.brands_menu {
+    height: 40px;
+    line-height: 40px;
+    border: solid 1px #cfcfcf;
+    background: url(../../images/theme/skin/bg3.png) left top repeat-x;
+    color: #fff;
+}
+
+.brands_menu li {
+    float: left;
+}
+
+.brands_menu a {
+    padding: 0 16px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    border-right: 1px solid #fff;
+}
+
+.banner {
+    margin-bottom: 10px;
+}
+
+.banner img {
+    width: 950px;
+}
+
+.banner_btm img {
+    width: 950px;
+}
+
+.shop_clm {}
+
+.shop_clm h3 {
+    background-color: #fff;
+    line-height: 35px;
+    color: #333;
+    font-weight: normal;
+    height: 35px;
+    text-indent: 1em;
+    font-size: 14px;
+    border-bottom: 1px solid #C31A17;
+}
+
+.shop_clm .btns a,
+.shop_clm .btns span {
+    display: inline-block;
+    width: 50%;
+    height: 47px;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    overflow: hidden;
+    text-align: center;
+    margin-left: -1px;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+
+.shop_clm .btns a {
+    background: #F2F6F7 url(../../images/theme/skin/enter.png) no-repeat center center;
+}
+
+.shop_clm .btns span {
+    background: #F2F6F7 url(../../images/theme/skin/sc.png) no-repeat center center;
+}
+
+.shop_clm .btns span.active {
+    background: #F2F6F7 url(../../images/theme/skin/sc2.png) no-repeat center center;
+    cursor: default;
+}
+
+.shop_clm_c {
+    line-height: 22px;
+}
+
+.shop_info {
+    font-size: 12px;
+}
+
+.shop_info .label_title {
+    width: 120px;
+    text-align: right;
+    float: left;
+    color: #666;
+}
+
+.shop_info .field {
+    margin-left: 130px;
+}
+
+.shop_info li {
+    padding-top: 10px;
+    zoom: 1;
+}
+
+.shop_info .l_color {
+    color: #DB0817;
+    font-weight: bold;
+}
+
+.shop_info strong {
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.shop_info .btn,
+.shop_info .btn2 {
+    height: 22px;
+    line-height: 22px;
+    display: block;
+    margin-top: 5px;
+}
+
+.shop_info .btn {
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.shop_info .btn2:hover {
+    text-decoration: underline;
+    color: #C7000B;
+}
+
+.shop_cate dl {
+    line-height: 40px;
+    color: #7E7E7E;
+}
+
+.shop_cate dt a {
+    color: #7E7E7E;
+    font-size: 12px;
+    display: block;
+    line-height: 35px;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.shop_cate a:hover {
+    color: #f80;
+}
+
+.shop_cate dl dt {
+    font-size: 14px;
+    position: relative;
+    padding-left: 33px;
+    border-bottom: 1px solid #eee;
+}
+
+.shop_cate dl dt s {
+    background: url(../picture/icon-spr.png) no-repeat;
+    background-position: -399px -35px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.shop_cate dl dt s.rt {
+    background: url(../../images/icon-spr.png) no-repeat;
+    background-position: -399px -35px;
+}
+
+.shop_cate dl dt s.on {
+    background: url(../../images/icon-spr.png) no-repeat;
+    background-position: -399px -15px;
+}
+
+.shop_cate dl ul {
+    padding: 3px 0 3px 36px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.shop_cate dl dd {
+    display: none;
+}
+
+.shop_sch .shop_clm_c {
+    line-height: 32px;
+    color: #A7A7A7;
+}
+
+.shop_sch label {
+    display: inline-block;
+    width: 60px;
+    vertical-align: top;
+    text-align: right;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.shop_sch .btn {
+    width: 94px;
+    margin: 3px 0 5px 60px;
+    height: 22px;
+    font-size: 18px;
+}
+
+.shop_sch .btn-2 {
+    margin: 0;
+    font-size: 12px;
+    color: #fff;
+    height: 18px;
+    width: 36px;
+    padding: 3px 8px;
+}
+
+.shop_sch .btn-2:hover {
+    background-color: #C7000B;
+}
+
+.shop_sch #search_txt,
+.shop_sch .search_txt,
+#search_star,
+#search_end {
+    border: solid 1px #A7A7A7;
+    height: 21px;
+    padding: 0;
+}
+
+.shop_sch #search_txt,
+.shop_sch .search_txt {
+    width: 108px;
+}
+
+.shop_sch #search_star,
+#search_end {
+    width: 40px;
+    vertical-align: middle;
+}
+
+.shop_sch #search_star {
+    margin-right: 3px;
+}
+
+.shop_sch #search_end {
+    margin-left: 3px;
+}
+
+.shop_sch .btns a {
+    margin: 0;
+    width: 100%;
+    border-right: 0 none;
+    border-left: 0 none;
+    padding: 0;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background: #F2F6F7 url(../../images/theme/skin/ico_sch.png) 20px center no-repeat;
+    font-size: 14px;
+    color: #8C929C;
+    text-indent: inherit;
+}
+
+.shop_sch .btns a:hover {
+    text-decoration: none;
+}
+
+.shop_sch-2 {
+    padding: 5px 15px;
+    background-color: #F6F6F6;
+    border: 1px solid #DBDBDB;
+    margin-bottom: 10px;
+}
+
+.shop_sch-2 .lab {
+    padding: 2px 5px;
+    background-color: #fff;
+    border: 1px solid #A6A6A6;
+    vertical-align: middle;
+}
+
+.shop_sch-2 .lab:hover {
+    text-decoration: none;
+}
+
+.shop_sch-2 .search_txt {
+    background: url(../../images/icos.png) no-repeat 5px -89px;
+    background-color: #fff;
+    display: inline-block;
+    padding-left: 22px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.shop_schpro li {
+    width: 176px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.shop_schpro li a {
+    color: #333;
+}
+
+.shop_schpro li a:hover {
+    color: #C7000B;
+}
+
+.shop_schpro li img {
+    width: 170px;
+    height: 170px;
+}
+
+.shop_schpro li span {
+    line-height: 22px;
+}
+
+.shop_schpro li em {
+    padding: 0 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-style: normal;
+    color: #fff;
+    background-color: #D50100;
+    height: 18px;
+    line-height: 18px;
+}
+
+.shop_pro {
+    padding-top: 10px;
+}
+
+.shop_pro li {
+    display: -moz-inline-stack;
+    display: inline-block;
+    overflow: hidden;
+    *display: inline;
+    *float: left;
+    vertical-align: top;
+    line-height: 22px;
+    margin-left: 20px;
+    width: 160px;
+}
+
+.shop_pro li.line {
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    background: #ececec;
+    width: 710px;
+    margin: 10px 0 11px 19px;
+    _margin-left: 10px;
+}
+
+shop_pro .line {
+    height: 1px;
+    width: 100%;
+    overflow: hidden;
+    background: #ececec;
+}
+
+.shop_pro li a {
+    color: #000;
+}
+
+.shop_pro li em {
+    color: #FF0101;
+}
+
+.shop_pro li .btns {
+    margin-top: 6px;
+    height: 24px;
+}
+
+.shop_pro li .p_img {
+    width: 160px;
+    height: 160px;
+}
+
+.shop_pro li .p_price {
+    color: #E43A3B;
+    font-size: 16px;
+    font-weight: bold;
+    word-break: break-all;
+    word-wrap: break-word;
+    height: 42px;
+}
+
+.shop_pro li .p_name {
+    height: 44px;
+    overflow: hidden;
+    width: 160px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.shop_pro li .extra {
+    margin-left: -4px;
+    overflow: hidden;
+    padding: 3px 0 3px 4px;
+}
+
+.shop_pro li .extra .font_info {
+    border-left: 1px solid #333333;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    margin-left: -5px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.shop_pro li .p_spname {}
+
+
+/*--  /å•†å“è¯¦æƒ…ä¾§æ  --*/
+
+
+/*banner*/
+
+.l_banner188 {
+    width: 188px;
+    height: 188px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.l_banner188 img {
+    width: 188px;
+    height: 188px;
+}
+
+.r_banner750 {
+    width: 750px;
+    height: 155px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.r_banner750 img {
+    width: 750px;
+    height: 155px;
+}
+
+
+/* å›žåˆ°é¡¶éƒ¨ */
+
+.btt2,
+.btt2 a:hover,
+.btt2 #back.backToTop_hv {
+    background: url(../../images/bktop2.png) no-repeat;
+}
+
+.btt2 {
+    height: 82px;
+    width: 41px;
+    margin-top: -41px;
+}
+
+.btt2 #back,
+.btt2 a {
+    width: 41px;
+    height: 41px;
+    display: inline-block;
+    text-indent: -999px;
+    overflow: hidden;
+    _position: absolute;
+}
+
+.btt2 #back {
+    _left: 0;
+    _top: 41px;
+}
+
+.btt2 a {
+    _left: 0;
+    _top: 0;
+}
+
+.btt2 a:hover {
+    background-position: -41px 0;
+}
+
+.btt2 #back.backToTop_hv {
+    background-position: -41px -41px;
+}

@@ -41,21 +41,6 @@ Gooddetail.prototype = {
         };
         return $.ajax(this.opt)
     },
-    load_data: function() {
-        this.opt = {
-            url: "http://localhost:80/PHP/yuki/data/list.json",
-            dataType: "json",
-            statusCode: {
-                404: function() {
-                    alert('page not found');
-                },
-                403: function() {
-                    alert('丫不让我访问!');
-                }
-            }
-        };
-        return $.ajax(this.opt)
-    },
     render_page: function(json) {
         this.html = ``;
         json.forEach(function(item) {

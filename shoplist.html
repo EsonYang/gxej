@@ -675,11 +675,11 @@
                         res.forEach(function(item) {
                             html += `
                       <div class="productBox"">
-                        <li>
-                        <div class="pro" data-id="${item.id}>
-                            <div class="p-img"  >
+                        <li >
+                        <div class="pro">
+                            <div class="p-img"   >
                                 <a href="javaScript:;" target="_blank">
-                                    <img  src="${item.images}" style="display: inline;">
+                                    <img id="${item.id}" src="${item.images}" style="display: inline;">
                                 </a>
                             </div>
                             <div class="p-price">￥${item.price}
@@ -719,18 +719,13 @@
 
                 )
                 .then(function() {
-                    //console.log(this)
+                    //页面传参
                     $(".pro").delegate("img", "click", function() {
-                            // console.log(this.attr("data-id"))
-                            console.log(1)
-
-                        })
-                        // on("click", function() {
-                        //     console.log(this)
-                        //     console.log($(".p-img").attr("data-id"))
-                        // })
+                        var url = "details.html?id=" + this.id;
+                        window.location.href = url;
+                        console.log(url)
+                    })
                 }.bind(this))
-
         })
     </script>
     <script src="js/shoplist.js"></script>

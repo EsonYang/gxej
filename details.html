@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/commen.css">
+    <!-- 头尾样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 默认样式 -->
+    <link rel="stylesheet" href="css/xiangqing.css">
+    <!-- 详情样式 -->
+    <link rel="stylesheet" href="css/scroll_skin1.css">
+    <!-- 选项卡样式 -->
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/product_new.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="head_top">
+        <div id="head_nav">
+            <div id="city_list" class="_oBox">
+                <i id="shows"></i>
+                <a>全国</a>
+                <span class="navicon"></span>
+                <div class="position-city" style="display: none;" id="position-city">
+                    <span class="wrong11" id="close"></span>
+                    <div class="container-header clear">
+                        <div class="container-header-right" id="container-header-right">
+                            <div class="input-contaner">
+                                <span class="search">地区搜索：</span>
+                                <input id="searchKeyword" type="" name="" value="请选择输入地区中文及英文字母" onblur="if (this.value ==''){this.value ='请选择输入地区中文及英文字母'}" onfocus="if (value =='请选择输入地区中文及英文字母'){value=''}" oninput="searchKeyword()" onpropertychange="searchKeyword()">
+                            </div>
+                            <ul class="search-suggest" style="display:none;" id="searchKeywork">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container-midlle clear" style="border-bottom:1px solid #ccc;">
+                        <span class="recond">推荐地区：</span>
+                        <div class="allcitys" id="allcitys">
+                            <a id="allcity" class="activecolor">全国</a>
+                        </div>
+                    </div>
+                    <div class="container-midlle clear" style="border-bottom:1px solid #ccc;">
+                        <span class="recond">最近访问：</span>
+
+                    </div>
+                    <div class="container-midlle container-bottom clear" id="showcityUl">
+                        <div class="list-item" id="liId0"><span class="recond word word-active">A</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="231102">爱辉区</a><a herf="javascript:;" name="654300">阿勒泰地区</a><a herf="javascript:;" name="360829">安福县</a><a herf="javascript:;" name="430923">安化县</a><a herf="javascript:;" name="340000">安徽</a>
+                                <a herf="javascript:;" name="360123">安义县</a><a herf="javascript:;" name="360726">安远县</a><a herf="javascript:;" name="141026">安泽县</a></div>
+                        </div>
+                        <div class="list-item" id="liId1"><span class="recond word word-active">B</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="220600">白山市</a><a herf="javascript:;" name="610527">白水县</a><a herf="javascript:;" name="620402">白银区</a><a herf="javascript:;" name="120115">宝坻区</a><a herf="javascript:;" name="610300">宝鸡市</a>
+                                <a herf="javascript:;" name="420626">保康县</a><a herf="javascript:;" name="511900">巴中市</a><a herf="javascript:;" name="610427">彬县</a><a herf="javascript:;" name="652700">博尔塔拉蒙古自治州</a></div>
+                        </div>
+                        <div class="list-item" id="liId2"><span class="recond word word-active">C</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="654022">察布查尔锡伯自治县</a><a herf="javascript:;" name="430700">常德市</a><a herf="javascript:;" name="350821">长汀县</a><a herf="javascript:;" name="410728">长垣县</a><a herf="javascript:;" name="211300">朝阳市</a>
+                                <a herf="javascript:;" name="150400">赤峰市</a><a herf="javascript:;" name="509999">重庆</a><a herf="javascript:;" name="360725">崇义县</a></div>
+                        </div>
+                        <div class="list-item" id="liId3"><span class="recond word word-active">D</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="611022">丹凤县</a><a herf="javascript:;" name="420922">大悟县</a><a herf="javascript:;" name="511700">达州市</a><a herf="javascript:;" name="350526">德化县</a><a herf="javascript:;" name="632802">德令哈市</a>
+                                <a herf="javascript:;" name="410185">登封市</a><a herf="javascript:;" name="411381">邓州市</a><a herf="javascript:;" name="361181">德兴市</a><a herf="javascript:;" name="621100">定西市</a><a herf="javascript:;" name="220502">东昌区</a>
+                                <a herf="javascript:;" name="220421">东丰县</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId4"><span class="recond word word-active">E</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="422801">恩施市</a><a herf="javascript:;" name="150724">鄂温克族自治旗</a></div>
+                        </div>
+                        <div class="list-item" id="liId5"><span class="recond word word-active">F</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="410926">范县</a><a herf="javascript:;" name="371325">费县</a><a herf="javascript:;" name="433123">凤凰县</a><a herf="javascript:;" name="451223">凤山县</a><a herf="javascript:;" name="141182">汾阳市</a><a herf="javascript:;"
+                                    name="610730">佛坪县</a><a herf="javascript:;" name="350982">福鼎市</a><a herf="javascript:;" name="610822">府谷县</a><a herf="javascript:;" name="350000">福建</a><a herf="javascript:;" name="220621">抚松县</a></div>
+                        </div>
+                        <div class="list-item" id="liId6"><span class="recond word word-active">G</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="620000">甘肃</a><a herf="javascript:;" name="130182">藁城市</a><a herf="javascript:;" name="150785">根河市</a><a herf="javascript:;" name="511600">广安市</a><a herf="javascript:;" name="361030">广昌县</a><a herf="javascript:;"
+                                    name="440000">广东</a><a herf="javascript:;" name="431027">桂东县</a><a herf="javascript:;" name="450881">桂平市</a></div>
+                        </div>
+                        <div class="list-item" id="liId7"><span class="recond word word-active">H</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="652201">哈密市</a><a herf="javascript:;" name="610902">汉滨区</a><a herf="javascript:;" name="610581">韩城市</a><a herf="javascript:;" name="130000">河北</a><a herf="javascript:;" name="371312">河东区</a><a herf="javascript:;"
+                                    name="652827">和静县</a><a herf="javascript:;" name="140882">河津市</a><a herf="javascript:;" name="410000">河南</a><a herf="javascript:;" name="610524">合阳县</a><a herf="javascript:;" name="532529">红河县</a><a herf="javascript:;"
+                                    name="431200">怀化市</a>
+                                <a herf="javascript:;" name="110116">怀柔区</a><a herf="javascript:;" name="370211">黄岛区</a><a herf="javascript:;" name="130983">黄骅市</a><a herf="javascript:;" name="430623">华容县</a><a herf="javascript:;" name="420000">湖北</a>
+                                <a herf="javascript:;" name="360733">会昌县</a>
+                                <a herf="javascript:;" name="430000">湖南</a><a herf="javascript:;" name="654023">霍城县</a><a herf="javascript:;" name="341522">霍邱县</a></div>
+                        </div>
+                        <div class="list-item" id="liId8"><span class="recond word word-active">J</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="511304">嘉陵区</a><a herf="javascript:;" name="320000">江苏</a><a herf="javascript:;" name="360000">江西</a><a herf="javascript:;" name="220582">集安市</a><a herf="javascript:;" name="220000">吉林</a><a herf="javascript:;"
+                                    name="341502">金安区</a><a herf="javascript:;" name="620300">金昌市</a><a herf="javascript:;" name="360925">靖安县</a><a herf="javascript:;" name="610824">靖边县</a><a herf="javascript:;" name="360881">井冈山市</a><a herf="javascript:;"
+                                    name="420800">荆门市</a>
+                                <a herf="javascript:;" name="610423">泾阳县</a><a herf="javascript:;" name="350582">晋江市</a><a herf="javascript:;" name="341524">金寨县</a><a herf="javascript:;" name="360400">九江市</a><a herf="javascript:;" name="131181">冀州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId9"><span class="recond word word-active">L</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="410225">兰考县</a><a herf="javascript:;" name="130225">乐亭县</a><a herf="javascript:;" name="440881">廉江市</a><a herf="javascript:;" name="210000">辽宁</a><a herf="javascript:;" name="211000">辽阳市</a><a herf="javascript:;"
+                                    name="211021">辽阳县</a><a herf="javascript:;" name="361022">黎川县</a><a herf="javascript:;" name="450721">灵山县</a><a herf="javascript:;" name="220322">梨树县</a><a herf="javascript:;" name="4690216">龙河镇</a><a herf="javascript:;"
+                                    name="360727">龙南县</a>
+                                <a herf="javascript:;" name="130824">滦平县</a><a herf="javascript:;" name="411100">漯河市</a><a herf="javascript:;" name="653224">洛浦县</a><a herf="javascript:;" name="350123">罗源县</a><a herf="javascript:;" name="360323">芦溪县</a>
+                                <a herf="javascript:;" name="411628">鹿邑县</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId10"><span class="recond word word-active">M</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="420302">茅箭区</a><a herf="javascript:;" name="610725">勉县</a><a herf="javascript:;" name="150722">莫力达瓦达斡尔族自治旗</a></div>
+                        </div>
+                        <div class="list-item" id="liId11"><span class="recond word word-active">N</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="360100">南昌市</a><a herf="javascript:;" name="361021">南城县</a><a herf="javascript:;" name="361023">南丰县</a><a herf="javascript:;" name="360782">南康市</a><a herf="javascript:;" name="430921">南县</a><a herf="javascript:;"
+                                    name="150000">内蒙古</a><a herf="javascript:;" name="360730">宁都县</a><a herf="javascript:;" name="120221">宁河区</a><a herf="javascript:;" name="640000">宁夏</a></div>
+                        </div>
+                        <div class="list-item" id="liId12"><span class="recond word word-active">P</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="360430">彭泽县</a><a herf="javascript:;" name="140321">平定县</a><a herf="javascript:;" name="110117">平谷区</a><a herf="javascript:;" name="140829">平陆县</a><a herf="javascript:;" name="130532">平乡县</a>
+                                <a herf="javascript:;" name="140728">平遥县</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId13"><span class="recond word word-active">Q</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="500114">黔江区</a><a herf="javascript:;" name="340824">潜山县</a><a herf="javascript:;" name="130227">迁西县</a><a herf="javascript:;" name="430426">祁东县</a><a herf="javascript:;" name="410922">清丰县</a>
+                                <a herf="javascript:;" name="630000">青海</a><a herf="javascript:;" name="130534">清河县</a><a herf="javascript:;" name="410882">沁阳市</a><a herf="javascript:;" name="410221">杞县</a><a herf="javascript:;" name="360729">全南县</a></div>
+                        </div>
+                        <div class="list-item" id="liId14"><span class="recond word word-active">R</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="131124">饶阳县</a><a herf="javascript:;" name="360781">瑞金市</a></div>
+                        </div>
+                        <div class="list-item" id="liId15"><span class="recond word word-active">S</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="411200">三门峡市</a><a herf="javascript:;" name="653125">莎车县</a><a herf="javascript:;" name="370000">山东</a><a herf="javascript:;" name="360923">上高县</a><a herf="javascript:;" name="350823">上杭县</a>
+                                <a herf="javascript:;" name="360322">上栗县</a><a herf="javascript:;" name="611023">商南县</a><a herf="javascript:;" name="361100">上饶市</a><a herf="javascript:;" name="361121">上饶县</a><a herf="javascript:;" name="360724">上犹县</a>
+                                <a herf="javascript:;" name="330682">上虞区</a>
+                                <a herf="javascript:;" name="611002">商州区</a><a herf="javascript:;" name="140000">山西</a><a herf="javascript:;" name="610000">陕西</a><a herf="javascript:;" name="430523">邵阳县</a><a herf="javascript:;" name="210100">沈阳市</a>
+                                <a herf="javascript:;" name="130100">石家庄市</a>
+                                <a herf="javascript:;" name="430726">石门县</a><a herf="javascript:;" name="220501">市辖区</a><a herf="javascript:;" name="510000">四川</a><a herf="javascript:;" name="220300">四平市</a><a herf="javascript:;" name="341324">泗县</a>
+                                <a herf="javascript:;" name="360827">遂川县</a>
+                                <a herf="javascript:;" name="411403">睢阳区</a><a herf="javascript:;" name="211421">绥中县</a><a herf="javascript:;" name="321311">宿豫区</a><a herf="javascript:;" name="341300">宿州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId16"><span class="recond word word-active">T</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="140726">太谷县</a><a herf="javascript:;" name="410927">台前县</a><a herf="javascript:;" name="130200">唐山市</a><a herf="javascript:;" name="410523">汤阴县</a><a herf="javascript:;" name="430922">桃江县</a>
+                                <a herf="javascript:;" name="654027">特克斯县</a><a herf="javascript:;" name="341181">天长市</a><a herf="javascript:;" name="129999">天津</a><a herf="javascript:;" name="610522">潼关县</a><a herf="javascript:;" name="340700">铜陵市</a>
+                                <a herf="javascript:;" name="652100">吐鲁番地区</a>
+                            </div>
+                        </div>
+                        <div class="list-item" id="liId17"><span class="recond word word-active">W</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="361129">万年县</a><a herf="javascript:;" name="410781">卫辉市</a><a herf="javascript:;" name="130533">威县</a><a herf="javascript:;" name="410481">舞钢市</a><a herf="javascript:;" name="430581">武冈市</a><a herf="javascript:;"
+                                    name="360423">武宁县</a><a herf="javascript:;" name="654202">乌苏市</a><a herf="javascript:;" name="150821">五原县</a><a herf="javascript:;" name="361130">婺源县</a></div>
+                        </div>
+                        <div class="list-item" id="liId18"><span class="recond word word-active">X</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="141023">襄汾县</a><a herf="javascript:;" name="420600">襄阳市</a><a herf="javascript:;" name="350322">仙游县</a><a herf="javascript:;" name="341322">萧县</a><a herf="javascript:;" name="410323">新安县</a><a herf="javascript:;"
+                                    name="150727">新巴尔虎右旗</a><a herf="javascript:;" name="360722">信丰县</a><a herf="javascript:;" name="360824">新干县</a><a herf="javascript:;" name="610481">兴平市</a><a herf="javascript:;" name="130125">行唐县</a><a herf="javascript:;"
+                                    name="360427">星子县</a><a herf="javascript:;" name="650000">新疆兵团</a><a herf="javascript:;" name="950000">新疆自治区</a><a herf="javascript:;" name="210181">新民市</a><a herf="javascript:;" name="430528">新宁县</a><a herf="javascript:;"
+                                    name="411500">信阳市</a><a herf="javascript:;" name="360424">修水县</a><a herf="javascript:;" name="540000">西藏</a><a herf="javascript:;" name="360734">寻乌县</a><a herf="javascript:;" name="610429">旬邑县</a><a herf="javascript:;"
+                                    name="320300">徐州市</a></div>
+                        </div>
+                        <div class="list-item" id="liId19"><span class="recond word word-active">Y</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="511800">雅安市</a><a herf="javascript:;" name="610622">延川县</a><a herf="javascript:;" name="410329">伊川县</a><a herf="javascript:;" name="360900">宜春市</a><a herf="javascript:;" name="420506">夷陵区</a>
+                                <a herf="javascript:;" name="420981">应城市</a><a herf="javascript:;" name="421124">英山县</a><a herf="javascript:;" name="371323">沂水县</a><a herf="javascript:;" name="433127">永顺县</a><a herf="javascript:;" name="341503">裕安区</a>
+                                <a herf="javascript:;" name="411425">虞城县</a>
+                                <a herf="javascript:;" name="360622">余江县</a><a herf="javascript:;" name="371725">郓城县</a><a herf="javascript:;" name="361123">玉山县</a><a herf="javascript:;" name="130229">玉田县</a><a herf="javascript:;" name="530400">玉溪市</a></div>
+                        </div>
+                        <div class="list-item" id="liId20"><span class="recond word word-active">Z</span>
+                            <div class="allcitys allcitys-cit "><a herf="javascript:;" name="420683">枣阳市</a><a herf="javascript:;" name="360702">章贡区</a><a herf="javascript:;" name="350881">漳平市</a><a herf="javascript:;" name="350600">漳州市</a><a herf="javascript:;" name="371624">沾化县</a>
+                                <a herf="javascript:;" name="370685">招远市</a><a herf="javascript:;" name="321100">镇江市</a><a herf="javascript:;" name="420527">秭归县</a><a herf="javascript:;" name="520300">遵义市</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul id="login">
+                <li id="uesr_info"><a href="" class="a_color">马上登录</a></li>
+                <li class="li_linespace">|</li>
+                <li><a href="" class="a_color">注册</a></li>
+                <li><a href="" id="car_cont" class="shop_car">
+                购物车
+                    <i class="i_shopcar"></i>
+                    <span class="a_color">0</span>
+                    </a>件
+                </li>
+                <li class="li_linespace">|</li>
+                <li><a href="">我的商城</a></li>
+                <li class="li_linespace">|</li>
+                <li><a href="">我的订单</a></li>
+                <li class="li_linespace">|</li>
+                <li id="customer_service" class="_oBox">
+                    <a href="">客户服务
+                    <i class="navicon"></i></a>
+                    <div class="kffwon" id="kffwon">
+                        <a href="">在线客服</a>
+                        <a href="">售后保障</a>
+                        <a href="">热点问题</a>
+                    </div>
+
+                </li>
+                <li class="li_linespace">|</li>
+                <li id="shopNav" class="_oBox">
+                    <a href="" id="shop_center">网站导航<i class="navicon"></i> </a>
+                    <div class="shoper downgx" id="shoper">
+                        <ul class="shoplist clear">
+                            <li class="farmproduct">
+                                <h3>农产品商城</h3>
+                                <nav class="shopcontentlast clear">
+                                    <a href=""> 肉禽蛋奶 </a>
+                                    <a href=""> 米面杂粮 </a>
+                                    <a href=""> 熟食面点 </a>
+                                    <a href=""> 方便速食 </a>
+                                    <a href=""> 厨房调味 </a>
+                                    <a href=""> 腊味干货 </a>
+                                    <a href=""> 饮料冲调 </a>
+                                    <a href=""> 休闲零食 </a>
+                                    <a href=""> 营养保健 </a>
+                                    <a href=""> 中外名酒 </a>
+                                    <a href=""> 海鲜水产 </a>
+                                    <a href=""> 时令鲜蔬 </a>
+                                    <a href=""> 新鲜水果 </a>
+                                    <a href=""> 四季茗茶 </a>
+                                </nav>
+                            </li>
+                            <li class="online">
+                                <h3>货郎在线</h3>
+                                <nav class="shopcontentlast clear">
+                                    <a href=""> 生活日用 </a>
+                                    <a href=""> 精品家纺 </a>
+                                    <a href=""> 纸品湿巾 </a>
+                                    <a href=""> 厨具日用 </a>
+                                    <a href=""> 面部护理 </a>
+                                    <a href=""> 洗发护发 </a>
+                                    <a href=""> 香水彩妆 </a>
+                                    <a href=""> 身体护肤 </a>
+                                    <a href=""> 家庭清洁 </a>
+                                    <a href=""> 口腔护理 </a>
+                                    <a href=""> 时尚女装 </a>
+                                    <a href=""> 精品男装 </a>
+                                    <a href=""> 鲜花礼品 </a>
+                                    <a href=""> 家用电器 </a>
+                                    <a href=""> 潮流鞋靴 </a>
+                                    <a href=""> 电脑外设 </a>
+                                    <a href=""> 精品箱包 </a>
+                                    <a href=""> 办公用品 </a>
+                                    <a href=""> 袜子配饰 </a>
+                                    <a href=""> 母婴护理 </a>
+                                    <a href=""> 汽车用品 </a>
+                                    <a href=""> 供销e购卡 </a>
+                                </nav>
+                            </li>
+                            <li class="farmshop">
+                                <h3>农资商城</h3>
+                                <nav class="shopcontent clear">
+                                    <a href=""> 肥料 </a>
+                                    <a href=""> 农药 </a>
+                                    <a href=""> 农机具 </a>
+                                    <a href=""> 土地 </a>
+                                    <a href=""> 苗木 </a>
+                                    <a href="" style="margin-right: 0;"> 种子 </a>
+                                    <a href=""> 农业服务 </a>
+                                </nav>
+                            </li>
+                            <li class="farmlife">
+                                <h3>生活服务</h3>
+                                <nav class="shopcontent clear">
+                                    <a href="" target="_blank">缴水费</a>
+                                    <a href="" target="_blank">缴电费</a>
+                                    <a href="" target="_blank">煤气费</a>
+                                    <a href="" target="_blank">手机充值</a>
+                                </nav>
+                            </li>
+                            <li class="service">
+                                <h3>服务指南</h3>
+                                <nav class="shopcontent clear">
+                                    <a href=""> 初次到访 </a>
+                                    <a href=""> 购物流程 </a>
+                                    <a href=""> 关于我们 </a>
+                                    <a href=""> 配送标准 </a>
+                                    <a href=""> 发票制度 </a>
+                                    <a href=""> 签收验货 </a>
+                                    <a href=""> 退货流程 </a>
+                                    <a href=""> 退换货规则 </a>
+                                    <a href=""> 地方平台搭建 </a>
+                                    <a href=""> 商户入驻 </a>
+                                    <a href=""> 入驻流程 </a>
+                                    <a href=""> 入驻须知 </a>
+                                    <a href=""> 禁售商品规则 </a>
+                                    <a href="" id="wangdian"> 网点申请 </a>
+                                </nav>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="li_linespace">|</li>
+                <li><a href="">供销e通</a></li>
+                <li class="li_linespace">|</li>
+                <li><a href="">供销e批</a></li>
+                <li class="li_linespace">|</li>
+                <li><a href="">农资衣服</a></li>
+                <li class="li_linespace">|</li>
+                <li id="phone"><a href="" class="_oBox">手机版 <i class="navicon"></i>
+            <div id="qr_code">
+                <img src="picture/weixin.jpg" alt="">
+                <img src="picture/client.jpg" alt="">
+            </div>
+       
+        </div>
+
+    </div>
+<!-- ，，，，，，，，，，，，，，，，，，，，，，，，，导航结束，，，，，，，，，，，，，，，， -->
+
+
+<div id="logo" class="head_botom" style="">
+    <div id="logo_store" class="logo" style="width: 380px;">
+        <div id="nationwidePaltFrom" style="position: relative;width:150px;height: 100%;"><a href=""><img src="picture/logo_new.png" style="cursor: pointer;margin-left:0;margin-right:0;"></a></div>
+        <div id="paltFromIdDetail" style="width:180px;position: absolute;left:150px;top: 0;height: 100%;">
+        </div>
+    </div>
+
+
+    <div class="logo_shop">
+        <div class="shop-name">
+            <p>优仕堂官方旗舰店</p>
+        </div>
+        <div class="shop-xy">
+            <p>
+                <span>描述</span>
+                <span>服务</span>
+                <span>物流</span>
+            </p>
+            <div class="shop-sz">
+                <span>0.0<b></b></span>
+                <span>0.0<b></b></span>
+                <span>0.0<b></b></span>
+            </div>
+        </div>
+    </div>
+    <div class="head_botomR" style="margin-left:0;float:right;width: 420px;">
+        <form name="searchForm" target="_blank">
+
+            <input name="query" placeholder="搜索商品/店铺" class="text ac_input" type="text" id="query" size="45" maxlength="45" value="" onblur="query_blur()" style="width: 300px" onfocus="query_focus()" onkeydown="query_keydown()" autocomplete="off">
+        </form>
+        <a href="javascript:void(0);" id="queryButton" class="button" style="background-color:#fd581e;">
+            <span class="icon"></span> 搜索
+        </a>
+        <a href="javascript:void(0);" id="queryButton1" class="button" style="margin-left:10px;background:#F2A134;display:none;">
+            <span class="icon"></span> 搜农资
+        </a>
+
+        <div style="width: 100%;float: left;" id="hot_search_key_list"><a href="">糖心苹果</a><a href="">赣南脐橙</a></div>
+    </div>
+    </div>
+
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，，，，顶部搜索结束，，，，，，，，，，，，，，，，， -->
+
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，商铺图标，，，，，，，，，，，，，，，，，，，，，，， -->
+    <div id="banner">
+        <div style="position: relative;">
+            <a href="" target="_blank">
+                <img src="picture/1524798347477.jpg" style="position: absolute;left: 0;top: 0;">
+            </a>
+        </div>
+    </div>
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，商铺图标结束，，，，，，，，，，，，，，，，，，，，，，， -->
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，，，，，，，商铺导航，，，，，，，，，，，，，，，，， -->
+    <div id="big-nav">
+        <div id="nav">
+            <ul>
+                <li><a href="">商铺首页</a></li>
+                <li><span>|</span></li>
+                <li><a href="">首页</a></li>
+                <li><span>|</span></li>
+                <li><a href="">传杞三十七</a></li>
+                <li><span>|</span></li>
+                <li><a href="">优杞说V8</a></li>
+                <li><span>|</span></li>
+                <li><a href="">每日枸杞</a></li>
+                <li><span>|</span></li>
+                <li><a href="">杞留香</a></li>
+                <li><span>|</span></li>
+                <li><a href="">优商冕</a></li>
+                <li><span>|</span></li>
+                <li><a href="">商铺介绍</a></li>
+                <li><span>|</span></li>
+                <li><a href="">联系方式</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，，，，，，，商铺导航结束，，，，，，，，，，，，，，，，， -->
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，，，，，，，商品介绍，，，，，，，，，，，，，，，，， -->
+    <div id="content" class="clear">
+        <div id="goods-top">
+            <div class="product cfx">
+                <div class="goods-img">
+                    <!-- 放大镜 -->
+                    <a id="prodPicImgLarger1" href="javascript:;" class="jqzoom" rel="gal1">
+                        <div class="zoomPad">
+                            <img id="prodPicImgId1" class="pic" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819034439.jpg-388x388" alt="图片不存在" title="查看大图">
+                            <div class="zoomPup" style="display: none; top: 0px; left: 0px; width: 198px; height: 198px; position: absolute; border-width: 1px;"></div>
+                            <div class="zoomWindow" style="position: absolute; z-index: 5001; left: 410px; top: 0px; display: none;">
+                                <div class="zoomWrapper" style="width: 398px;">
+                                    <div class="zoomWrapperTitle" style="width: 100%; position: absolute; display: none;"></div>
+                                    <div class="zoomWrapperImage" style="width: 100%; height: 398px;"><img src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819030322.png-800x800" style="top: 0px; left: 0px; position: absolute; border-width: 1px; display: block;"></div>
+                                </div>
+                            </div>
+                            <div class="zoomPreload" style="visibility: hidden;">Loading zoom</div>
+                        </div>
+                    </a>
+                    <!-- 选项卡切换图片 -->
+                    <div class=" jcarousel-skin-min" style="float:left">
+                        <div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;">
+                            <div class="jcarousel-clip jcarousel-clip-horizontal" style="position: relative;">
+                                <ul id="scroll" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: 0px; width: 510px;">
+                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;display:inline-flex;">
+                                        <a rel="{gallery: 'gal1', smallimage: 'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819030322.png-388x388',largeimage:'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819030322.png-800x800'}" class="zoomThumbActive">
+                                            <img class="choose" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819030322.png-120x120" alt="图片不存在" title="产品缩略图">
+                                        </a>
+                                    </li>
+                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;display:inline-flex;">
+                                        <a rel="{gallery: 'gal1', smallimage: 'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819032505.jpg-388x388',largeimage:'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819032505.jpg-800x800'}" class="">
+                                            <img class="choose" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819032505.jpg-120x120" alt="图片不存在" title="产品缩略图">
+                                        </a>
+                                    </li>
+                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;display:inline-flex;">
+                                        <a rel="{gallery: 'gal1', smallimage: 'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819034439.jpg-388x388',largeimage:'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819034439.jpg-800x800'}" class="">
+                                            <img class="choose" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819034439.jpg-120x120" alt="图片不存在" title="产品缩略图">
+                                        </a>
+                                    </li>
+                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;display:inline-flex;">
+                                        <a rel="{gallery: 'gal1', smallimage: 'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819036384.jpg-388x388',largeimage:'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819036384.jpg-800x800'}">
+                                            <img class="choose" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819036384.jpg-120x120" alt="图片不存在" title="产品缩略图">
+                                        </a>
+                                    </li>
+                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-5 jcarousel-item-5-horizontal" jcarouselindex="5" style="float: left; list-style: none;display:inline-flex;">
+                                        <a rel="{gallery: 'gal1', smallimage: 'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819038357.jpg-388x388',largeimage:'http://img1.ccgn.cc/images/2018/4/27/00042880/1524819038357.jpg-800x800'}">
+                                            <img class="choose" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819038357.jpg-120x120" alt="图片不存在" title="产品缩略图">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal" disabled="disabled" style="display: block;"></div>
+                            <div class="jcarousel-next jcarousel-next-horizontal jcarousel-next-disabled jcarousel-next-disabled-horizontal" disabled="disabled" style="display: block;"></div>
+                        </div>
+                    </div>
+                    <!-- 分享 -->
+                    <div id="prodFavoriteDiv clear" class="pro_shares">
+
+                        <div class="short-share clear" style="float:left;width:100%;">
+                            <span class="short-share clear" style="float:left;text-indent: 0;position:static;background:none">
+                                <a href="javascript:void(0);" >
+                                    <b class="g-style2" style="margin-top:-5px"></b>
+                                    <span class="short_scsp" style="padding-left:25px">收藏商品</span>
+                            <span></span>
+                            </a>
+                            </span>
+                            <span class="dec" style="float:left;padding:0px 15px;background: none;position:static;text-indent: 0;">|</span>
+                            <div class="bdsharebuttonbox bdshare-button-style1-16" style="float:left;margin-top:-4px" data-bd-bind="1526869146309">
+                                <a href="#" class="bds_more" data-cmd="more"></a>
+                                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                <a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a>
+                            </div>
+                            <div class="short-share clear" style="float:right;margin-top:-7px;">
+                                <a id="prosecutionNewSet" href="javascript:void(0);" class="report" prodid="0000139836" merchantid="00042880" style="float: right;line-height: 32px;margin-right: 25px;top:-5px;" }>举报</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- 。。。。。。。。。。。。。详情左侧结束。。。。。。。。。。。。。。。 -->
+                <!-- ，，，，，，，，，，，，，详情中间开始，，，，，，，，，， -->
+                <div class="goods-cont">
+                    <div class="goods_flag"></div>
+                    <h1 id="tit">优仕堂 宁夏枸杞芽茶 绿茶 优商冕礼盒120g&nbsp;&nbsp;</h1>
+                    <div class="text" style="visibility: visible;width:561px;white-space:nowrap;margin-bottom:20px;">
+                        <p>
+                            <span style="color:#FF8800;white-space: pre-wrap;">睡前也能喝的中国高端绿茶 以【养生】枸杞芽为茶胚的绿茶  惊喜活动猛戳！！</span>
+                            <a href="" style="text-decoration:underline;color:#FF0000;"></a>
+                        </p>
+                    </div>
+                    <div class="goods-jiage" style="position:relative;">
+
+                        <div style="height: 55px;line-height: 55px;overflow: hidden;" id="priceTr">
+                            <input id="addresStr" type="hidden" name="addresStr" value="">
+                            <input id="addresStrNext" type="hidden" name="addresStrNext" value="">
+
+                            <div style="width: 70px;padding: 6px 0 0 10px;float: left;" class="pricetitle">供销价</div>
+                            <div style="color: #ff8800;;font-size:18px;float: left; " class="pricetitleDiv"><input type="hidden" id="isAllSellOut" name="isAllSellOut" value=""><input type="hidden" id="prodPropSize" name="prodPropSize" value="0">
+                                <div id="firstProdPrice" style="display: inline-block;">
+                                    <input type="hidden" id="productPrice" name="productPrice" value="496.00">
+                                    <span class="price">￥</span><span class="price" id="prodPrice" style="font-size:30px;">496.<span style="font-size:20px;">00</span></span>
+                                </div>
+                            </div>
+                            <div style="position:relative;">
+                                <div class="summary-info" style="display:none;">
+                                    <b></b>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div id="fullGive" style="display:none;clear: both;" class="promotion_tr">
+                            <div style="vertical-align: top;letter-spacing:23px;float: left;width: 90px;height: 18px;">
+                                <div id="fullGiveSynbol" style="text-align:justify;margin-left: 20px">
+                                    促销
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="goods-kd" style="clear: both;height: 40px;">
+                            <div style="float: left;">
+                                <span style="margin-top:5px;margin-left: 10px;letter-spacing: 23px;">运费</span>
+                            </div>
+                            <div style="float: left;" class="pro_detail">
+                                <ul class="prop">
+                                    <li class="re_index cfx">
+                                        <span title="北京北京市">北京北京市</span>
+                                        <span>至</span>
+                                        <span class="sku_table">
+				                        <span class="t_add_address" style="float: none;display: inline-block;height: 24px;line-height: 8px;vertical-align: text-top;">
+					                    <span id="defaultArea" class="correct_address cur">北京 北京市 市辖区<i style="background-position: 0px -25px;"></i></span>
+                                        <div class="address_main" id="add_address" style="width: 424px; margin-left: 50px; display: none;"> <span class="t_close" onclick="clow()"></span>
+                                            <ul id="areaTab" class="tabname cfx">
+                                                <li id="addressCity" name="119999" class="li_cur cur">北京</li>
+                                                <li id="addressArea" name="110000" class="li_cur">北京市<i></i></li>
+                                                <li id="addressThree" name="110100" class="li_cur">市辖区<i></i></li>
+                                            </ul>
+                                        </div>
+                                        </span>
+
+                                        </span>
+                                    </li>
+                                    <li class="kd" style="margin-top: 0px;float:left;">
+                                        <input type="hidden" id="" class="transModel_commit" value="1">
+                                        <input type="hidden" id="" class="transModel_commit_count" value="1">
+                                        <span id="prodLogistics" name="1" class="in_block ml10" style="">快递：¥0.00</span>
+                                    </li>
+                                    <li class="context"><span id="condition"></span></li>
+                                    <li class="show-details-box" style="display: none;">
+                                        <span class="quesAngel"><i></i></span>
+                                        <div class="show-details">
+                                            <span></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+                            <div></div>
+
+
+
+
+                        </div>
+
+                        <div id="weightVolum1" style="background: white; height: 40px; line-height: 40px; clear: both; display: none;">
+                            <div id="achieveData1" style="float: left;margin-left: 20px;letter-spacing: 23px;"><span></span></div>
+                            <div id="achieveKg1" style="float: left;"><span></span></div>
+                        </div>
+                        <div id="weightVolum2" style="background: white; height: 40px; line-height: 40px; clear: both; display: none;">
+                            <div id="achieveData2" style="float: left;margin-left: 20px;letter-spacing: 23px;"><span></span></div>
+                            <div id="achieveKg2" style="float: left;"><span></span></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom:10px;margin-top:5px;border-bottom: 1px dotted #dcdcdc;"></div>
+
+                    <div class="pro_detail pro_detail1">
+                        <div id="prodSkuDiv" style="margin-left: 10px">
+
+
+                            <input id="prodSkuIdNoPropStorage" name="prodSkuIdNoPropStorage" type="hidden" value="20">
+
+                            <!--商品SKU-->
+                            <p id="skuSelected" class="select_a" style="letter-spacing: 1.5em;padding-left: 10px;">
+
+                            </p>
+                            <div style="position:relative;display:inline-block;width: 137px;line-height: 60px;;height:50px;float: left;">
+                                <span style="display:block;padding-left:10px;width:70px;">数量</span>
+                                <span class="num_add" id="subtract">-</span>
+                                <input type="text" name="nums" id="nums" class="buy_num" value="1" size="5" maxlength="5" title="温馨提示:购买数量大于0的整数" onblur="ShopCar.checkNum();" onkeyup="this.value=this.value.replace(/\D/g,'')" onchange="prodNumsFun()">
+                                <span class="num_add" id="plus">+</span>
+                                <span id="selectSku" class="col_red" style="display:none;position:absolute;top:32px;left:10px;">请选择商品规格</span>
+                                <span id="error_msg" class="col_red" style="display:none;"></span>
+                            </div>
+
+                            <p></p>
+                            <input type="hidden" name="shopCar.skuId" id="shopCar.skuId" value="00000000000000159035">
+                            <input type="hidden" name="shopCar.skuProContext" id="shopCar.skuProContext">
+                            <input type="hidden" name="prodPropNum" id="prodPropNum" value="0">
+                            <input type="hidden" id="defaultSkuProdWeight" name="defaultSkuProdWeight" value="0.00">
+                            <input type="hidden" id="defaultSkuProdBulk" name="defaultSkuProdBulk" value="0.00">
+                            <input type="hidden" id="canFree" name="canFree" value="1">
+
+                        </div>
+                        <!-- 立即购买和加入购物车按钮  -->
+                        <form id="nowBuyForm" action="//www.gxyj.com/security/shoppingcart/commit.jhtml" method="post">
+                            <input id="nowBuyOrderprod" type="hidden" name="orderProdJson">
+                            <input id="commitContentForm.merchantId" type="hidden" name="merchantId" value="00042880">
+                            <input id="commitContentForm.storeId" type="hidden" name="storeId" value="036824">
+                            <input type="hidden" name="channel" value="00">
+                            <input type="hidden" name="transModel" value="1_1" id="transModel_commit">
+                            <input type="hidden" name="transModelCount" value="0" id="transModel_commit_count">
+                        </form>
+
+                        <div class="goods-gm">
+                            <div class="goods-car">
+                                <a id="addTringToShopCardId1" href="" class="n_btn n_btn_red">加入购物车</a>
+                            </div>
+                            <div class="goods-pay"><a id="nowBuy" href="javascript:void(0)">立即购买</a></div>
+                        </div>
+                    </div>
+
+                    <!-- 服务认证开始 -->
+
+
+                    <div class="summary-serpromise">
+                        <div class="summary-serve clear">
+                            <div style="float: left;margin: 0 45px 0 20px;">服务</div>
+                            <div style="float: left">
+                                <p>由&nbsp;<span class="orange" style="max-width: 330px" title="优仕堂官方旗舰店">优仕堂官方旗舰店</span>&nbsp;发货并提供售后服务</p>
+                            </div>
+                        </div>
+                        <div class="summary-promise clear">
+                            <div style="float: left;margin: 0 45px 0 20px;">承诺</div>
+                            <div style="float: left">
+                                <span class="item2">按时发货</span>
+                                <span class="item3">急速退款</span>
+                                <span class="item1">退款保障卡</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="dltese" class="summary-promise clear">
+                    </div>
+                </div>
+
+                <!-- ，，，，，，，，，，，，，，，详情中间结束，，，，，，，，，，，， -->
+                <!-- ，，，，，，，，，，，，，详情右侧开始，，，，，，，，，，， -->
+                <div class="goods-rm">
+                    <div id="box">
+                        <div class="special">看了又看</div>
+                        <div class="shop_clm_c" style="margin:0;">
+                            <div class="tabcon" id="p_recommend" style="display:block;">
+                                <div class="box-list">
+                                    <ul class="list" id="treasure">
+                                        <li>
+                                            <a style="position:relative;display:block;width:200px;height:200px;">
+                                                <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524813702224.png-388x388">
+                                                <div class="p_price">￥278.00</div>
+                                            </a>
+                                            <div class="p_name">
+                                                <a title="宁夏中宁贡果级枸杞干果 传杞37度 经济装 200g">宁夏中宁贡果级枸杞干果 传杞37度 经济装 200g</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a style="position:relative;display:block;width:200px;height:200px;">
+                                                <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/5/8/00042880/1525777959618.png-388x388">
+                                                <div class="p_price">￥399.00</div>
+                                            </a>
+                                            <div class="p_name">
+                                                <a title="宁夏中宁贡果级枸杞干果 小袋免洗 传杞37度 礼盒装 320g">宁夏中宁贡果级枸杞干果 小袋免洗 传杞37度 礼盒装 320g</a>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a style="position:relative;display:block;width:200px;height:200px;">
+                                                <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524815779497.png-388x388">
+                                                <div class="p_price">￥199.00</div>
+                                            </a>
+                                            <div class="p_name">
+                                                <a title="优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 经济装 230g">优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 经...</a>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a style="position:relative;display:block;width:200px;height:200px;">
+                                                <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524816108773.png-388x388">
+                                                <div class="p_price">￥257.00</div>
+                                            </a>
+                                            <div class="p_name">
+                                                <a title="优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 240g">优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 240g</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jiantou">
+                            <div class="next"><img src="picture/btn1.png" alt="上移"></div>
+                            <div class="prev"><img src="picture/btn2.png " alt="下移"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，，介绍结束，，，，，，，，，，，，，，，，， -->
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，，详情开始，，，，，，，，，，，， -->
+    <div id="contentBig">
+
+        <div class="cont-left">
+            <!--左边信息第一条-->
+            <div class="cont-shop-xx">
+                <div class="shop-name">优仕堂官方旗舰店</div>
+                <!--店铺logo-->
+                <div class="store-logo" style="display:none;">
+                    <a href="javascript:;"></a>
+                </div>
+                <!--第一部分-->
+                <div class="shop-pf">
+                    <h1>
+                        <span>描述</span>
+                        <span>服务</span>
+                        <span>物流</span>
+                    </h1>
+                    <p>
+                        <span>0.0<b></b></span>
+                        <span>0.0<b></b></span>
+                        <span>0.0<b></b></span>
+
+                    </p>
+                    <div>
+                        <a href="" class="shop-gg">进店逛逛</a>
+                        <a href="javascript:void(0);" class="shop-sc">关注店铺</a>
+                        <a id="zxkfid" class="zxkf grey">
+                            <b class="kf" style="margin-left:3px;"></b><span style="color:#fcfcfc; line-height:inherit; margin-left:3px;">和我联系</span>
+                        </a>
+                        <p id="serviceTel">咨询电话&nbsp; 010-52742395</p>
+                    </div>
+                </div>
+            </div>
+            <!--左边信息第二条-->
+            <div class="shop-fenlei">
+                <div class="shop-fenlei-title">商品分类</div>
+                <form id="storeSearchForm" method="get" target="_blank">
+                    <div class="shop-search">
+                        <input type="text" id="search_txt" name="keyword" maxlength="45" placeholder="请输入关键字">
+                        <a id="queryButton" href="javascript:void(0)"><img src="picture/sousuo.png" alt=""></a>
+                    </div>
+                </form>
+                <ul>
+                    <div id="storeGroupDiv">
+                        <div class="shop_clm shop_cate">
+                            <div class="shop_clm_c" id="shop_menu">
+                                <dl>
+                                    <dt>
+	    			                    <s style="background:#fff;"></s>
+	    			                    <a target="_blank" href="">查看所有宝贝</a>
+	    		                    </dt>
+                                </dl>
+                                <dl>
+                                    <dt>
+										<s></s>
+									<a target="_blank" href="">传杞三十七度</a>
+								</dt>
+                                    <dd style="background:#f9f9f9;">
+                                        <ul>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+										<s></s>
+										<a target="_blank" href="">优杞说V8</a>
+									</dt>
+                                    <dd style="background:#f9f9f9;">
+                                        <ul>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+										<s></s>
+										<a target="_blank" href="">每日枸杞</a>
+									</dt>
+                                    <dd style="background:#f9f9f9;">
+                                        <ul>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+										<s></s>
+										<a target="_blank" href="">杞留香</a>
+									</dt>
+                                    <dd style="background:#f9f9f9;">
+                                        <ul>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+										<s></s>
+										<a target="_blank" href="">优商冕</a>
+									</dt>
+                                    <dd style="background:#f9f9f9;">
+                                        <ul>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <!--左边信息第三条-->
+            <div class="shop-rem">
+                <div class="shop-tui-name">热销排行</div>
+                <div id="browseContent" class="shop_clm_c" style="margin:0;">
+                    <ul>
+                        <li>
+                            <a href="" style="position:relative;display:block;width:200px;height:200px;"><img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819030322.png-120x120" style="width:100%;height:180px;">
+                                <div class="p_price">496.00</div>
+                            </a>
+                            <div class="p_name"><a target="_blank" href="">优仕堂 宁夏枸杞芽茶 绿茶 优商冕礼盒120g</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--左边信息第四条-->
+            <div class="shop-rem">
+                <div class="shop-tui-name">店主推荐</div>
+                <div class="shop_clm_c" style="margin:0;">
+                    <div class="tabcon p_recommend" id="p_recommend" style="display:block;">
+                        <div class="box-list">
+                            <ul class="picBox2" id="recommend_shopowner">
+                                <li>
+                                    <a style="position:relative;display:block;width:200px;height:200px;">
+                                        <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524813702224.png-388x388">
+                                        <div class="p_price">￥278.00</div>
+                                    </a>
+                                    <div class="p_name">
+                                        <a title="宁夏中宁贡果级枸杞干果 传杞37度 经济装 200g">宁夏中宁贡果级枸杞干果 传杞37度 经济装 200g</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a style="position:relative;display:block;width:200px;height:200px;">
+                                        <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/5/8/00042880/1525777959618.png-388x388">
+                                        <div class="p_price">￥399.00</div>
+                                    </a>
+                                    <div class="p_name">
+                                        <a title="宁夏中宁贡果级枸杞干果 小袋免洗 传杞37度 礼盒装 320g">宁夏中宁贡果级枸杞干果 小袋免洗 传杞37度 礼盒装 320g</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a style="position:relative;display:block;width:200px;height:200px;">
+                                        <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524815779497.png-388x388">
+                                        <div class="p_price">￥199.00</div>
+                                    </a>
+                                    <div class="p_name">
+                                        <a title="优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 经济装 230g">优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 经...</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a style="position:relative;display:block;width:200px;height:200px;">
+                                        <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524816108773.png-388x388">
+                                        <div class="p_price">￥257.00</div>
+                                    </a>
+                                    <div class="p_name">
+                                        <a title="优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 240g">优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 240g</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentBig_cont_right">
+            <div class="cont-big" style="margin:0;padding:0;">
+                <div class="mainclm_l_c" style="margin-left:0px;padding-left:0px;">
+                    <div id="prodComment">
+                    </div>
+                    <div class="p_detaillist p_detaillist1" id="p_detaillist">
+                        <div class="p_detaillist_top" style="padding-top: 40px;">
+                            <div id="tabname" class="tabname2">
+                                <div onclick="proxq()" id="tab1" class="li_cur2">商品详情</div>
+                                <div class="goods-car"><a id="addTringToShopCardId2" class="n_btn another">加入购物车</a></div>
+                            </div>
+                            <div id="alertGoodsCar" class="alert jqmWindow jqmID3">
+                                <div class="modal_header">
+                                    <span class="close"></span>
+                                    <h3>提示</h3>
+                                </div>
+                                <div class="cont">已成功加入购物车</div>
+                                <div class="tac cfx padb20">
+                                    <input type="button" id="okBtGoodsCar" class="btn btn_goodsCar" value="确定">
+                                </div>
+                            </div>
+
+
+
+
+                            <ul class="p_detail">
+                                <li>商品品牌：优仕堂</li>
+                                <li title="优仕堂 宁夏枸杞芽茶 绿茶 优商冕礼盒120g">商品名称：优仕堂 宁夏枸杞芽茶 绿茶 优商冕礼盒120g</li>
+                                <li title="净重：120g">净重：120g</li>
+                                <li title="保质期：18个月">保质期：18个月</li>
+                                <li title="产地：宁夏">产地：宁夏</li>
+                                <li title="茶叶等级：特级">茶叶等级：特级</li>
+                                <li title="商户商品编码：YSM-120">商户商品编码：YSM-120</li>
+                                <li title="国产/进口：国产">国产/进口：国产</li>
+                                <li title="生产许可号：QS640314020009">生产许可号：QS640314020009</li>
+                                <li title="储藏方式：常温保存">储藏方式：常温保存</li>
+                                <li title="包装：盒装">包装：盒装</li>
+                            </ul>
+                        </div>
+                        <div class="p_detaillist_bottom" id="p_detaillist_bottom">
+                            <div class="tabcon tabcon1">
+                                <div class="p_detail_c"><img src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819313968.jpg" alt=""><img src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819320437.jpg" alt=""><img src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819328154.jpg"
+                                        alt=""><img src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819334586.jpg" alt=""></div>
+                            </div>
+                            <!--精品推荐-->
+                            <div class="p_detail-right shop-rem" id="p_recommend_rx">
+                                <div class="p_detail-right_t">精选推荐</div>
+                                <div class="shop_clm_c">
+                                    <div class="tabcon p_recommend" id="p_recommend2" style="display:block;border:none;">
+                                        <div class="box-list">
+                                            <ul class="picBox2" id="prodRecommended2">
+                                                <li>
+                                                    <a style="position:relative;display:block;width:200px;height:200px;">
+                                                        <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524813702224.png-388x388">
+                                                        <div class="p_price">￥278.00</div>
+                                                    </a>
+                                                    <div class="p_name">
+                                                        <a title="宁夏中宁贡果级枸杞干果 传杞37度 经济装 200g">宁夏中宁贡果级枸杞干果 传杞37度 经济装 200g</a>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <a style="position:relative;display:block;width:200px;height:200px;">
+                                                        <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/5/8/00042880/1525777959618.png-388x388">
+                                                        <div class="p_price">￥399.00</div>
+                                                    </a>
+                                                    <div class="p_name">
+                                                        <a title="宁夏中宁贡果级枸杞干果 小袋免洗 传杞37度 礼盒装 320g">宁夏中宁贡果级枸杞干果 小袋免洗 传杞37度 礼盒装 320g</a>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <a style="position:relative;display:block;width:200px;height:200px;">
+                                                        <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524815779497.png-388x388">
+                                                        <div class="p_price">￥199.00</div>
+                                                    </a>
+                                                    <div class="p_name">
+                                                        <a title="优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 经济装 230g">优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 经...</a>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <a style="position:relative;display:block;width:200px;height:200px;">
+                                                        <img alt="产品图片" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524816108773.png-388x388">
+                                                        <div class="p_price">￥257.00</div>
+                                                    </a>
+                                                    <div class="p_name">
+                                                        <a title="优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 240g">优仕堂 宁夏枸杞王级枸杞干果 小袋免洗 优杞说V8 240g</a>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabcon"></div>
+                        <div id="prodBuys">
+                            <div class="tabcon" style="display: block;">
+                                <div class="ten_address mar10">价格的不同可能是由于促销和打折引起的，详情可以咨询商家。</div>
+                                <div class="show_buy_list" id="turnover"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ，，，，，，，，，，，，，，，，，，，，，，，底部开始 ，，，，，，，，，，，，，，，，，，-->
+    <div class="ifooter ">
+        <div class="helper clear ">
+            <ul>
+                <li>
+                    <dl>
+                        <dt>供销业务</dt>
+                        <dd><a href=" " target="view_frame ">供销e通</a></dd>
+                        <dd><a href=" " target="view_frame ">供销e批</a></dd>
+                        <dd><a href=" " target="view_frame ">农资农服</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>新手上路</dt>
+                        <dd><a href=" " target="view_frame ">初次到访</a></dd>
+                        <dd><a href=" " target="view_frame ">关于我们</a></dd>
+                        <dd><a href=" " target="view_frame ">友情链接</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>购物指南</dt>
+                        <dd><a href=" ">购物流程</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>配送服务</dt>
+                        <dd><a href=" " target="view_frame ">配送标准</a></dd>
+                        <dd><a href=" " target="view_frame ">签收验货</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>售后保障</dt>
+                        <dd><a href=" " target="view_frame ">发票制度</a></dd>
+                        <dd><a href=" " target="view_frame ">退换货流程</a></dd>
+                        <dd><a href=" " target="view_frame ">退换货规则</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>商家入驻</dt>
+                        <dd><a href=" " target="view_frame ">地方平台搭建</a></dd>
+                        <dd><a href=" " target="view_frame ">商户入驻</a></dd>
+                        <dd><a href=" " target="view_frame ">禁售商品规则</a></dd>
+                        <dd><a href=" " target="view_frame ">入驻流程</a></dd>
+                        <dd><a href=" " target="view_frame ">入驻须知</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="gxcoop ">
+                <a href=" "> <img src="picture/gxcoop.png " alt=" "></a>
+            </div>
+            <ul class="wx_col ">
+                <li class="clear ">
+                    <h4>微信公众平台</h4>
+                    <p>
+                        <a href=" "> <img src="picture/wx-bg1-index.png " width="108 " height="108 "></a>
+                    </p>
+                </li>
+                <li class="clear ">
+                    <h4 class="text-middle ">下载客户端</h4>
+                    <p>
+                        <a href=" "> <img src="picture/wx-bg2-index.png " width="108 " height="108 "></a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright " style="margin:0 auto; ">
+            <span>版权所有 供销e家&nbsp;|&nbsp;京ICP备15050565号&nbsp;|&nbsp;<a href=" " target="_blank "><img src="picture/footerFlag.png " style="vertical-align: middle; ">京公网安备11011202000858号</a>&nbsp;|&nbsp;<a href="http://www.gxyj.com/active/ynzzpc/blic.html?mallId=00000000
+                                " target="_blank ">经营执照</a>&nbsp;|&nbsp;京ICP证151138号</span>
+        </div>
+        <div class="copybox ">
+            <div class="copyimg ">
+                <a id="_pingansec_bottomimagesmall_brand " href=" " target="_blank "> <img src="picture/110×40.jpg "> </a>
+                <a href=" " target="_blank "> <img src="picture/110×40-1.jpg "> </a>
+                <a href=" " target="_blank "> <img src="picture/110×40-2.jpg "> </a>
+                <a href=" " target="_blank "> <img src="picture/cert (1).png "> </a>
+                <a id="___szfw_logo___ " href=" " target="_blank "><img src="picture/cnnic.png " style="widht:110px;height:40px; " border="0 "></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.js "></script>
+<script src="js/same.js"></script>
+<script src="js/details.js"></script>
+<script>
+    new Show("#prodPicImgId1", ".zoomWindow");
+</script>
+
+</html>

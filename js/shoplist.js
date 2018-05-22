@@ -61,12 +61,4 @@ $(function() {
     //     console.log(this);
     //     new ChangeNum("#plus", "#subtract", "#nums")
     // })
-    // function Biography() {
-    //     console.log($(".p-img"))
-    //         // $(".p-img").on("click", function() {
-    //         //     // console.log(this.attr("data-id"))
-    //         //     console.log(this)
-    //         // }.bind(this))
-    // }
-    // Biography();
 })
