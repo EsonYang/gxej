@@ -35,7 +35,7 @@ Show.prototype = {
     }
 }
 new Show("._oBox");
-new Show(".select-sp", ".select-con");
+
 $(function() {
     //吸顶    ele为要吸顶的部分   className为吸顶后的class名
     function SuctionTop(ele, className) {
@@ -43,7 +43,7 @@ $(function() {
         this.ele = $(ele);
         this.init();
         this.constider()
-        this.offTop = this.ele.offset().top;
+        this.offTop = this.ele.offsetTop;
     }
     SuctionTop.prototype = {
         constructor: SuctionTop,
@@ -62,4 +62,33 @@ $(function() {
         }
     }
     new SuctionTop(".menubox", "menuboxScroll")
+
+    function GoodsShop() {
+        this.init();
+    }
+    GoodsShop.prototype = {
+        constructor: GoodsShop,
+        init() {
+            this.carNum = $("#number")
+            this.carNum.html(this.getSum());
+        },
+        changeNum() {
+            this.carNum.html(this.getSum());
+        },
+        getSum() {
+            var shopCarString = $.cookie("shopCar");
+            // console.log(shopCarString)
+            if (shopCarString) {
+                var shopCarArray = JSON.parse(shopCarString);
+                var sum = 0;
+                shopCarArray.forEach(function(item) {
+                    sum += Number(item.num);
+                })
+                return sum;
+            }
+
+            return 0;
+        }
+    }
+    new GoodsShop();
 })

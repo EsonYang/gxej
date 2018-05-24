@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>
+        绿茶 四季茗茶 [行情 价格 评价 正品行货] gxyj.com供销e家
+    </title>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/commen.css">
     <link rel="stylesheet" href="css/shoplist.css">
@@ -155,11 +158,11 @@
             <ul id="login">
                 <li id="uesr_info"><a href="" class="a_color">马上登录</a></li>
                 <li class="li_linespace">|</li>
-                <li><a href="" class="a_color">注册</a></li>
-                <li><a href="" id="car_cont" class="shop_car">
+                <li id="zc"><a href="" class="a_color">注册</a></li>
+                <li><a href="shopcar.html" id="car_cont" class="shop_car">
                 购物车
                     <i class="i_shopcar"></i>
-                    <span class="a_color">0</span>
+                    <span id="number" class="a_color">0</span>
                     </a>件
                 </li>
                 <li class="li_linespace">|</li>
@@ -294,7 +297,7 @@
 
     <div id="newLogo" class="head_bottom">
         <div class="head_bottomL">
-            <a href="" target="_self"><img src="picture/2018newlogo.png"></a>
+            <a href="index.html" target="_self"><img src="picture/2018newlogo.png"></a>
         </div>
     </div>
 
@@ -307,12 +310,12 @@
         <div class="menu w clear">
             <div class="fl navgationWrap" id="newNavigationStairAndSec">
                 <ul class="nav_tab clear">
-                    <li class="nvliindex"><a href="" class="nva_gx current"><i class="i_ico"></i> 首页</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>春茶</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>坚果</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>杂粮</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>蜜饯</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>鲜果</a></li>
+                    <li class="nvliindex"><a href="index.html" class="nva_gx current"><i class="i_ico"></i> 首页</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>春茶</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>坚果</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>杂粮</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>蜜饯</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>鲜果</a></li>
                 </ul>
                 <div class="pclassall"><a href="" target="_blank">全部&gt;</a></div>
                 <a class="yx-cp-tabNav-split nvliarea"></a><a class="nvliarea nva_gx" href="" target="_blank">寻真</a><a class="nvliarea nva_gx" href="" target="_blank">特产推荐</a>
@@ -326,7 +329,7 @@
     </div>
     <!-- ................................顶部结束.............................................. -->
     <!-- ................................四季茗茶开始.............................................. -->
-    <div class="crumb clearfix">
+    <div class="crumb clear">
         <!-- 搜索时面包屑导航 -->
         <!-- 搜索时面包屑导航 -->
         <a href="javascript:addCategoryFilterFun('87','四季茗茶');" class="title">四季茗茶</a>
@@ -340,7 +343,7 @@
             </div>
 
             <div class="select-con">
-                <ul class="clearfix">
+                <ul class="clear">
                     <li class="active"><a href="">绿茶</a></li>
                     <li><a href="javascript:;">红茶</a></li>
                     <li><a href="javascript:;">白茶</a></li>
@@ -403,9 +406,9 @@
                             150 以上
                         </a>
                     <div class="prices">
-                        <input type="text" value="" class="p_num" onkeyup="regexPrice()" onpaste="return false" id="startPrice" name="priceRegion" onkeydown="submitPrice()" maxlength="8" size="8">
+                        <input type="text" value="" class="p_num" id="startPrice" name="priceRegion">
                         <span>-</span>
-                        <input type="text" value="" class="p_num" onkeyup="regexPrice()" onpaste="return false" id="endPrice" name="priceRegion" onkeydown="submitPrice()" maxlength="8" size="8">
+                        <input type="text" value="" class="p_num" id="endPrice" name="priceRegion">
                         <p href="#" class="b2" onclick="getPriceRegionVal()">确定</p>
                     </div>
                 </dd>
@@ -662,72 +665,12 @@
     </div> -->
     <script src="js/jquery-3.3.1.js "></script>
     <script src="js/same.js "></script>
-    <script>
-    </script>
-    <script>
-        $(function() {
-
-            $.ajax({
-                    url: "./data/shoplist.json"
-                })
-                .then(function(res) {
-                        var html = ""
-                        res.forEach(function(item) {
-                            html += `
-                      <div class="productBox"">
-                        <li >
-                        <div class="pro">
-                            <div class="p-img"   >
-                                <a href="javaScript:;" target="_blank">
-                                    <img id="${item.id}" src="${item.images}" style="display: inline;">
-                                </a>
-                            </div>
-                            <div class="p-price">￥${item.price}
-                            </div>
-                            <div class="p-name"><a title="茶叶鲜叶" href="" target="_blank">${item.pro}</a></div>
-
-                            <div class="extra">
-                                <a style="color:#999999;line-height: 25px;display: inline-block; width: 50%;float: left;height: 25px;" href="" title="雅安雅供" target="_blank">
-                                    <span title="雅安雅供" style="display: block;height: 100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
-                            ${item.shop}
-            		</span>
-                                </a>
-                                <div class="p-address" title="四川 雅安市">
-                                    ${item.prosition}
-                                </div>
-                            </div>
-                            <div class="renzheng">
-                            </div>
-                            <div class="btns">
-                                <a href="#this" class="btn3 collect">
-                                    <span onclick="addFavoriteProduct('茶叶鲜叶','0000141492',this)">收藏</span>
-                                </a>
-                                <a href="#this" class="btn3 contrast">
-                                    <input type="checkbox" class="compare_close" value="对比" id="0000141492">
-                                    <label for="checkbox"> 对比</label>
-                                </a>
-                                <a id="addTringToShopCardId${item.id}" class="btn3 addCar" href="javascript:void(0)"><i class="item-icon"></i>加入购物车</a>
-                            </div>
-                        </div>
-                    </li>
-                </div>
-                    `
-                        }.bind(this))
-                        $("#oBox").html(html);
-
-                    }.bind(this)
-
-                )
-                .then(function() {
-                    //页面传参
-                    $(".pro").delegate("img", "click", function() {
-                        var url = "details.html?id=" + this.id;
-                        window.location.href = url;
-                        console.log(url)
-                    })
-                }.bind(this))
-        })
-    </script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/user.js"></script>
     <script src="js/shoplist.js"></script>
+    <script>
+        new Show(".select-sp", ".select-con");
+        new Show(".select-con", ".select-con");
+    </script>
 
 </html>

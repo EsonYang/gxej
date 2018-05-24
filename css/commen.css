@@ -11,6 +11,7 @@
     width: 1200px;
     height: 30px;
     margin: 0 auto;
+    position: relative;
 }
 
 #city_list {
@@ -42,8 +43,10 @@
 }
 
 #login {
-    margin-right: 20px;
+    /* margin-right: 20px; */
     float: left;
+    position: absolute;
+    right: 20px;
 }
 
 #login li {

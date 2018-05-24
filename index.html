@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <!-- ！！！！！！！！！！！！顶部图片开始！！！！！！！！！！！！！！！！！！！！ -->
     <div id="advertisement">
         <a href="javascript:;">
@@ -160,13 +161,13 @@
                 </div>
             </div>
             <ul id="login">
-                <li id="uesr_info"><a href="" class="a_color">马上登录</a></li>
+                <li id="uesr_info"><a href="land.html" class="a_color">马上登录</a></li>
                 <li class="li_linespace">|</li>
-                <li><a href="" class="a_color">注册</a></li>
-                <li><a href="" id="car_cont" class="shop_car">
+                <li id="zc"><a href="register.html" class="a_color">注册</a></li>
+                <li><a href="shopcar.html" id="car_cont" class="shop_car">
                 购物车
                     <i class="i_shopcar"></i>
-                    <span class="a_color">0</span>
+                    <span id="number" class="a_color">0</span>
                     </a>件
                 </li>
                 <li class="li_linespace">|</li>
@@ -303,7 +304,7 @@
 
     <div id="newLogo" class="head_bottom">
         <div class="head_bottomL">
-            <a href="" target="_self"><img src="picture/2018newlogo.png"></a>
+            <a href="index.html" target="_self"><img src="picture/2018newlogo.png"></a>
         </div>
     </div>
 
@@ -316,12 +317,12 @@
         <div class="menu w clear">
             <div class="fl navgationWrap" id="newNavigationStairAndSec">
                 <ul class="nav_tab clear">
-                    <li class="nvliindex"><a href="" class="nva_gx current"><i class="i_ico"></i> 首页</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>春茶</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>坚果</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>杂粮</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>蜜饯</a></li>
-                    <li class="nvli"><a href="" target="_blank" class="nva_gx"><i class="i_ico"></i>鲜果</a></li>
+                    <li class="nvliindex"><a href="index.html" class="nva_gx current"><i class="i_ico"></i> 首页</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>春茶</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>坚果</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>杂粮</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>蜜饯</a></li>
+                    <li class="nvli"><a href="shoplist.html" target="_blank" class="nva_gx"><i class="i_ico"></i>鲜果</a></li>
                 </ul>
                 <div class="pclassall"><a href="" target="_blank">全部&gt;</a></div>
                 <a class="yx-cp-tabNav-split nvliarea"></a><a class="nvliarea nva_gx" href="" target="_blank">寻真</a><a class="nvliarea nva_gx" href="" target="_blank">特产推荐</a>
@@ -741,7 +742,7 @@
     <div id="elevatorNew" class="elevator">
         <div class="tab_cart ">
             <a href=" " target="_blank " class="buycart i_ico2 " style="display: block; "></a>
-            <a id="carttext " href="shopCart" target="_blank " class="carttext " style="display: none; ">购物车</a>
+            <a id="carttext " href="shopcar.html" target="_blank " class="carttext " style="display: none; ">购物车</a>
         </div>
         <ul>
             <li class=" ">
@@ -761,9 +762,11 @@
         </div>
     </div>
 </body>
+
 <script src="js/jquery-3.3.1.js "></script>
 <script src="js/index.js "></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/user.js"></script>
 <script src="js/same.js "></script>
-
 
 </html>

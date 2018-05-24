@@ -11,7 +11,7 @@
 
 
 
-    <title>Document</title>
+    <title>供销e家商城</title>
 </head>
 
 <body>
@@ -158,11 +158,11 @@
             <ul id="login">
                 <li id="uesr_info"><a href="" class="a_color">马上登录</a></li>
                 <li class="li_linespace">|</li>
-                <li><a href="" class="a_color">注册</a></li>
+                <li id="zc"><a href="" class="a_color">注册</a></li>
                 <li><a href="" id="car_cont" class="shop_car">
                 购物车
                     <i class="i_shopcar"></i>
-                    <span class="a_color">0</span>
+                    <span id="number" class="a_color">0</span>
                     </a>件
                 </li>
                 <li class="li_linespace">|</li>
@@ -296,7 +296,7 @@
 <div class="head_botom" style="height: 78px; margin:17px auto;width:1210px;">
         <div class="head_botomL" style="width: auto;" id="fristPagelogoId">
 		
-        <a href="" target="_self"><img src="picture/logo11_03.png" style="cursor: pointer;"></a>
+        <a href="index.html" target="_self"><img src="picture/logo11_03.png" style="cursor: pointer;"></a>
         </div>
         <span class="shopping_cart_flag">购物车</span>
         <div class="head_botomR" style="width: 640px; float: right; margin-left: 0px;">
@@ -316,7 +316,7 @@
     <!-- 。。。。。。。。。。。。。。。。。。。。。。顶部搜索结束。。。。。。。。。。。。。。。。。。。。。 -->
 
 
-    <div id="content" style="height: 451px;">
+    <div id="content" style="min-height: 451px;">
         <div id="con">
             <!-- 购物车为空状态 -->
             <div class="car-con" id="empty" style="display:none;">
@@ -324,12 +324,11 @@
                     <span class="title">您的购物车空空如也！</span>
                 </div>
                 <div class="Go-shoppig">
-                    <a href="" class="btn1 btn_gery" target="_blank">去逛逛吧</a>
+                    <a href="shoplist.html" class="btn1 btn_gery" target="_blank">去逛逛吧</a>
                 </div>
             </div>
             <form action="" method="post" id="form_allstore">
                 <!--全部商品  -->
-
                 <div class="Cart_bar">
                     <ul id="Gxyj-CartAll" class="Gxyj-CartAll">
                         <li class="btn-switch-cart  current fl">
@@ -342,11 +341,11 @@
                 <div class="shopCart_p_list_box">
                     <div class="shopCart_p_list" style="margin:auto;border:0px;">
                         <div class="cart-table-th">
-                            <div class="wp clearfix">
+                            <div class="wp clear">
                                 <div class="fl th-chk">
                                     <div id="Gxyj-SelectAll1" class="select-all Gxyj-SelectAll">
                                         <div class="cart-checkbox">
-                                            <input id="Gxyj-SelectAllCbx1" type="checkbox" class="selall_cart" onclick="Shoppingcart.getSelectedStoreAll(this,'040919','0')">
+                                            <input id="Gxyj-SelectAllCbx1" type="checkbox" class="selall_cart">
                                             <label for="Gxyj-SelectAllCbx1"> 全选</label>
 
                                         </div>
@@ -397,86 +396,6 @@
                                 </div>
                             </div>
                             <div class="order-content ">
-                                <!-- 团购/限时特价 优惠价格 -->
-                                <input type="hidden" class="onePromotionDecMoney" id="010101_onePromotionDecMoney" value="">
-                                <input type="hidden" id="010101_isFullDelivery" value="0">
-                                <div id="dl_010101_0_00000000000000090765" class="item-holder">
-                                    <div id="grey_010101_0_00000000000000090765_00000000000000090765" class="item-body clear ">
-                                        <!--商品复选框-->
-                                        <div class="td-inner td-chk td-innerCon">
-                                            <div class="cart-checkbox " style="margin-top: 2px;">
-                                                <input type="checkbox" class="Gxyj-Item">
-                                                <label for="" class=""></label>
-                                            </div>
-                                        </div>
-
-                                        <ul class="item-content  clear">
-                                            <!--商品图片、名称、SKU-->
-                                            <li class="td td-item" style="word-break: break-all;">
-                                                <div class="td-innerCon clear">
-                                                    <div class="item-pic fl">
-                                                        <a href="" target="_blank">
-                                                            <img src="picture/1480729683378_3.jpg"></a>
-                                                    </div>
-                                                    <div class="item-info fl">
-                                                        <div class="item-basic-info">
-                                                            <a href="" target="_blank" class="item-title" title="">买一送一</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-                                            <!--商品规格-->
-                                            <li class="td th-info">
-                                                <div class="td-innerCon clear">
-                                                    <div class="item-info">
-                                                        <div class="info-line">
-                                                            <em style="font-size: 12px;" title=""></em>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <!--商品价格-->
-                                            <li class="td th-price">
-                                                <div class="price-content td-innerCon">
-                                                    <div class="price-line">
-                                                        <em style="font-size: 13px;">￥69.90</em>
-                                                    </div>
-                                                    <!-- 如果有团购 的原价-->
-                                                </div>
-                                            </li>
-
-                                            <!--商品数量-->
-                                            <li class="td td-amount">
-                                                <div class="td-innerCon">
-                                                    <div class="item-amount clear">
-                                                        <a href="javascript:void(0)" class="fl tac amount-color minus" id="sub_010101_0_00000000000000090765_00000000000000090765">-</a>
-                                                        <input prodsta="nomal" type="text" class="fl tac f14  text text-amount" value="1">
-                                                        <a href="javascript:void(0)" class="fl tac f14 amount-color plus" id="add_010101_0_00000000000000090765_00000000000000090765">+</a>
-                                                    </div>
-                                                    <!-- 限购 -->
-
-                                                </div>
-                                            </li>
-                                            <!--优惠-->
-
-                                            <!-- 价格小计 -->
-                                            <li class="td td-sum">
-                                                <div class="td-innerCon">
-                                                    <span style="font-size: 14px;font-weight: normal;">￥</span><em id="ut_010101_0_00000000000000090765_00000000000000090765">69.90</em>
-                                                </div>
-                                            </li>
-                                            <!--删除与收藏-->
-                                            <li class="td td-top">
-                                                <div class="td-innerCon">
-                                                    <a href="javascript:void(0)">删除</a>
-                                                    <a href="javascript:void(0)"></a>
-                                                    <a href="javascript:void(0)" title="移入关注" class="btn-shou">移入关注</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="sum-bar-container" style="display: block; position: relative; margin: 10px auto 50px;">
@@ -486,7 +405,7 @@
                                     <li class="Sum-Title fl">
                                         <div class="Yh-zh clear">
                                             <div class="Yh-zh-header">
-                                                <input type="checkbox" class="selall_cart" id="Yh-checkbox" onclick="Shoppingcart.getSelectedStoreAll(this,'010101','0')">
+                                                <input type="checkbox" class="selall_cart" id="Yh-checkbox">
                                                 <label for="Yh-checkbox">全选</label>
                                             </div>
                                         </div>
@@ -645,5 +564,10 @@
 
 
 </body>
+<script src="js/jquery-3.3.1.js "></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/user.js"></script>
+<script src="js/same.js"></script>
+<script src="js/shopcar.js"></script>
 
 </html>

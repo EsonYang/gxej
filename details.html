@@ -161,13 +161,13 @@
                 </div>
             </div>
             <ul id="login">
-                <li id="uesr_info"><a href="" class="a_color">马上登录</a></li>
+                <li id="uesr_info"><a href="land.html" class="a_color">马上登录</a></li>
                 <li class="li_linespace">|</li>
-                <li><a href="" class="a_color">注册</a></li>
-                <li><a href="" id="car_cont" class="shop_car">
+                <li id="zc"><a href="register.html" class="a_color">注册</a></li>
+                <li><a href="shopcar.html" id="car_cont" class="shop_car">
                 购物车
                     <i class="i_shopcar"></i>
-                    <span class="a_color">0</span>
+                    <span id="number" class="a_color">0</span>
                     </a>件
                 </li>
                 <li class="li_linespace">|</li>
@@ -301,7 +301,7 @@
 
 <div id="logo" class="head_botom" style="">
     <div id="logo_store" class="logo" style="width: 380px;">
-        <div id="nationwidePaltFrom" style="position: relative;width:150px;height: 100%;"><a href=""><img src="picture/logo_new.png" style="cursor: pointer;margin-left:0;margin-right:0;"></a></div>
+        <div id="nationwidePaltFrom" style="position: relative;width:150px;height: 100%;"><a href="index.html"><img src="picture/logo_new.png" style="cursor: pointer;margin-left:0;margin-right:0;"></a></div>
         <div id="paltFromIdDetail" style="width:180px;position: absolute;left:150px;top: 0;height: 100%;">
         </div>
     </div>
@@ -383,9 +383,9 @@
                 <div class="goods-img">
                     <!-- 放大镜 -->
                     <a id="prodPicImgLarger1" href="javascript:;" class="jqzoom" rel="gal1">
-                        <div class="zoomPad">
+                        <div class="zoomPad" style="position: relative;">
                             <img id="prodPicImgId1" class="pic" src="http://img1.ccgn.cc/images/2018/4/27/00042880/1524819034439.jpg-388x388" alt="图片不存在" title="查看大图">
-                            <div class="zoomPup" style="display: none; top: 0px; left: 0px; width: 198px; height: 198px; position: absolute; border-width: 1px;"></div>
+                            <div class="zoomPup" style="display: none;top: 0px; left: 0px; width: 198px; height: 198px; position: absolute; border-width: 1px;"></div>
                             <div class="zoomWindow" style="position: absolute; z-index: 5001; left: 410px; top: 0px; display: none;">
                                 <div class="zoomWrapper" style="width: 398px;">
                                     <div class="zoomWrapperTitle" style="width: 100%; position: absolute; display: none;"></div>
@@ -573,7 +573,7 @@
                             <div style="position:relative;display:inline-block;width: 137px;line-height: 60px;;height:50px;float: left;">
                                 <span style="display:block;padding-left:10px;width:70px;">数量</span>
                                 <span class="num_add" id="subtract">-</span>
-                                <input type="text" name="nums" id="nums" class="buy_num" value="1" size="5" maxlength="5" title="温馨提示:购买数量大于0的整数" onblur="ShopCar.checkNum();" onkeyup="this.value=this.value.replace(/\D/g,'')" onchange="prodNumsFun()">
+                                <input type="text" name="nums" id="nums" class="buy_num" onkeyup="value=value.replace(/[^\d]/g,'')" value="1" size="5" maxlength="5" title="温馨提示:购买数量大于0的整数">
                                 <span class="num_add" id="plus">+</span>
                                 <span id="selectSku" class="col_red" style="display:none;position:absolute;top:32px;left:10px;">请选择商品规格</span>
                                 <span id="error_msg" class="col_red" style="display:none;"></span>
@@ -600,7 +600,7 @@
 
                         <div class="goods-gm">
                             <div class="goods-car">
-                                <a id="addTringToShopCardId1" href="" class="n_btn n_btn_red">加入购物车</a>
+                                <a id="addTringToShopCardId1" href="javascript:;" class="n_btn n_btn_red">加入购物车</a>
                             </div>
                             <div class="goods-pay"><a id="nowBuy" href="javascript:void(0)">立即购买</a></div>
                         </div>
@@ -980,21 +980,6 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- ，，，，，，，，，，，，，，，，，，，，，，，底部开始 ，，，，，，，，，，，，，，，，，，-->
     <div class="ifooter ">
         <div class="helper clear ">
@@ -1082,9 +1067,8 @@
 </body>
 <script src="js/jquery-3.3.1.js "></script>
 <script src="js/same.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/user.js"></script>
 <script src="js/details.js"></script>
-<script>
-    new Show("#prodPicImgId1", ".zoomWindow");
-</script>
 
 </html>

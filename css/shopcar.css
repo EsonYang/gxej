@@ -1480,5 +1480,48 @@ input {
     cursor: not-allowed;
 }
 
+.item-info .item-basic-info a {
+    position: absolute;
+    height: 30px;
+}
 
-/* 到1001行 */
+.car-con {
+    width: 980px;
+    margin: 0 auto 30px;
+}
+
+.cart-empty {
+    width: 980px;
+    height: 360px;
+    padding-top: 50px;
+    background: url(../images/cart-empty-bg.png) no-repeat center center;
+    position: relative;
+}
+
+.cart-empty .title {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    bottom: 55px;
+    color: #b0b0b0;
+}
+
+.Go-shoppig {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.Go-shoppig a {
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    background: #ff8800;
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    text-align: center;
+    border-radius: 3px;
+    margin: 0 auto;
+}
